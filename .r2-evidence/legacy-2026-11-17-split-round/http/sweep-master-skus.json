@@ -1,0 +1,1 @@
+﻿{"code":200,"msg":"ok","data":[{"id":1,"skuCode":"SKU-001","skuName":"测试商品A","unit":"EA","batchManage":1,"expireManage":1,"snManage":0,"enable":1},{"id":2,"skuCode":"SKU-002","skuName":"测试商品B","unit":"EA","batchManage":0,"expireManage":0,"snManage":0,"enable":1}]}

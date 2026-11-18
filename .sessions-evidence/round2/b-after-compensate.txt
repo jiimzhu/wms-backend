@@ -1,0 +1,8 @@
+﻿outbound_no	status	last_error
+OUT1794977170371	FINISHED	notifyOmsStatus 异常: RetryableException: wms-integration-service executing POST http://wms-integration-service/internal/integration/oms/status
+id	status	request_id	retry_count	owner	lease_until	last_error	next_retry_time
+25	SUCCESS	OUT:OUT1794977170371:SKU-T-001:LOC-T:B20261118	2	NULL	NULL	NULL	NULL
+id	change_qty	before_qty	after_qty	biz_key
+132	-1.000	2.000	1.000	OUT:OUT1794977170371:SKU-T-001:LOC-T:B20261118
+sku_code	location_code	qty
+SKU-T-001	LOC-T	1.000

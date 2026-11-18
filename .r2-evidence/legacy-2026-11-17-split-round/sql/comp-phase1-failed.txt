@@ -1,0 +1,6 @@
+﻿outbound_no	status
+OUT1794893070048	CONFIRM_FAILED
+id	outbound_no	sku_code	location_code	batch_no	change_qty	request_id	status	last_error	retry_count	next_retry_time	create_time	update_time
+3	OUT1794893070048	SKU-002	DC01-P-01	B-E2E-02	-10.0000	OUT:OUT1794893070048:SKU-002:DC01-P-01:B-E2E-02	FAILED	code=400, msg=库存不足, skuCode=SKU-002, 现有=0, 需要=10.0000	1	2026-11-17 13:25:47	2026-11-17 13:24:47	2026-11-17 13:24:47
+sku002_log_after_fail
+0

@@ -1,0 +1,11 @@
+﻿id	warehouse_code	location_code	sku_code	batch_no	qty	freeze_qty	stock_status	version
+1	DC01	DC01-A-01-01	SKU-001	B001	15.000	0.000	1	1
+2	DC01	DC01-A-01-01	SKU-001	B-E2E-01	20.000	0.000	1	0
+id	biz_key	warehouse_code	location_code	sku_code	batch_no	business_type	business_no	change_qty	before_qty	after_qty
+1	REQ-TEST-001	DC01	DC01-A-01-01	SKU-001	B001	PURCHASE_IN	PO-001	10.000	0.000	10.000
+2	NULL	DC01	DC01-A-01-01	SKU-001	B001	PURCHASE_IN	PO-002	5.000	10.000	15.000
+3	IN:IN1794892935664:SKU-001:DC01-A-01-01:B-E2E-01	DC01	DC01-A-01-01	SKU-001	B-E2E-01	PURCHASE_IN	IN1794892935664	20.000	0.000	20.000
+inbound_no	status	warehouse_code
+IN1794892935664	FINISHED	DC01
+inbound_no	sku_code	batch_no	expect_qty	received_qty	putaway_qty	location_code	qc_status
+IN1794892935664	SKU-001	B-E2E-01	20.000	20.000	20.000	DC01-A-01-01	PASS

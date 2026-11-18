@@ -1,0 +1,1 @@
+﻿{"code":200,"msg":"ok","data":[{"id":1,"warehouseCode":"DC01","warehouseName":"上海主仓","warehouseType":1,"enable":1,"createTime":"2026-11-17T12:56:39","updateTime":"2026-11-17T12:56:39"},{"id":2,"warehouseCode":"DC02","warehouseName":"广州主仓","warehouseType":1,"enable":1,"createTime":"2026-11-17T12:56:39","updateTime":"2026-11-17T12:56:39"}]}

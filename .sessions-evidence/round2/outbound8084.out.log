@@ -1,0 +1,635 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-11-18T12:45:36.922+08:00  INFO 1712 --- [wms-outbound-service] [           main] c.j.w.o.OutboundServiceApplication       : Starting OutboundServiceApplication v1.0.0 using Java 17.0.21 with PID 1712 (D:\wms\wms-backend\wms-outbound-service\target\wms-outbound-service-1.0.0.jar started by 华为 in D:\wms\wms-backend)
+2026-11-18T12:45:36.927+08:00 DEBUG 1712 --- [wms-outbound-service] [           main] c.j.w.o.OutboundServiceApplication       : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-11-18T12:45:36.928+08:00  INFO 1712 --- [wms-outbound-service] [           main] c.j.w.o.OutboundServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-11-18T12:45:38.095+08:00  INFO 1712 --- [wms-outbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T12:45:38.098+08:00  INFO 1712 --- [wms-outbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-18T12:45:38.121+08:00  INFO 1712 --- [wms-outbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2026-11-18T12:45:38.488+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22b00c06-f450-389c-b3fe-25b61977d6ec
+2026-11-18T12:45:38.907+08:00  WARN 1712 --- [wms-outbound-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T12:45:38.913+08:00  WARN 1712 --- [wms-outbound-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T12:45:39.518+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2026-11-18T12:45:39.558+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T12:45:39.560+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-11-18T12:45:39.682+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T12:45:39.686+08:00  INFO 1712 --- [wms-outbound-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2643 ms
+2026-11-18T12:45:40.348+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T12:45:40.827+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b3fc6d8
+2026-11-18T12:45:40.833+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T12:45:41.102+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2026-11-18T12:45:41.103+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2026-11-18T12:45:41.105+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-11-18T12:45:41.150+08:00  INFO 1712 --- [wms-outbound-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3306/jim_wms_outbound (MySQL 8.0)
+2026-11-18T12:45:41.264+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.063s)
+2026-11-18T12:45:41.283+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `jim_wms_outbound`: 3
+2026-11-18T12:45:41.289+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.f.core.internal.command.DbMigrate      : Schema `jim_wms_outbound` is up to date. No migration necessary.
+2026-11-18T12:45:42.181+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'wms-inventory-service' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T12:45:42.322+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'wms-integration-service' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T12:45:42.352+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'wms-transfer-service' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T12:45:43.998+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.jim.wms.common.lock.RedisLockUtil    : Redis 锁通道就绪（127.0.0.1:6379:0），PING=PONG
+2026-11-18T12:45:44.497+08:00  INFO 1712 --- [wms-outbound-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T12:45:44.528+08:00  WARN 1712 --- [wms-outbound-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T12:45:44.561+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-18T12:45:44.649+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-18T12:45:44.656+08:00  INFO 1712 --- [wms-outbound-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T12:45:44.678+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T12:45:44.680+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T12:45:44.680+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T12:45:44.680+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T12:45:44.680+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T12:45:44.680+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-18T12:45:44.680+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T12:45:45.056+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T12:45:45.061+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 10
+2026-11-18T12:45:45.064+08:00  INFO 1712 --- [wms-outbound-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-18T12:45:45.068+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794977145067 with initial instances count: 2
+2026-11-18T12:45:45.070+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WMS-OUTBOUND-SERVICE with eureka with status UP
+2026-11-18T12:45:45.071+08:00  INFO 1712 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794977145071, current=UP, previous=STARTING]
+2026-11-18T12:45:45.073+08:00  INFO 1712 --- [wms-outbound-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-OUTBOUND-SERVICE/wms-outbound-service:8084: registering service...
+2026-11-18T12:45:45.083+08:00  INFO 1712 --- [wms-outbound-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path ''
+2026-11-18T12:45:45.085+08:00  INFO 1712 --- [wms-outbound-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8084
+2026-11-18T12:45:45.118+08:00  INFO 1712 --- [wms-outbound-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-OUTBOUND-SERVICE/wms-outbound-service:8084 - registration status: 204
+2026-11-18T12:45:45.160+08:00  INFO 1712 --- [wms-outbound-service] [           main] c.j.w.o.OutboundServiceApplication       : Started OutboundServiceApplication in 8.967 seconds (process running for 9.56)
+2026-11-18T12:46:10.262+08:00  INFO 1712 --- [wms-outbound-service] [nio-8084-exec-8] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T12:46:10.264+08:00  INFO 1712 --- [wms-outbound-service] [nio-8084-exec-8] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T12:46:10.265+08:00  INFO 1712 --- [wms-outbound-service] [nio-8084-exec-8] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-18T12:46:10.527+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-8] c.j.w.o.m.OutboundOrderMapper.insert     : ==>  Preparing: INSERT INTO wms_outbound_order ( outbound_no, order_type, source_system, source_no, warehouse_code, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T12:46:10.546+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-8] c.j.w.o.m.OutboundOrderMapper.insert     : ==> Parameters: OUT1794977170371(String), SALE_OUT(String), OMS(String), OMS-B-001(String), WMS-T(String), CREATED(String), 2026-11-18T12:46:10.317049800(LocalDateTime), 2026-11-18T12:46:10.317049800(LocalDateTime)
+2026-11-18T12:46:10.552+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-8] c.j.w.o.m.OutboundOrderMapper.insert     : <==    Updates: 1
+2026-11-18T12:46:10.559+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-8] c.j.w.o.m.O.insert                       : ==>  Preparing: INSERT INTO wms_outbound_item ( outbound_no, sku_code, batch_no, plan_qty, picked_qty, location_code ) VALUES ( ?, ?, ?, ?, ?, ? )
+2026-11-18T12:46:10.563+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-8] c.j.w.o.m.O.insert                       : ==> Parameters: OUT1794977170371(String), SKU-T-001(String), B20261118(String), 1(BigDecimal), 0(BigDecimal), LOC-T(String)
+2026-11-18T12:46:10.565+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-8] c.j.w.o.m.O.insert                       : <==    Updates: 1
+2026-11-18T12:46:15.200+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:46:15.202+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:44:15.171881700(LocalDateTime)
+2026-11-18T12:46:15.211+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:46:15.213+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:46:15.214+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:46:15.213933200(LocalDateTime), 2026-11-18T12:46:15.213933200(LocalDateTime)
+2026-11-18T12:46:15.216+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:46:15.313+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T12:46:15.315+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977170371(String)
+2026-11-18T12:46:15.320+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:46:15.322+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ? AND sku_code = ? AND location_code = ? AND batch_no = ?)
+2026-11-18T12:46:15.323+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977170371(String), SKU-T-001(String), LOC-T(String), B20261118(String)
+2026-11-18T12:46:15.325+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:46:15.327+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_item SET outbound_no=?, sku_code=?, batch_no=?, plan_qty=?, picked_qty=?, location_code=? WHERE id=?
+2026-11-18T12:46:15.327+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794977170371(String), SKU-T-001(String), B20261118(String), 1.000(BigDecimal), 1.000(BigDecimal), LOC-T(String), 30(Long)
+2026-11-18T12:46:15.329+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T12:46:15.332+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T12:46:15.333+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794977170371(String), SALE_OUT(String), OMS(String), OMS-B-001(String), WMS-T(String), PICKING(String), 2026-11-18T12:46:10(LocalDateTime), 2026-11-18T12:46:15.330669300(LocalDateTime), 29(Long)
+2026-11-18T12:46:15.334+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T12:46:45.222+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:46:45.225+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:44:45.220229400(LocalDateTime)
+2026-11-18T12:46:45.227+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:46:45.228+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:46:45.228+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:46:45.227793400(LocalDateTime), 2026-11-18T12:46:45.227793400(LocalDateTime)
+2026-11-18T12:46:45.229+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:47:07.958+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T12:47:07.958+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977170371(String)
+2026-11-18T12:47:07.960+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:47:07.962+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ?)
+2026-11-18T12:47:07.962+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977170371(String)
+2026-11-18T12:47:07.963+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:47:07.965+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T12:47:07.966+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794977170371(String), SALE_OUT(String), OMS(String), OMS-B-001(String), WMS-T(String), CONFIRMING(String), 2026-11-18T12:46:10(LocalDateTime), 2026-11-18T12:47:07.965269400(LocalDateTime), 29(Long)
+2026-11-18T12:47:07.967+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T12:47:07.968+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_outbound_stock_task WHERE (request_id = ?)
+2026-11-18T12:47:07.968+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectCount                  : ==> Parameters: OUT:OUT1794977170371:SKU-T-001:LOC-T:B20261118(String)
+2026-11-18T12:47:07.969+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectCount                  : <==      Total: 1
+2026-11-18T12:47:07.971+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.insert                       : ==>  Preparing: INSERT INTO wms_outbound_stock_task ( outbound_no, sku_code, location_code, batch_no, change_qty, request_id, status, retry_count, next_retry_time, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T12:47:07.973+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.insert                       : ==> Parameters: OUT1794977170371(String), SKU-T-001(String), LOC-T(String), B20261118(String), -1.000(BigDecimal), OUT:OUT1794977170371:SKU-T-001:LOC-T:B20261118(String), PENDING(String), 0(Integer), 2026-11-18T12:47:17.965269400(LocalDateTime), 2026-11-18T12:47:07.965269400(LocalDateTime), 2026-11-18T12:47:07.965269400(LocalDateTime)
+2026-11-18T12:47:07.976+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.insert                       : <==    Updates: 1
+2026-11-18T12:47:07.984+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE (outbound_no = ?)
+2026-11-18T12:47:07.985+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977170371(String)
+2026-11-18T12:47:07.988+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:47:07.991+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T12:47:07.991+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977170371(String)
+2026-11-18T12:47:07.993+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:47:07.994+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.claimFirstAttempt            : ==>  Preparing: UPDATE wms_outbound_stock_task SET status='PROCESSING', owner=?, lease_until=?, retry_count = retry_count + 1, update_time=? WHERE id=? AND status='PENDING' AND retry_count=0
+2026-11-18T12:47:07.995+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.claimFirstAttempt            : ==> Parameters: wms-outbound-service:8084:http-nio-8084-exec-4(String), 2026-11-18T12:48:07.994432100(LocalDateTime), 2026-11-18T12:47:07.994432100(LocalDateTime), 25(Long)
+2026-11-18T12:47:07.996+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.claimFirstAttempt            : <==    Updates: 1
+2026-11-18T12:47:08.003+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectById                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE id=?
+2026-11-18T12:47:08.005+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectById                   : ==> Parameters: 25(Long)
+2026-11-18T12:47:08.008+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectById                   : <==      Total: 1
+2026-11-18T12:47:08.009+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.renewLease                   : ==>  Preparing: UPDATE wms_outbound_stock_task SET lease_until=?, update_time=? WHERE id=? AND owner=?
+2026-11-18T12:47:08.011+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.renewLease                   : ==> Parameters: 2026-11-18T12:48:08.009456600(LocalDateTime), 2026-11-18T12:47:08.009456600(LocalDateTime), 25(Long), wms-outbound-service:8084:http-nio-8084-exec-4(String)
+2026-11-18T12:47:08.014+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.renewLease                   : <==    Updates: 1
+2026-11-18T12:47:10.155+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.markFailedTerminal           : ==>  Preparing: UPDATE wms_outbound_stock_task SET status='FAILED', owner=NULL, lease_until=NULL, last_error=?, retry_count=?, next_retry_time=?, update_time=? WHERE id=?
+2026-11-18T12:47:10.158+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.markFailedTerminal           : ==> Parameters: Feign 调用异常: RetryableException: Connection refused: getsockopt executing POST http://wms-inventory-service/internal/inventory/change-stock(String), 1(Integer), 2026-11-18T12:48:10.155648600(LocalDateTime), 2026-11-18T12:47:10.155648600(LocalDateTime), 25(Long)
+2026-11-18T12:47:10.165+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.markFailedTerminal           : <==    Updates: 1
+2026-11-18T12:47:10.166+08:00  WARN 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.s.impl.OutboundServiceImpl       : 扣减失败置 FAILED, taskId=25, requestId=OUT:OUT1794977170371:SKU-T-001:LOC-T:B20261118, retry=1, nextRetryAt=2026-11-18T12:48:10.155648600, lastError=Feign 调用异常: RetryableException: Connection refused: getsockopt executing POST http://wms-inventory-service/internal/inventory/change-stock
+2026-11-18T12:47:10.167+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.renewLease                   : ==>  Preparing: UPDATE wms_outbound_stock_task SET lease_until=?, update_time=? WHERE id=? AND owner=?
+2026-11-18T12:47:10.167+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.renewLease                   : ==> Parameters: 2026-11-18T12:48:10.166936500(LocalDateTime), 2026-11-18T12:47:10.166936500(LocalDateTime), 25(Long), wms-outbound-service:8084:http-nio-8084-exec-4(String)
+2026-11-18T12:47:10.168+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.renewLease                   : <==    Updates: 0
+2026-11-18T12:47:10.168+08:00  WARN 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.s.impl.OutboundServiceImpl       : 续租未命中（已被回收或 owner 不符）, taskId=25, requestId=OUT:OUT1794977170371:SKU-T-001:LOC-T:B20261118
+2026-11-18T12:47:10.169+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE (outbound_no = ?)
+2026-11-18T12:47:10.170+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977170371(String)
+2026-11-18T12:47:10.172+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:47:10.174+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T12:47:10.174+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977170371(String)
+2026-11-18T12:47:10.176+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:47:10.177+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T12:47:10.177+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794977170371(String), SALE_OUT(String), OMS(String), OMS-B-001(String), WMS-T(String), CONFIRM_FAILED(String), 2026-11-18T12:46:10(LocalDateTime), 2026-11-18T12:47:10.176470200(LocalDateTime), 29(Long)
+2026-11-18T12:47:10.183+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T12:47:10.183+08:00 ERROR 1712 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.s.impl.OutboundServiceImpl       : 出库确认存在失败任务, 整单置 CONFIRM_FAILED, outboundNo=OUT1794977170371
+2026-11-18T12:47:15.242+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:47:15.245+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:45:15.241601300(LocalDateTime)
+2026-11-18T12:47:15.247+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:47:15.248+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:47:15.249+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:47:15.247128900(LocalDateTime), 2026-11-18T12:47:15.247128900(LocalDateTime)
+2026-11-18T12:47:15.251+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:47:45.262+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:47:45.263+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:45:45.260003(LocalDateTime)
+2026-11-18T12:47:45.265+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:47:45.268+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:47:45.269+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:47:45.266561400(LocalDateTime), 2026-11-18T12:47:45.266561400(LocalDateTime)
+2026-11-18T12:47:45.270+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:48:15.272+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:48:15.274+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:46:15.271036200(LocalDateTime)
+2026-11-18T12:48:15.277+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:48:15.278+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:48:15.278+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:48:15.278607300(LocalDateTime), 2026-11-18T12:48:15.278607300(LocalDateTime)
+2026-11-18T12:48:15.281+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 1
+2026-11-18T12:48:15.281+08:00  INFO 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.s.impl.OutboundServiceImpl       : 出库补偿扫描: 候选任务数=1
+2026-11-18T12:48:15.282+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T12:48:15.283+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977170371(String)
+2026-11-18T12:48:15.284+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:48:15.287+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.claimNew                     : ==>  Preparing: UPDATE wms_outbound_stock_task SET status='PROCESSING', owner=?, lease_until=?, retry_count = retry_count + 1, update_time=? WHERE id=? AND status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)
+2026-11-18T12:48:15.287+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.claimNew                     : ==> Parameters: wms-outbound-service:8084:scheduling-1(String), 2026-11-18T12:49:15.284752500(LocalDateTime), 2026-11-18T12:48:15.284752500(LocalDateTime), 25(Long), 5(Integer), 2026-11-18T12:48:15.284752500(LocalDateTime)
+2026-11-18T12:48:15.289+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.claimNew                     : <==    Updates: 1
+2026-11-18T12:48:15.297+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectById                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE id=?
+2026-11-18T12:48:15.298+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectById                   : ==> Parameters: 25(Long)
+2026-11-18T12:48:15.299+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectById                   : <==      Total: 1
+2026-11-18T12:48:15.299+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.renewLease                   : ==>  Preparing: UPDATE wms_outbound_stock_task SET lease_until=?, update_time=? WHERE id=? AND owner=?
+2026-11-18T12:48:15.301+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.renewLease                   : ==> Parameters: 2026-11-18T12:49:15.299561500(LocalDateTime), 2026-11-18T12:48:15.299561500(LocalDateTime), 25(Long), wms-outbound-service:8084:scheduling-1(String)
+2026-11-18T12:48:15.302+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.renewLease                   : <==    Updates: 1
+2026-11-18T12:48:15.828+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.markSuccessTerminal          : ==>  Preparing: UPDATE wms_outbound_stock_task SET status='SUCCESS', owner=NULL, lease_until=NULL, last_error=NULL, next_retry_time=NULL, update_time=? WHERE id=?
+2026-11-18T12:48:15.830+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.markSuccessTerminal          : ==> Parameters: 2026-11-18T12:48:15.828680600(LocalDateTime), 25(Long)
+2026-11-18T12:48:15.838+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.markSuccessTerminal          : <==    Updates: 1
+2026-11-18T12:48:15.840+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.renewLease                   : ==>  Preparing: UPDATE wms_outbound_stock_task SET lease_until=?, update_time=? WHERE id=? AND owner=?
+2026-11-18T12:48:15.841+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.renewLease                   : ==> Parameters: 2026-11-18T12:49:15.839212400(LocalDateTime), 2026-11-18T12:48:15.839212400(LocalDateTime), 25(Long), wms-outbound-service:8084:scheduling-1(String)
+2026-11-18T12:48:15.844+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.renewLease                   : <==    Updates: 0
+2026-11-18T12:48:15.844+08:00  WARN 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.s.impl.OutboundServiceImpl       : 续租未命中（已被回收或 owner 不符）, taskId=25, requestId=OUT:OUT1794977170371:SKU-T-001:LOC-T:B20261118
+2026-11-18T12:48:15.848+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T12:48:15.849+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977170371(String)
+2026-11-18T12:48:15.851+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:48:15.856+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE (outbound_no = ?)
+2026-11-18T12:48:15.857+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977170371(String)
+2026-11-18T12:48:15.859+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:48:15.862+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ?)
+2026-11-18T12:48:15.863+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977170371(String)
+2026-11-18T12:48:15.865+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:48:15.868+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T12:48:15.870+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794977170371(String), SALE_OUT(String), OMS(String), OMS-B-001(String), WMS-T(String), FINISHED(String), 2026-11-18T12:46:10(LocalDateTime), 2026-11-18T12:48:15.867808300(LocalDateTime), 29(Long)
+2026-11-18T12:48:15.872+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T12:48:15.877+08:00  INFO 1712 --- [wms-outbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-order-status, eventKey=OUT1794977170371
+2026-11-18T12:48:15.909+08:00  WARN 1712 --- [wms-outbound-service] [   scheduling-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: wms-integration-service
+2026-11-18T12:48:15.911+08:00  WARN 1712 --- [wms-outbound-service] [   scheduling-1] RetryableFeignBlockingLoadBalancerClient : Service instance was not resolved, executing the original request
+2026-11-18T12:48:17.181+08:00  WARN 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.s.impl.OutboundServiceImpl       : 通知 OMS 状态异常（不阻断出库单据）, outboundNo=OUT1794977170371, omsOrderNo=OMS-B-001, status=FINISHED, ex=RetryableException: wms-integration-service executing POST http://wms-integration-service/internal/integration/oms/status
+2026-11-18T12:48:17.184+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T12:48:17.185+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977170371(String)
+2026-11-18T12:48:17.186+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:48:17.187+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, last_error=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T12:48:17.189+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794977170371(String), SALE_OUT(String), OMS(String), OMS-B-001(String), WMS-T(String), FINISHED(String), notifyOmsStatus 异常: RetryableException: wms-integration-service executing POST http://wms-integration-service/internal/integration/oms/status(String), 2026-11-18T12:46:10(LocalDateTime), 2026-11-18T12:48:17.187850100(LocalDateTime), 29(Long)
+2026-11-18T12:48:17.192+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T12:48:17.199+08:00  INFO 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.s.impl.OutboundServiceImpl       : 出库单终态确认, outboundNo=OUT1794977170371, status=FINISHED
+2026-11-18T12:48:17.199+08:00  INFO 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.s.impl.OutboundServiceImpl       : 出库补偿扫描本轮结束: 候选=1, 认领=1, 回写=1
+2026-11-18T12:48:17.246+08:00  INFO 1712 --- [wms-outbound-service] [   scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [127.0.0.1:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 1000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2026-11-18T12:48:17.271+08:00  INFO 1712 --- [wms-outbound-service] [   scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2026-11-18T12:48:17.309+08:00  INFO 1712 --- [wms-outbound-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2026-11-18T12:48:17.311+08:00  INFO 1712 --- [wms-outbound-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2026-11-18T12:48:17.311+08:00  INFO 1712 --- [wms-outbound-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794977297308
+2026-11-18T12:48:17.578+08:00  INFO 1712 --- [wms-outbound-service] [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: It0Yw3kSTE6CgjNgvc67hg
+2026-11-18T12:48:17.582+08:00  INFO 1712 --- [wms-outbound-service] [ad | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1012 with epoch 0
+2026-11-18T12:48:17.617+08:00  INFO 1712 --- [wms-outbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=11, topic=wms-order-status, eventKey=OUT1794977170371
+2026-11-18T12:48:17.618+08:00  INFO 1712 --- [wms-outbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-outbound-service:8084
+2026-11-18T12:48:45.290+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:48:45.291+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:46:45.288876(LocalDateTime)
+2026-11-18T12:48:45.292+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:48:47.206+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:48:47.208+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:48:47.206390(LocalDateTime), 2026-11-18T12:48:47.206390(LocalDateTime)
+2026-11-18T12:48:47.210+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:49:15.305+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:49:15.314+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:47:15.303555800(LocalDateTime)
+2026-11-18T12:49:15.316+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:49:17.215+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:49:17.217+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:49:17.215236200(LocalDateTime), 2026-11-18T12:49:17.215236200(LocalDateTime)
+2026-11-18T12:49:17.218+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:49:29.143+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-6] c.j.w.o.m.OutboundOrderMapper.insert     : ==>  Preparing: INSERT INTO wms_outbound_order ( outbound_no, order_type, source_system, source_no, warehouse_code, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T12:49:29.145+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-6] c.j.w.o.m.OutboundOrderMapper.insert     : ==> Parameters: OUT1794977369142(String), SALE_OUT(String), OMS(String), OMS-C-001(String), WMS-T(String), CREATED(String), 2026-11-18T12:49:29.142345600(LocalDateTime), 2026-11-18T12:49:29.142345600(LocalDateTime)
+2026-11-18T12:49:29.146+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-6] c.j.w.o.m.OutboundOrderMapper.insert     : <==    Updates: 1
+2026-11-18T12:49:29.147+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-6] c.j.w.o.m.O.insert                       : ==>  Preparing: INSERT INTO wms_outbound_item ( outbound_no, sku_code, batch_no, plan_qty, picked_qty, location_code ) VALUES ( ?, ?, ?, ?, ?, ? )
+2026-11-18T12:49:29.149+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-6] c.j.w.o.m.O.insert                       : ==> Parameters: OUT1794977369142(String), SKU-T-002(String), B20261118(String), 1(BigDecimal), 0(BigDecimal), LOC-T2(String)
+2026-11-18T12:49:29.150+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-6] c.j.w.o.m.O.insert                       : <==    Updates: 1
+2026-11-18T12:49:29.293+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T12:49:29.294+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977369142(String)
+2026-11-18T12:49:29.295+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:49:29.296+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ? AND sku_code = ? AND location_code = ? AND batch_no = ?)
+2026-11-18T12:49:29.297+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977369142(String), SKU-T-002(String), LOC-T2(String), B20261118(String)
+2026-11-18T12:49:29.298+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:49:29.299+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_item SET outbound_no=?, sku_code=?, batch_no=?, plan_qty=?, picked_qty=?, location_code=? WHERE id=?
+2026-11-18T12:49:29.299+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794977369142(String), SKU-T-002(String), B20261118(String), 1.000(BigDecimal), 1.000(BigDecimal), LOC-T2(String), 31(Long)
+2026-11-18T12:49:29.300+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T12:49:29.300+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T12:49:29.301+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794977369142(String), SALE_OUT(String), OMS(String), OMS-C-001(String), WMS-T(String), PICKING(String), 2026-11-18T12:49:29(LocalDateTime), 2026-11-18T12:49:29.300927200(LocalDateTime), 30(Long)
+2026-11-18T12:49:29.301+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T12:49:39.162+08:00 ERROR 1712 --- [wms-outbound-service] [nio-8084-exec-9] c.j.w.c.e.GlobalExceptionHandler         : 系统异常
+
+org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/octet-stream' is not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:213) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:161) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:135) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-11-18T12:49:45.334+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:49:45.335+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:47:45.332779600(LocalDateTime)
+2026-11-18T12:49:45.339+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:49:47.221+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:49:47.224+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:49:47.221034500(LocalDateTime), 2026-11-18T12:49:47.221034500(LocalDateTime)
+2026-11-18T12:49:47.225+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:50:06.202+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T12:50:06.202+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977369142(String)
+2026-11-18T12:50:06.204+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:50:06.205+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ?)
+2026-11-18T12:50:06.205+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977369142(String)
+2026-11-18T12:50:06.207+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:50:06.210+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T12:50:06.210+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794977369142(String), SALE_OUT(String), OMS(String), OMS-C-001(String), WMS-T(String), CONFIRMING(String), 2026-11-18T12:49:29(LocalDateTime), 2026-11-18T12:50:06.209025300(LocalDateTime), 30(Long)
+2026-11-18T12:50:06.211+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T12:50:06.212+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_outbound_stock_task WHERE (request_id = ?)
+2026-11-18T12:50:06.213+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectCount                  : ==> Parameters: OUT:OUT1794977369142:SKU-T-002:LOC-T2:B20261118(String)
+2026-11-18T12:50:06.213+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectCount                  : <==      Total: 1
+2026-11-18T12:50:06.214+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.insert                       : ==>  Preparing: INSERT INTO wms_outbound_stock_task ( outbound_no, sku_code, location_code, batch_no, change_qty, request_id, status, retry_count, next_retry_time, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T12:50:06.214+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.insert                       : ==> Parameters: OUT1794977369142(String), SKU-T-002(String), LOC-T2(String), B20261118(String), -1.000(BigDecimal), OUT:OUT1794977369142:SKU-T-002:LOC-T2:B20261118(String), PENDING(String), 0(Integer), 2026-11-18T12:50:16.209025300(LocalDateTime), 2026-11-18T12:50:06.209025300(LocalDateTime), 2026-11-18T12:50:06.209025300(LocalDateTime)
+2026-11-18T12:50:06.215+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.insert                       : <==    Updates: 1
+2026-11-18T12:50:06.223+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE (outbound_no = ?)
+2026-11-18T12:50:06.223+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977369142(String)
+2026-11-18T12:50:06.225+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:50:06.226+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T12:50:06.226+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977369142(String)
+2026-11-18T12:50:06.228+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:50:06.229+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.claimFirstAttempt            : ==>  Preparing: UPDATE wms_outbound_stock_task SET status='PROCESSING', owner=?, lease_until=?, retry_count = retry_count + 1, update_time=? WHERE id=? AND status='PENDING' AND retry_count=0
+2026-11-18T12:50:06.229+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.claimFirstAttempt            : ==> Parameters: wms-outbound-service:8084:http-nio-8084-exec-1(String), 2026-11-18T12:51:06.229679500(LocalDateTime), 2026-11-18T12:50:06.229679500(LocalDateTime), 26(Long)
+2026-11-18T12:50:06.230+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.claimFirstAttempt            : <==    Updates: 1
+2026-11-18T12:50:06.238+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectById                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE id=?
+2026-11-18T12:50:06.240+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectById                   : ==> Parameters: 26(Long)
+2026-11-18T12:50:06.243+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectById                   : <==      Total: 1
+2026-11-18T12:50:06.244+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.renewLease                   : ==>  Preparing: UPDATE wms_outbound_stock_task SET lease_until=?, update_time=? WHERE id=? AND owner=?
+2026-11-18T12:50:06.244+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.renewLease                   : ==> Parameters: 2026-11-18T12:51:06.244234200(LocalDateTime), 2026-11-18T12:50:06.244234200(LocalDateTime), 26(Long), wms-outbound-service:8084:http-nio-8084-exec-1(String)
+2026-11-18T12:50:06.245+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.renewLease                   : <==    Updates: 1
+2026-11-18T12:50:06.279+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.markSuccessTerminal          : ==>  Preparing: UPDATE wms_outbound_stock_task SET status='SUCCESS', owner=NULL, lease_until=NULL, last_error=NULL, next_retry_time=NULL, update_time=? WHERE id=?
+2026-11-18T12:50:06.279+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.markSuccessTerminal          : ==> Parameters: 2026-11-18T12:50:06.279843(LocalDateTime), 26(Long)
+2026-11-18T12:50:06.286+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.markSuccessTerminal          : <==    Updates: 1
+2026-11-18T12:50:06.287+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.renewLease                   : ==>  Preparing: UPDATE wms_outbound_stock_task SET lease_until=?, update_time=? WHERE id=? AND owner=?
+2026-11-18T12:50:06.287+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.renewLease                   : ==> Parameters: 2026-11-18T12:51:06.287391200(LocalDateTime), 2026-11-18T12:50:06.287391200(LocalDateTime), 26(Long), wms-outbound-service:8084:http-nio-8084-exec-1(String)
+2026-11-18T12:50:06.289+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.renewLease                   : <==    Updates: 0
+2026-11-18T12:50:06.289+08:00  WARN 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.s.impl.OutboundServiceImpl       : 续租未命中（已被回收或 owner 不符）, taskId=26, requestId=OUT:OUT1794977369142:SKU-T-002:LOC-T2:B20261118
+2026-11-18T12:50:06.290+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T12:50:06.291+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977369142(String)
+2026-11-18T12:50:06.293+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:50:06.295+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE (outbound_no = ?)
+2026-11-18T12:50:06.296+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977369142(String)
+2026-11-18T12:50:06.300+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:50:06.302+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ?)
+2026-11-18T12:50:06.303+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977369142(String)
+2026-11-18T12:50:06.306+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:50:06.308+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T12:50:06.310+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794977369142(String), SALE_OUT(String), OMS(String), OMS-C-001(String), WMS-T(String), FINISHED(String), 2026-11-18T12:49:29(LocalDateTime), 2026-11-18T12:50:06.308153800(LocalDateTime), 30(Long)
+2026-11-18T12:50:06.312+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T12:50:06.314+08:00  INFO 1712 --- [wms-outbound-service] [nio-8084-exec-1] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-order-status, eventKey=OUT1794977369142
+2026-11-18T12:50:06.337+08:00  WARN 1712 --- [wms-outbound-service] [nio-8084-exec-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: wms-integration-service
+2026-11-18T12:50:06.338+08:00  WARN 1712 --- [wms-outbound-service] [nio-8084-exec-1] RetryableFeignBlockingLoadBalancerClient : Service instance was not resolved, executing the original request
+2026-11-18T12:50:07.004+08:00  INFO 1712 --- [wms-outbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=12, topic=wms-order-status, eventKey=OUT1794977369142
+2026-11-18T12:50:07.006+08:00  INFO 1712 --- [wms-outbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-outbound-service:8084
+2026-11-18T12:50:07.598+08:00  WARN 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.s.impl.OutboundServiceImpl       : 通知 OMS 状态异常（不阻断出库单据）, outboundNo=OUT1794977369142, omsOrderNo=OMS-C-001, status=FINISHED, ex=RetryableException: wms-integration-service executing POST http://wms-integration-service/internal/integration/oms/status
+2026-11-18T12:50:07.603+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T12:50:07.603+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977369142(String)
+2026-11-18T12:50:07.605+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:50:07.608+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, last_error=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T12:50:07.609+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794977369142(String), SALE_OUT(String), OMS(String), OMS-C-001(String), WMS-T(String), FINISHED(String), notifyOmsStatus 异常: RetryableException: wms-integration-service executing POST http://wms-integration-service/internal/integration/oms/status(String), 2026-11-18T12:49:29(LocalDateTime), 2026-11-18T12:50:07.605825100(LocalDateTime), 30(Long)
+2026-11-18T12:50:07.611+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T12:50:07.619+08:00  INFO 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.s.impl.OutboundServiceImpl       : 出库单终态确认, outboundNo=OUT1794977369142, status=FINISHED
+2026-11-18T12:50:07.619+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE (outbound_no = ?)
+2026-11-18T12:50:07.620+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977369142(String)
+2026-11-18T12:50:07.621+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:50:07.622+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T12:50:07.622+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977369142(String)
+2026-11-18T12:50:07.624+08:00 DEBUG 1712 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:50:15.343+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:50:15.344+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:48:15.342308800(LocalDateTime)
+2026-11-18T12:50:15.348+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:50:17.230+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:50:17.233+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:50:17.230549300(LocalDateTime), 2026-11-18T12:50:17.230549300(LocalDateTime)
+2026-11-18T12:50:17.234+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:50:44.691+08:00  INFO 1712 --- [wms-outbound-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T12:50:45.361+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:50:45.370+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:48:45.360890300(LocalDateTime)
+2026-11-18T12:50:45.372+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:50:47.238+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:50:47.241+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:50:47.238669300(LocalDateTime), 2026-11-18T12:50:47.238669300(LocalDateTime)
+2026-11-18T12:50:47.244+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:51:15.378+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:51:15.381+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:49:15.377920800(LocalDateTime)
+2026-11-18T12:51:15.382+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:51:17.255+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:51:17.258+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:51:17.255305(LocalDateTime), 2026-11-18T12:51:17.255305(LocalDateTime)
+2026-11-18T12:51:17.261+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:51:45.385+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:51:45.387+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:49:45.384515200(LocalDateTime)
+2026-11-18T12:51:45.389+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:51:47.276+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:51:47.280+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:51:47.276665900(LocalDateTime), 2026-11-18T12:51:47.276665900(LocalDateTime)
+2026-11-18T12:51:47.281+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:52:15.392+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:52:15.395+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:50:15.391304600(LocalDateTime)
+2026-11-18T12:52:15.396+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:52:17.297+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:52:17.299+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:52:17.296414400(LocalDateTime), 2026-11-18T12:52:17.296414400(LocalDateTime)
+2026-11-18T12:52:17.301+08:00 DEBUG 1712 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:52:26.163+08:00  INFO 1712 --- [wms-outbound-service] [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8761/eureka/} exception=I/O error on PUT request for "http://127.0.0.1:8761/eureka/apps/WMS-OUTBOUND-SERVICE/wms-outbound-service:8084": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://127.0.0.1:8761/eureka/apps/WMS-OUTBOUND-SERVICE/wms-outbound-service:8084": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:351)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:184)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 19 more
+
+2026-11-18T12:52:26.165+08:00  WARN 1712 --- [wms-outbound-service] [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://127.0.0.1:8761/eureka/apps/WMS-OUTBOUND-SERVICE/wms-outbound-service:8084": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+2026-11-18T12:52:26.175+08:00  INFO 1712 --- [wms-outbound-service] [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8761/eureka/}, exception=I/O error on PUT request for "http://127.0.0.1:8761/eureka/apps/WMS-OUTBOUND-SERVICE/wms-outbound-service:8084": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://127.0.0.1:8761/eureka/apps/WMS-OUTBOUND-SERVICE/wms-outbound-service:8084": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:351)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:184)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 20 more
+
+2026-11-18T12:52:26.176+08:00  WARN 1712 --- [wms-outbound-service] [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://127.0.0.1:8761/eureka/apps/WMS-OUTBOUND-SERVICE/wms-outbound-service:8084": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+2026-11-18T12:52:26.177+08:00 ERROR 1712 --- [wms-outbound-service] [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-OUTBOUND-SERVICE/wms-outbound-service:8084 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar!/:2.0.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.2.jar!/:2.0.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.2.jar!/:2.0.2]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.2.jar!/:2.0.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.2.jar!/:2.0.2]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837) ~[eureka-client-2.0.2.jar!/:2.0.2]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401) ~[eureka-client-2.0.2.jar!/:2.0.2]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+

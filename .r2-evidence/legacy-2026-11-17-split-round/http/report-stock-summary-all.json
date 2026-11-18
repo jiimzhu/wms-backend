@@ -1,0 +1,1 @@
+﻿{"code":200,"msg":"ok","data":[{"warehouseCode":"DC01","skuCode":"SKU-001","onHandQty":27.000,"freezeQty":0.000,"availableQty":27.000},{"warehouseCode":"DC01","skuCode":"SKU-002","onHandQty":0.000,"freezeQty":0.000,"availableQty":0.000}]}

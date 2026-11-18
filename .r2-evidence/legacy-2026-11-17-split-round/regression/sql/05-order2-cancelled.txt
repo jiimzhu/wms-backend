@@ -1,0 +1,6 @@
+﻿outbound_no	order_type	status
+OUT1794895933020	REPLENISH	CANCELLED
+outbound_no	sku_code	status	retry_count	last_error
+OUT1794895933020	SKU-002	CANCELLED	1	code=400, msg=库存不足, skuCode=SKU-002, 现有=0, 需要=5.0000
+external_order_no	business_type	status
+CTM-REG-002	REPLENISH	RECEIVED

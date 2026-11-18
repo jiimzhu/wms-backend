@@ -1,0 +1,21 @@
+﻿-- SELECT COUNT(*) AS inv_rows FROM jim_wms_inventory.wms_inventory;
+inv_rows
+0
+-- SELECT COUNT(*) AS log_rows FROM jim_wms_inventory.wms_inventory_log;
+log_rows
+0
+-- SELECT COUNT(*) AS wh FROM jim_wms_admin.wms_warehouse;
+wh
+2
+-- SELECT COUNT(*) AS area FROM jim_wms_admin.wms_area;
+area
+4
+-- SELECT COUNT(*) AS loc FROM jim_wms_admin.wms_location;
+loc
+5
+-- SELECT COUNT(*) AS sku FROM jim_wms_admin.wms_sku;
+sku
+2
+-- SELECT COUNT(*) AS flyway_history FROM jim_wms_inventory.flyway_schema_history;
+flyway_history
+1

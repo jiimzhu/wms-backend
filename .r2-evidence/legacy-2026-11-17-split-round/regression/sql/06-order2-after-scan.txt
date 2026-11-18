@@ -1,0 +1,6 @@
+﻿outbound_no	status
+OUT1794895933020	CANCELLED
+outbound_no	sku_code	status	retry_count	next_retry_time	last_error
+OUT1794895933020	SKU-002	CANCELLED	1	2026-11-17 14:13:35	code=400, msg=库存不足, skuCode=SKU-002, 现有=0, 需要=5.0000
+sku002_log_rows
+0

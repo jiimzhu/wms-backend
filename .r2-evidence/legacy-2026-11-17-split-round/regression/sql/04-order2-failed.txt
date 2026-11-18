@@ -1,0 +1,4 @@
+﻿outbound_no	order_type	status
+OUT1794895933020	REPLENISH	CONFIRM_FAILED
+outbound_no	sku_code	status	change_qty	retry_count	next_retry_time	last_error
+OUT1794895933020	SKU-002	FAILED	-5.0000	1	2026-11-17 14:13:35	code=400, msg=库存不足, skuCode=SKU-002, 现有=0, 需要=5.0000

@@ -1,0 +1,1 @@
+﻿WMS-INVENTORY-SERVICE  port=8082  status=UP  host=LAPTOP-KTLR75G6  instanceId=wms-inventory-service:8082

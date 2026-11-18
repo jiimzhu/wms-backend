@@ -1,0 +1,28 @@
+﻿=== A. 非 inventory 源码出现 InventoryMapper / com.jim.wms.inventory / wms_inventory 表名 ===
+D:\wms\wms-backend\wms-common\src\main\java\com\jim\wms\common\dto\InventoryView.java:10: * 库存台账视图，字段对齐旧实体 com.jim.wms.inventory.entity.Inventory
+
+=== B. 旧单体库 jim_wms 直连连接串 ===
+D:\wms\wms-backend\wms-admin-service\src\main\resources\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_admin?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-admin-service\target\classes\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_admin?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-inbound-service\src\main\resources\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_inbound?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-inbound-service\target\classes\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_inbound?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-integration-service\src\main\resources\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_integration?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-integration-service\target\classes\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_integration?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-inventory-service\src\main\resources\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_inventory?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-inventory-service\target\classes\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_inventory?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-outbound-service\src\main\resources\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_outbound?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-outbound-service\target\classes\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_outbound?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-report-service\src\main\resources\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_report?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-report-service\target\classes\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_report?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-return-service\src\main\resources\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_return?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-return-service\target\classes\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_return?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-stocktake-service\src\main\resources\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_stocktake?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-stocktake-service\target\classes\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_stocktake?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-transfer-service\src\main\resources\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_transfer?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+D:\wms\wms-backend\wms-transfer-service\target\classes\application.yml:9: url: jdbc:mysql://127.0.0.1:3306/jim_wms_transfer?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+
+=== C. @FeignClient 归属（应全部位于 wms-common\api） ===
+D:\wms\wms-backend\wms-common\src\main\java\com\jim\wms\common\api\AdminApi.java
+D:\wms\wms-backend\wms-common\src\main\java\com\jim\wms\common\api\IntegrationApi.java
+D:\wms\wms-backend\wms-common\src\main\java\com\jim\wms\common\api\InventoryApi.java
+D:\wms\wms-backend\wms-common\src\main\java\com\jim\wms\common\api\OutboundApi.java

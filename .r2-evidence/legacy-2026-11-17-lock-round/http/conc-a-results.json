@@ -1,0 +1,187 @@
+﻿{
+    "scenario":  "CONC-A",
+    "concurrency":  20,
+    "globalElapsedMs":  2122,
+    "results":  [
+                    {
+                        "requestId":  "CONC-A-01",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2081
+                    },
+                    {
+                        "requestId":  "CONC-A-02",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2094
+                    },
+                    {
+                        "requestId":  "CONC-A-03",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2094
+                    },
+                    {
+                        "requestId":  "CONC-A-04",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2094
+                    },
+                    {
+                        "requestId":  "CONC-A-05",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2093
+                    },
+                    {
+                        "requestId":  "CONC-A-06",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2093
+                    },
+                    {
+                        "requestId":  "CONC-A-07",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2092
+                    },
+                    {
+                        "requestId":  "CONC-A-08",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2090
+                    },
+                    {
+                        "requestId":  "CONC-A-09",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2088
+                    },
+                    {
+                        "requestId":  "CONC-A-10",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2086
+                    },
+                    {
+                        "requestId":  "CONC-A-11",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2085
+                    },
+                    {
+                        "requestId":  "CONC-A-12",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2083
+                    },
+                    {
+                        "requestId":  "CONC-A-13",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2083
+                    },
+                    {
+                        "requestId":  "CONC-A-14",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2081
+                    },
+                    {
+                        "requestId":  "CONC-A-15",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2080
+                    },
+                    {
+                        "requestId":  "CONC-A-16",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2079
+                    },
+                    {
+                        "requestId":  "CONC-A-17",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2079
+                    },
+                    {
+                        "requestId":  "CONC-A-18",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2079
+                    },
+                    {
+                        "requestId":  "CONC-A-19",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2079
+                    },
+                    {
+                        "requestId":  "CONC-A-20",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2078
+                    }
+                ]
+}

@@ -1,0 +1,1 @@
+﻿SELECT warehouse_code,location_code,sku_code,batch_no,qty,freeze_qty FROM jim_wms_inventory.wms_inventory; SELECT id,sku_code,business_type,business_no,change_qty,before_qty,after_qty,biz_key FROM jim_wms_inventory.wms_inventory_log ORDER BY id;

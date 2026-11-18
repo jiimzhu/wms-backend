@@ -1,0 +1,2 @@
+HTTP 200
+{"code":200,"msg":"ok","data":[{"id":4,"warehouseCode":"DC01","locationCode":"DC01-A-01-01","skuCode":"SKU-001","batchNo":"B-REG-01","expireDate":null,"snCode":null,"qty":7.000,"freezeQty":0.000,"stockStatus":1,"version":1,"createTime":"2026-11-17T14:09:30","updateTime":"2026-11-17T14:10:41"}]}

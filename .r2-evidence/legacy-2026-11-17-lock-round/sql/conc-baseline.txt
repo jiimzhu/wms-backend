@@ -1,0 +1,4 @@
+﻿warehouse_code	location_code	sku_code	batch_no	qty	freeze_qty
+DC01	DC01-A-01-01	SKU-LOCK-01	B-LOCK-01	1.000	0.000
+log_total
+1

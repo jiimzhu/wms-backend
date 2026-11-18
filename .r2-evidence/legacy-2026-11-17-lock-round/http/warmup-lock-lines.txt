@@ -1,0 +1,2 @@
+﻿2026-11-17T14:56:51.048+08:00  INFO 32704 --- [wms-inventory-service] [nio-8082-exec-1] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-A-01-01:SKU-LOCK-01:B-LOCK-01 token=wms-inventory-service:8082:42:fade4dda-cb52-43f0-8899-b4072bff04ba
+2026-11-17T14:56:52.550+08:00  INFO 32704 --- [wms-inventory-service] [nio-8082-exec-1] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-A-01-01:SKU-LOCK-01:B-LOCK-01 token=wms-inventory-service:8082:42:fade4dda-cb52-43f0-8899-b4072bff04ba

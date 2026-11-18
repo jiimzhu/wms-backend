@@ -1,0 +1,4 @@
+﻿KEYS 'wms:stock:*' => []
+EXISTS wms:stock:DC01:DC01-A-01-01:SKU-LOCK-01:B-LOCK-01 => 0
+DBSIZE => 0
+INFO memory maxmemory-policy => maxmemory_policy:noeviction

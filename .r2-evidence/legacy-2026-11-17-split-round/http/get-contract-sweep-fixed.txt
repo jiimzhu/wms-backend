@@ -1,0 +1,12 @@
+﻿[OK code=200] http://127.0.0.1:8081/api/master/warehouses
+    {"code":200,"msg":"ok","data":[{"id":1,"warehouseCode":"DC01","warehouseName":"上海主仓","warehouseType":1,"enable":1,"createTime":"2026-11-17T12:56:39","updateTime":"2026-11-17T12:56:39"},{"id":2,"warehouseCode":"DC02","warehouseName":"广州主仓","warehouseType":1,"enable":1,"createTime":"2026-11-17T12:56:39","updateTime":"2026-11-17T12:56:39"}]}
+[OK code=200] http://127.0.0.1:8081/api/master/areas?warehouseCode=DC01
+    {"code":200,"msg":"ok","data":[{"id":4,"warehouseCode":"DC01","areaCode":"NG","areaName":"不合格区","areaType":4},{"id":3,"warehouseCode":"DC01","areaCode":"PICK","areaName":"拣货区","areaType":3},{"id":1,"warehouseCode":"DC01","areaCode":"RCV","areaName":"收货区","areaType":1},{"id":2,"warehouseCode":"DC01","areaCode":"STO","areaName":"存储区","areaType":2}]}
+[OK code=200] http://127.0.0.1:8081/api/master/locations?warehouseCode=DC01
+    {"code":200,"msg":"ok","data":[{"id":2,"warehouseCode":"DC01","areaCode":"STO","locationCode":"DC01-A-01-01","locationType":2,"capacity":500.000,"enable":1},{"id":3,"warehouseCode":"DC01","areaCode":"STO","locationCode":"DC01-A-01-02","locationType":2,"capacity":500.000,"enable":1},{"id":5,"warehouseCode":"DC01","areaCode":"NG","locationCode":"DC01-NG-01","locationType":4,"capacity":500.000,"enable":1},{"id":4,"warehouseCode":"DC01","areaCode":"PICK","locationCode":"DC01-P-01","locationType":3,"capacity":200.000,"enable":1},{"id":1,"warehouseCode":"DC01","areaCode":"RCV","locationCode":"DC01-RCV-01","locationType":1,"capacity":9999.000,"enable":1}]}
+[OK code=200] http://127.0.0.1:8081/api/master/skus
+    {"code":200,"msg":"ok","data":[{"id":1,"skuCode":"SKU-001","skuName":"测试商品A","unit":"EA","batchManage":1,"expireManage":1,"snManage":0,"enable":1},{"id":2,"skuCode":"SKU-002","skuName":"测试商品B","unit":"EA","batchManage":0,"expireManage":0,"snManage":0,"enable":1}]}
+[OK code=200] http://127.0.0.1:8082/api/inventory/on-hand?warehouseCode=DC01&skuCode=SKU-001
+    {"code":200,"msg":"ok","data":27.000}
+[OK code=500] http://127.0.0.1:8082/api/inventory/stock-history?warehouseCode=DC01&skuCode=SKU-001
+    {"code":500,"msg":"系统内部错误: NoResourceFoundException","data":null}

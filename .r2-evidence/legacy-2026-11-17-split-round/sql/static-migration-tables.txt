@@ -1,0 +1,10 @@
+﻿wms-admin-service\src\main\resources\db\migration\V1__init_schema.sql => wms_warehouse, wms_area, wms_location, wms_sku
+wms-admin-service\src\main\resources\db\migration\V2__seed_master_data.sql => (no CREATE TABLE)
+wms-inbound-service\src\main\resources\db\migration\V1__init_schema.sql => wms_inbound_order, wms_inbound_item
+wms-integration-service\src\main\resources\db\migration\V1__init_schema.sql => wms_external_order
+wms-inventory-service\src\main\resources\db\migration\V1__init_schema.sql => wms_inventory, wms_inventory_log
+wms-outbound-service\src\main\resources\db\migration\V1__init_schema.sql => wms_outbound_order, wms_outbound_item, wms_outbound_stock_task
+wms-report-service\src\main\resources\db\migration\V1__init_schema.sql => (no CREATE TABLE)
+wms-return-service\src\main\resources\db\migration\V1__init_schema.sql => wms_return_order
+wms-stocktake-service\src\main\resources\db\migration\V1__init_schema.sql => wms_stocktake_order, wms_stocktake_item
+wms-transfer-service\src\main\resources\db\migration\V1__init_schema.sql => wms_transfer_order

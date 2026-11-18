@@ -1,0 +1,174 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-11-18T13:27:07.349+08:00  INFO 14036 --- [wms-integration-service] [           main] c.j.w.i.IntegrationServiceApplication    : Starting IntegrationServiceApplication v1.0.0 using Java 17.0.21 with PID 14036 (D:\wms\wms-backend\wms-integration-service\target\wms-integration-service-1.0.0.jar started by 华为 in D:\wms\wms-backend)
+2026-11-18T13:27:07.366+08:00 DEBUG 14036 --- [wms-integration-service] [           main] c.j.w.i.IntegrationServiceApplication    : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-11-18T13:27:07.369+08:00  INFO 14036 --- [wms-integration-service] [           main] c.j.w.i.IntegrationServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-11-18T13:27:09.794+08:00  INFO 14036 --- [wms-integration-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T13:27:09.808+08:00  INFO 14036 --- [wms-integration-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-18T13:27:09.843+08:00  INFO 14036 --- [wms-integration-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2026-11-18T13:27:10.456+08:00  INFO 14036 --- [wms-integration-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=08b49747-258c-3bcd-91e7-4a11ccdd04d5
+2026-11-18T13:27:10.870+08:00  WARN 14036 --- [wms-integration-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T13:27:10.874+08:00  WARN 14036 --- [wms-integration-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T13:27:11.851+08:00  INFO 14036 --- [wms-integration-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2026-11-18T13:27:11.901+08:00  INFO 14036 --- [wms-integration-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T13:27:11.902+08:00  INFO 14036 --- [wms-integration-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-11-18T13:27:12.086+08:00  INFO 14036 --- [wms-integration-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T13:27:12.090+08:00  INFO 14036 --- [wms-integration-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4519 ms
+2026-11-18T13:27:13.174+08:00  INFO 14036 --- [wms-integration-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T13:27:13.778+08:00  INFO 14036 --- [wms-integration-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a717d79
+2026-11-18T13:27:13.782+08:00  INFO 14036 --- [wms-integration-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T13:27:14.215+08:00  INFO 14036 --- [wms-integration-service] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2026-11-18T13:27:14.218+08:00  INFO 14036 --- [wms-integration-service] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2026-11-18T13:27:14.219+08:00  INFO 14036 --- [wms-integration-service] [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-11-18T13:27:14.275+08:00  INFO 14036 --- [wms-integration-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3306/jim_wms_integration (MySQL 8.0)
+2026-11-18T13:27:14.407+08:00  INFO 14036 --- [wms-integration-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.080s)
+2026-11-18T13:27:14.439+08:00  INFO 14036 --- [wms-integration-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `jim_wms_integration`: 2
+2026-11-18T13:27:14.446+08:00  INFO 14036 --- [wms-integration-service] [           main] o.f.core.internal.command.DbMigrate      : Schema `jim_wms_integration` is up to date. No migration necessary.
+2026-11-18T13:27:15.423+08:00  INFO 14036 --- [wms-integration-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'wms-outbound-service' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T13:27:15.711+08:00  INFO 14036 --- [wms-integration-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'wms-admin-service' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T13:27:17.249+08:00  INFO 14036 --- [wms-integration-service] [           main] com.jim.wms.common.lock.RedisLockUtil    : Redis 锁通道就绪（127.0.0.1:6379:0），PING=PONG
+2026-11-18T13:27:17.658+08:00  INFO 14036 --- [wms-integration-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T13:27:17.700+08:00  WARN 14036 --- [wms-integration-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T13:27:17.741+08:00  INFO 14036 --- [wms-integration-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-18T13:27:17.814+08:00  INFO 14036 --- [wms-integration-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-18T13:27:17.820+08:00  INFO 14036 --- [wms-integration-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T13:27:17.844+08:00  INFO 14036 --- [wms-integration-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T13:27:17.846+08:00  INFO 14036 --- [wms-integration-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T13:27:17.847+08:00  INFO 14036 --- [wms-integration-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T13:27:17.847+08:00  INFO 14036 --- [wms-integration-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T13:27:17.847+08:00  INFO 14036 --- [wms-integration-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T13:27:17.847+08:00  INFO 14036 --- [wms-integration-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-18T13:27:17.848+08:00  INFO 14036 --- [wms-integration-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T13:27:18.180+08:00  INFO 14036 --- [wms-integration-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T13:27:18.189+08:00  INFO 14036 --- [wms-integration-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 10
+2026-11-18T13:27:18.193+08:00  INFO 14036 --- [wms-integration-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-18T13:27:18.197+08:00  INFO 14036 --- [wms-integration-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794979638197 with initial instances count: 0
+2026-11-18T13:27:18.200+08:00  INFO 14036 --- [wms-integration-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WMS-INTEGRATION-SERVICE with eureka with status UP
+2026-11-18T13:27:18.201+08:00  INFO 14036 --- [wms-integration-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794979638201, current=UP, previous=STARTING]
+2026-11-18T13:27:18.203+08:00  INFO 14036 --- [wms-integration-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-INTEGRATION-SERVICE/wms-integration-service:8089: registering service...
+2026-11-18T13:27:18.221+08:00  INFO 14036 --- [wms-integration-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path ''
+2026-11-18T13:27:18.222+08:00  INFO 14036 --- [wms-integration-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
+2026-11-18T13:27:18.255+08:00  INFO 14036 --- [wms-integration-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-INTEGRATION-SERVICE/wms-integration-service:8089 - registration status: 204
+2026-11-18T13:27:18.288+08:00  INFO 14036 --- [wms-integration-service] [           main] c.j.w.i.IntegrationServiceApplication    : Started IntegrationServiceApplication in 12.214 seconds (process running for 13.154)
+2026-11-18T13:27:48.199+08:00  INFO 14036 --- [wms-integration-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T13:27:48.201+08:00  INFO 14036 --- [wms-integration-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T13:27:48.201+08:00  INFO 14036 --- [wms-integration-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T13:27:48.201+08:00  INFO 14036 --- [wms-integration-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T13:27:48.202+08:00  INFO 14036 --- [wms-integration-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T13:27:48.202+08:00  INFO 14036 --- [wms-integration-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-11-18T13:27:48.202+08:00  INFO 14036 --- [wms-integration-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T13:27:48.224+08:00  INFO 14036 --- [wms-integration-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T13:29:35.769+08:00  INFO 14036 --- [wms-integration-service] [nio-8089-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T13:29:35.770+08:00  INFO 14036 --- [wms-integration-service] [nio-8089-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T13:29:35.771+08:00  INFO 14036 --- [wms-integration-service] [nio-8089-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-18T13:29:35.809+08:00  INFO 14036 --- [wms-integration-service] [nio-8089-exec-3] c.j.w.i.client.OmsCallbackClient         : OMS 回调未配置，跳过, omsOrderNo=R4-D1-OUT1, orderNo=OUT1794979768183, status=FINISHED
+2026-11-18T13:30:04.852+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-1] c.j.w.i.m.E.selectList                   : ==>  Preparing: SELECT id,source_system,external_order_no,outbound_no,business_type,warehouse_code,status,raw_json,create_time,update_time FROM wms_external_order WHERE (source_system = ? AND external_order_no = ?)
+2026-11-18T13:30:04.864+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-1] c.j.w.i.m.E.selectList                   : ==> Parameters: CTM(String), CTM-R4-D2-1(String)
+2026-11-18T13:30:04.880+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-1] c.j.w.i.m.E.selectList                   : <==      Total: 0
+2026-11-18T13:30:04.893+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-1] c.j.w.i.m.ExternalOrderMapper.insert     : ==>  Preparing: INSERT INTO wms_external_order ( source_system, external_order_no, business_type, warehouse_code, status, raw_json, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:30:04.896+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-1] c.j.w.i.m.ExternalOrderMapper.insert     : ==> Parameters: CTM(String), CTM-R4-D2-1(String), REPLENISH(String), DC01(String), RECEIVED(String), {"ctmOrderNo":"CTM-R4-D2-1","orderType":"REPLENISH","sourceWarehouseCode":"DC01","targetWarehouseCode":null,"priority":null,"items":[{"skuCode":"SKU-R4-003","qty":1,"batchNo":"B-R4-C1"}]}(String), 2026-11-18T13:30:04.884999600(LocalDateTime), 2026-11-18T13:30:04.884999600(LocalDateTime)
+2026-11-18T13:30:04.912+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-1] c.j.w.i.m.ExternalOrderMapper.insert     : <==    Updates: 1
+2026-11-18T13:30:04.917+08:00  INFO 14036 --- [wms-integration-service] [nio-8089-exec-1] c.j.w.i.c.CtmReplenishController         : 接收 CTM 单据 CTM-R4-D2-1，透传 orderType=REPLENISH，sourceWarehouseCode=DC01
+2026-11-18T13:30:05.132+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-1] c.j.w.i.m.E.selectList                   : ==>  Preparing: SELECT id,source_system,external_order_no,outbound_no,business_type,warehouse_code,status,raw_json,create_time,update_time FROM wms_external_order WHERE (source_system = ? AND external_order_no = ?)
+2026-11-18T13:30:05.133+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-1] c.j.w.i.m.E.selectList                   : ==> Parameters: CTM(String), CTM-R4-D2-1(String)
+2026-11-18T13:30:05.138+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-1] c.j.w.i.m.E.selectList                   : <==      Total: 1
+2026-11-18T13:30:05.141+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-1] c.j.w.i.m.E.updateById                   : ==>  Preparing: UPDATE wms_external_order SET source_system=?, external_order_no=?, outbound_no=?, business_type=?, warehouse_code=?, status=?, raw_json=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T13:30:05.143+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-1] c.j.w.i.m.E.updateById                   : ==> Parameters: CTM(String), CTM-R4-D2-1(String), OUT1794979805101(String), REPLENISH(String), DC01(String), RECEIVED(String), {"ctmOrderNo":"CTM-R4-D2-1","orderType":"REPLENISH","sourceWarehouseCode":"DC01","targetWarehouseCode":null,"priority":null,"items":[{"skuCode":"SKU-R4-003","qty":1,"batchNo":"B-R4-C1"}]}(String), 2026-11-18T13:30:05(LocalDateTime), 2026-11-18T13:30:05.138621300(LocalDateTime), 10(Long)
+2026-11-18T13:30:05.150+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-1] c.j.w.i.m.E.updateById                   : <==    Updates: 1
+2026-11-18T13:30:05.150+08:00  INFO 14036 --- [wms-integration-service] [nio-8089-exec-1] c.j.w.i.c.CtmReplenishController         : 接收 CTM 单据 CTM-R4-D2-1，生成 WMS 出库单 OUT1794979805101
+2026-11-18T13:31:03.083+08:00 ERROR 14036 --- [wms-integration-service] [nio-8089-exec-4] c.j.w.i.client.CtmCallbackClient         : 回调 CTM 失败, 需由重试任务补偿, orderNo=CTM-R4-D2-1, status=FINISHED
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:9000/ctm/wms/order/status": Connection refused: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:507) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at com.jim.wms.integration.client.CtmCallbackClient.callbackOrderStatus(CtmCallbackClient.java:36) ~[!/:1.0.0]
+	at com.jim.wms.integration.controller.InternalIntegrationController.ctmCallback(InternalIntegrationController.java:47) ~[!/:1.0.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:591) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:580) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:583) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:541) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:646) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:291) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:394) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:416) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1332) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1265) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1151) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1080) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.6.jar!/:6.1.6]
+	... 54 common frames omitted
+
+2026-11-18T13:32:09.209+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-9] c.j.w.i.m.E.selectList                   : ==>  Preparing: SELECT id,source_system,external_order_no,outbound_no,business_type,warehouse_code,status,raw_json,create_time,update_time FROM wms_external_order WHERE (source_system = ? AND external_order_no = ?)
+2026-11-18T13:32:09.211+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-9] c.j.w.i.m.E.selectList                   : ==> Parameters: CTM(String), CTM-R4-D2-1(String)
+2026-11-18T13:32:09.214+08:00 DEBUG 14036 --- [wms-integration-service] [nio-8089-exec-9] c.j.w.i.m.E.selectList                   : <==      Total: 1
+2026-11-18T13:32:09.217+08:00  WARN 14036 --- [wms-integration-service] [nio-8089-exec-9] c.j.w.c.e.GlobalExceptionHandler         : 业务异常: 单据已接收，请勿重复推送: CTM-R4-D2-1
+2026-11-18T13:32:17.866+08:00  INFO 14036 --- [wms-integration-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T13:33:08.829+08:00  INFO 14036 --- [wms-integration-service] [io-8089-exec-10] c.j.w.i.client.OmsCallbackClient         : OMS 回调未配置，跳过, omsOrderNo=R4-D3-OUT3, orderNo=OUT1794979981259, status=PICKED
+2026-11-18T13:33:54.487+08:00  WARN 14036 --- [wms-integration-service] [nio-8089-exec-2] c.j.w.c.e.GlobalExceptionHandler         : 业务异常: wmsOutboundNo 不能为空

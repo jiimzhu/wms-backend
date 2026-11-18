@@ -1,0 +1,37 @@
+﻿t	outbound_no	status	last_error
+order	OUT1794976876513	FINISHED	notifyOmsStatus 异常: RetryableException: wms-integration-service executing POST http://wms-integration-service/internal/integration/oms/status
+order	OUT1794977170371	FINISHED	notifyOmsStatus 异常: RetryableException: wms-integration-service executing POST http://wms-integration-service/internal/integration/oms/status
+order	OUT1794977369142	FINISHED	notifyOmsStatus 异常: RetryableException: wms-integration-service executing POST http://wms-integration-service/internal/integration/oms/status
+t	outbound_no	sku_code	location_code	batch_no	plan_qty	picked_qty
+item	OUT1794976876513	SKU-T-001	LOC-T	B20261118	1.000	1.000
+item	OUT1794976876513	SKU-T-002	LOC-T2	B20261118	2.000	2.000
+item	OUT1794977170371	SKU-T-001	LOC-T	B20261118	1.000	1.000
+item	OUT1794977369142	SKU-T-002	LOC-T2	B20261118	1.000	1.000
+t	id	outbound_no	status	request_id	retry_count
+task	23	OUT1794976876513	SUCCESS	OUT:OUT1794976876513:SKU-T-001:LOC-T:B20261118	1
+task	24	OUT1794976876513	SUCCESS	OUT:OUT1794976876513:SKU-T-002:LOC-T2:B20261118	1
+task	25	OUT1794977170371	SUCCESS	OUT:OUT1794977170371:SKU-T-001:LOC-T:B20261118	2
+task	26	OUT1794977369142	SUCCESS	OUT:OUT1794977369142:SKU-T-002:LOC-T2:B20261118	1
+task	27	REGRESS-D	FAILED	OUT:REGRESS-D:SKU-D1:LOC-D1:B-D1	5
+task	28	REGRESS-D	SUCCESS	OUT:REGRESS-D:SKU-D2:LOC-D2:B-D2	2
+task	29	REGRESS-D	PROCESSING	OUT:REGRESS-D:SKU-D3:LOC-D3:B-D3	1
+t	id	topic	event_key	status
+outbox	9	wms-order-status	OUT1794976876513	SENT
+outbox	10	wms-order-status	OUT1794976876513	SENT
+outbox	11	wms-order-status	OUT1794977170371	SENT
+outbox	12	wms-order-status	OUT1794977369142	SENT
+t	id	sku_code	location_code	batch_no	qty
+inv	10	SKU-T-001	LOC-T	B20261118	1.000
+inv	16	SKU-T-002	LOC-T2	B20261118	2.000
+t	id	business_no	sku_code	biz_key	change_qty
+invlog	80	IN1794971583777	SKU-T-001	IN:IN1794971583777:SKU-T-001:LOC-T:B20261118	3.000
+invlog	130	OUT1794976876513	SKU-T-001	OUT:OUT1794976876513:SKU-T-001:LOC-T:B20261118	-1.000
+invlog	131	OUT1794976876513	SKU-T-002	OUT:OUT1794976876513:SKU-T-002:LOC-T2:B20261118	-2.000
+invlog	132	OUT1794977170371	SKU-T-001	OUT:OUT1794977170371:SKU-T-001:LOC-T:B20261118	-1.000
+invlog	133	OUT1794977369142	SKU-T-002	OUT:OUT1794977369142:SKU-T-002:LOC-T2:B20261118	-1.000
+t	id	topic	event_key	status
+invoutbox	3	wms-stock-event	WMS-T:SKU-T-001	SENT
+invoutbox	53	wms-stock-event	WMS-T:SKU-T-001	SENT
+invoutbox	54	wms-stock-event	WMS-T:SKU-T-002	SENT
+invoutbox	55	wms-stock-event	WMS-T:SKU-T-001	SENT
+invoutbox	56	wms-stock-event	WMS-T:SKU-T-002	SENT

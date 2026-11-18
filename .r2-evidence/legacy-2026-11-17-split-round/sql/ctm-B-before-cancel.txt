@@ -1,0 +1,4 @@
+﻿outbound_no	status	source_no
+OUT1794893342705	CONFIRM_FAILED	CTM-E2E-002
+id	sku_code	batch_no	status	last_error	retry_count	next_retry_time
+4	SKU-002	B-E2E-03	FAILED	code=400, msg=库存不足, skuCode=SKU-002, 现有=0, 需要=5.0000	1	2026-11-17 13:30:03

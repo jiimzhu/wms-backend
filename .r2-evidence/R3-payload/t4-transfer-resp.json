@@ -1,0 +1,1 @@
+{"code":200,"msg":"ok","data":{"id":6,"transferNo":"TR1794978231092","sourceSystem":"CTM","sourceNo":"CTM-R3-T4","outboundNo":null,"fromWarehouseCode":"DC01","toWarehouseCode":"DC02","skuCode":"SKU-001","batchNo":"B-R3-A4","qty":2,"status":"CREATED","createTime":"2026-11-18T13:03:51.0943001","updateTime":"2026-11-18T13:03:51.0943001"}}

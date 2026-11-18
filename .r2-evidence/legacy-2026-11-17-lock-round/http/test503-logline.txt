@@ -1,0 +1,1 @@
+﻿2026-11-17T15:12:51.675+08:00  WARN 484 --- [wms-inventory-service] [io-18082-exec-1] c.j.w.c.e.GlobalExceptionHandler         : 业务异常: Redis 锁服务不可用，已拒绝本次库存变更: Unable to connect to Redis

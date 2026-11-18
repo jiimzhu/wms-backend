@@ -1,0 +1,375 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-11-18T13:10:32.049+08:00  INFO 27820 --- [wms-inventory-service] [           main] c.j.w.i.InventoryServiceApplication      : Starting InventoryServiceApplication v1.0.0 using Java 17.0.21 with PID 27820 (D:\wms\wms-backend\wms-inventory-service\target\wms-inventory-service-1.0.0.jar started by 华为 in D:\wms\wms-backend)
+2026-11-18T13:10:32.060+08:00 DEBUG 27820 --- [wms-inventory-service] [           main] c.j.w.i.InventoryServiceApplication      : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-11-18T13:10:32.062+08:00  INFO 27820 --- [wms-inventory-service] [           main] c.j.w.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-11-18T13:10:33.163+08:00  INFO 27820 --- [wms-inventory-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T13:10:33.166+08:00  INFO 27820 --- [wms-inventory-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-18T13:10:33.190+08:00  INFO 27820 --- [wms-inventory-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2026-11-18T13:10:33.521+08:00  INFO 27820 --- [wms-inventory-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9020b930-8f57-365b-a8e2-efad089cbfbc
+2026-11-18T13:10:33.866+08:00  WARN 27820 --- [wms-inventory-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T13:10:33.872+08:00  WARN 27820 --- [wms-inventory-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T13:10:34.440+08:00  INFO 27820 --- [wms-inventory-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 18082 (http)
+2026-11-18T13:10:34.466+08:00  INFO 27820 --- [wms-inventory-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T13:10:34.468+08:00  INFO 27820 --- [wms-inventory-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-11-18T13:10:34.556+08:00  INFO 27820 --- [wms-inventory-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T13:10:34.560+08:00  INFO 27820 --- [wms-inventory-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2401 ms
+2026-11-18T13:10:35.150+08:00  INFO 27820 --- [wms-inventory-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T13:10:35.679+08:00  INFO 27820 --- [wms-inventory-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23f60b7d
+2026-11-18T13:10:35.686+08:00  INFO 27820 --- [wms-inventory-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T13:10:35.918+08:00  INFO 27820 --- [wms-inventory-service] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2026-11-18T13:10:35.927+08:00  INFO 27820 --- [wms-inventory-service] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2026-11-18T13:10:35.928+08:00  INFO 27820 --- [wms-inventory-service] [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-11-18T13:10:35.959+08:00  INFO 27820 --- [wms-inventory-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3306/jim_wms_inventory (MySQL 8.0)
+2026-11-18T13:10:36.036+08:00  INFO 27820 --- [wms-inventory-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.039s)
+2026-11-18T13:10:36.056+08:00  INFO 27820 --- [wms-inventory-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `jim_wms_inventory`: 2
+2026-11-18T13:10:36.063+08:00  INFO 27820 --- [wms-inventory-service] [           main] o.f.core.internal.command.DbMigrate      : Schema `jim_wms_inventory` is up to date. No migration necessary.
+2026-11-18T13:10:37.659+08:00  INFO 27820 --- [wms-inventory-service] [           main] com.jim.wms.common.lock.RedisLockUtil    : Redis 锁通道就绪（127.0.0.1:6379:0），PING=PONG
+2026-11-18T13:10:38.957+08:00  INFO 27820 --- [wms-inventory-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T13:10:39.066+08:00  WARN 27820 --- [wms-inventory-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T13:10:39.149+08:00  INFO 27820 --- [wms-inventory-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 18082 (http) with context path ''
+2026-11-18T13:10:39.221+08:00  INFO 27820 --- [wms-inventory-service] [           main] c.j.w.i.InventoryServiceApplication      : Started InventoryServiceApplication in 7.85 seconds (process running for 8.499)
+2026-11-18T13:10:59.105+08:00  INFO 27820 --- [wms-inventory-service] [io-18082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T13:10:59.107+08:00  INFO 27820 --- [wms-inventory-service] [io-18082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T13:10:59.109+08:00  INFO 27820 --- [wms-inventory-service] [io-18082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-11-18T13:10:59.293+08:00  INFO 27820 --- [wms-inventory-service] [io-18082-exec-1] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-NG-01:SKU-002: token=wms-inventory-service:18082:38:2f701f78-37bd-44c9-88c6-99020315dcf8
+2026-11-18T13:10:59.380+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-1] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:10:59.390+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-1] c.j.w.i.m.I.selectCount                  : ==> Parameters: R3-KF1-REQ-1(String)
+2026-11-18T13:10:59.401+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-1] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:10:59.410+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-1] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no IS NULL) for update
+2026-11-18T13:10:59.411+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-1] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-NG-01(String), SKU-002(String)
+2026-11-18T13:10:59.413+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-1] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 0
+2026-11-18T13:10:59.417+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-1] c.j.w.i.mapper.InventoryMapper.insert    : ==>  Preparing: INSERT INTO wms_inventory ( warehouse_code, location_code, sku_code, batch_no, qty, freeze_qty, stock_status, version, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:10:59.420+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-1] c.j.w.i.mapper.InventoryMapper.insert    : ==> Parameters: DC01(String), DC01-NG-01(String), SKU-002(String), (String), 1(BigDecimal), 0(BigDecimal), 1(Integer), 0(Integer), 2026-11-18T13:10:59.414382900(LocalDateTime), 2026-11-18T13:10:59.414382900(LocalDateTime)
+2026-11-18T13:10:59.423+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-1] c.j.w.i.mapper.InventoryMapper.insert    : <==    Updates: 1
+2026-11-18T13:10:59.430+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-1] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, batch_no, business_type, business_no, change_qty, before_qty, after_qty, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:10:59.433+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-1] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-NG-01(String), SKU-002(String), (String), PURCHASE_IN(String), R3-KF1-BIZ-1(String), 1(BigDecimal), 0(BigDecimal), 1(BigDecimal), R3-KF1-REQ-1(String), 2026-11-18T13:10:59.428447200(LocalDateTime)
+2026-11-18T13:10:59.435+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-1] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:10:59.605+08:00  INFO 27820 --- [wms-inventory-service] [io-18082-exec-1] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-002
+2026-11-18T13:10:59.678+08:00  INFO 27820 --- [wms-inventory-service] [io-18082-exec-1] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-NG-01:SKU-002: token=wms-inventory-service:18082:38:2f701f78-37bd-44c9-88c6-99020315dcf8
+2026-11-18T13:10:59.824+08:00  INFO 27820 --- [wms-inventory-service] [io-18082-exec-3] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-NG-01:SKU-002: token=wms-inventory-service:18082:40:954572b5-318a-40ab-b2b5-6df248a3fff2
+2026-11-18T13:10:59.826+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-3] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:10:59.828+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-3] c.j.w.i.m.I.selectCount                  : ==> Parameters: R3-KF1-REQ-2(String)
+2026-11-18T13:10:59.829+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-3] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:10:59.831+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-3] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no IS NULL) for update
+2026-11-18T13:10:59.832+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-3] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-NG-01(String), SKU-002(String)
+2026-11-18T13:10:59.834+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-3] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 0
+2026-11-18T13:10:59.836+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-3] c.j.w.i.mapper.InventoryMapper.insert    : ==>  Preparing: INSERT INTO wms_inventory ( warehouse_code, location_code, sku_code, batch_no, qty, freeze_qty, stock_status, version, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:10:59.837+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-3] c.j.w.i.mapper.InventoryMapper.insert    : ==> Parameters: DC01(String), DC01-NG-01(String), SKU-002(String), (String), 1(BigDecimal), 0(BigDecimal), 1(Integer), 0(Integer), 2026-11-18T13:10:59.834766700(LocalDateTime), 2026-11-18T13:10:59.834766700(LocalDateTime)
+2026-11-18T13:10:59.838+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-3] c.j.w.i.mapper.InventoryMapper.insert    : <==    Updates: 1
+2026-11-18T13:10:59.840+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-3] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, batch_no, business_type, business_no, change_qty, before_qty, after_qty, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:10:59.844+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-3] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-NG-01(String), SKU-002(String), (String), PURCHASE_IN(String), R3-KF1-BIZ-2(String), 1(BigDecimal), 0(BigDecimal), 1(BigDecimal), R3-KF1-REQ-2(String), 2026-11-18T13:10:59.839356100(LocalDateTime)
+2026-11-18T13:10:59.848+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-3] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:10:59.851+08:00  INFO 27820 --- [wms-inventory-service] [io-18082-exec-3] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-002
+2026-11-18T13:10:59.853+08:00  INFO 27820 --- [wms-inventory-service] [io-18082-exec-3] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-NG-01:SKU-002: token=wms-inventory-service:18082:40:954572b5-318a-40ab-b2b5-6df248a3fff2
+2026-11-18T13:10:59.920+08:00  INFO 27820 --- [wms-inventory-service] [io-18082-exec-5] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-NG-01:SKU-002: token=wms-inventory-service:18082:42:eb6d3442-a97f-4b0d-ae4a-bdadbcd7b4ee
+2026-11-18T13:10:59.922+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-5] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:10:59.923+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-5] c.j.w.i.m.I.selectCount                  : ==> Parameters: R3-KF1-REQ-3(String)
+2026-11-18T13:10:59.924+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-5] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:10:59.925+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-5] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no IS NULL) for update
+2026-11-18T13:10:59.926+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-5] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-NG-01(String), SKU-002(String)
+2026-11-18T13:10:59.928+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-5] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 0
+2026-11-18T13:10:59.929+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-5] c.j.w.i.mapper.InventoryMapper.insert    : ==>  Preparing: INSERT INTO wms_inventory ( warehouse_code, location_code, sku_code, batch_no, qty, freeze_qty, stock_status, version, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:10:59.930+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-5] c.j.w.i.mapper.InventoryMapper.insert    : ==> Parameters: DC01(String), DC01-NG-01(String), SKU-002(String), (String), 1(BigDecimal), 0(BigDecimal), 1(Integer), 0(Integer), 2026-11-18T13:10:59.929120600(LocalDateTime), 2026-11-18T13:10:59.929120600(LocalDateTime)
+2026-11-18T13:10:59.932+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-5] c.j.w.i.mapper.InventoryMapper.insert    : <==    Updates: 1
+2026-11-18T13:10:59.933+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-5] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, batch_no, business_type, business_no, change_qty, before_qty, after_qty, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:10:59.934+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-5] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-NG-01(String), SKU-002(String), (String), PURCHASE_IN(String), R3-KF1-BIZ-3(String), 1(BigDecimal), 0(BigDecimal), 1(BigDecimal), R3-KF1-REQ-3(String), 2026-11-18T13:10:59.932631100(LocalDateTime)
+2026-11-18T13:10:59.936+08:00 DEBUG 27820 --- [wms-inventory-service] [io-18082-exec-5] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:10:59.939+08:00  INFO 27820 --- [wms-inventory-service] [io-18082-exec-5] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-002
+2026-11-18T13:10:59.940+08:00  INFO 27820 --- [wms-inventory-service] [io-18082-exec-5] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-NG-01:SKU-002: token=wms-inventory-service:18082:42:eb6d3442-a97f-4b0d-ae4a-bdadbcd7b4ee
+2026-11-18T13:11:00.547+08:00  INFO 27820 --- [wms-inventory-service] [   scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [127.0.0.1:9099]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 5000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 1000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 3000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2026-11-18T13:11:00.619+08:00  INFO 27820 --- [wms-inventory-service] [   scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2026-11-18T13:11:00.659+08:00  INFO 27820 --- [wms-inventory-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2026-11-18T13:11:00.661+08:00  INFO 27820 --- [wms-inventory-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2026-11-18T13:11:00.662+08:00  INFO 27820 --- [wms-inventory-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794978660657
+2026-11-18T13:11:00.856+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:00.860+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:00.860+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:00.970+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:00.973+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:00.974+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:01.080+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:01.082+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:01.082+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:01.315+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:01.318+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:01.318+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:01.676+08:00 ERROR 27820 --- [wms-inventory-service] [   scheduling-1] o.s.k.support.LoggingProducerListener    : Exception thrown when sending a message with key='DC01:SKU-002' and payload='{"eventId":"2122920482109001728","eventType":"INBOUND","warehouseCode":"DC01","locationCode":"DC01-N...' to topic wms-stock-event:
+
+org.apache.kafka.common.errors.TimeoutException: Topic wms-stock-event not present in metadata after 1000 ms.
+
+2026-11-18T13:11:01.690+08:00  WARN 27820 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递失败 id=93, retry=1, nextRetryAt=2026-11-18 13:11:06.682484, lastError=Send failed
+2026-11-18T13:11:01.693+08:00  INFO 27820 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-inventory-service:18082
+2026-11-18T13:11:01.788+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:01.790+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:01.791+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:02.515+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:02.517+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:02.517+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:03.732+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:03.735+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:03.735+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:04.631+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:04.634+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:04.634+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:05.556+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:05.560+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:05.561+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:06.515+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:06.517+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:06.517+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:07.733+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:07.735+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:07.735+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:08.793+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:08.796+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:08.796+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:09.774+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:09.776+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:09.777+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:10.683+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:10.686+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:10.686+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:11.667+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:11.671+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:11.671+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:12.615+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:12.617+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:12.617+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:13.629+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:13.631+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:13.631+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:14.655+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:14.658+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:14.660+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:15.702+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:15.704+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:15.704+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:16.780+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:16.782+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:16.783+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:17.926+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:17.929+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:17.929+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:18.768+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:18.769+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:18.771+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:19.967+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:19.969+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:19.969+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:21.138+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:21.141+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:21.141+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:22.216+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:22.217+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:22.217+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:23.078+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:23.079+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:23.079+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:23.907+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:23.908+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:23.909+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:25.082+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:25.084+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:25.085+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:26.256+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:26.260+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:26.263+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:27.363+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:27.365+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:27.365+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:28.455+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:28.457+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:28.457+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:29.471+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:29.473+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:29.473+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:30.641+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:30.643+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:30.644+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:31.610+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:31.611+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:31.613+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:32.652+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:32.654+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:32.654+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:33.742+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:33.744+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:33.745+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:34.646+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:34.648+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:34.648+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:35.754+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:35.755+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:35.756+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:36.921+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:36.922+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:36.923+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:38.080+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:38.082+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:38.083+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:39.003+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:39.005+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:39.006+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:39.955+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:39.956+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:39.956+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:41.105+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:41.106+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:41.108+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:42.253+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:42.254+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:42.256+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:43.346+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:43.347+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:43.348+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:44.504+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:44.504+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:44.504+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:45.455+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:45.457+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:45.457+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:46.418+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:46.420+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:46.421+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:47.277+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:47.280+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:47.280+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:48.132+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:48.133+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:48.134+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:49.329+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:49.330+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:49.331+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:50.279+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:50.280+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:50.280+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:51.476+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:51.479+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:51.479+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:52.318+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:52.319+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:52.319+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:53.271+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:53.273+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:53.273+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:54.127+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:54.129+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:54.129+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:54.955+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:54.957+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:54.958+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:56.096+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:56.099+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:56.099+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:57.209+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:57.209+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:57.210+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:58.375+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:58.376+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:58.376+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:11:59.356+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:11:59.358+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:11:59.360+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:12:00.212+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:12:00.214+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:12:00.214+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected
+2026-11-18T13:12:01.070+08:00  INFO 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T13:12:01.072+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (/127.0.0.1:9099) could not be established. Broker may not be available.
+2026-11-18T13:12:01.072+08:00  WARN 27820 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker 127.0.0.1:9099 (id: -1 rack: null) disconnected

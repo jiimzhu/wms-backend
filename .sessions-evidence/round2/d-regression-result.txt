@@ -1,0 +1,19 @@
+﻿d1_first_claim_rows
+1
+d1_second_claim_rows
+0
+id	status	retry_count	owner	lease_until
+27	PROCESSING	1	reg-owner-1	2026-11-18 12:52:18
+d2_at_max_retry_claim_rows
+0
+id	status	retry_count
+27	FAILED	5
+d3_expired_reclaim_rows
+1
+d3_healthy_not_stolen_rows
+0
+id	status	owner	retry_count	lease_until
+28	PROCESSING	reg-owner-2	2	2026-11-18 12:52:18
+29	PROCESSING	old-owner	1	2026-11-18 12:52:18
+id	status	owner	lease_until	last_error	next_retry_time
+28	SUCCESS	NULL	NULL	NULL	NULL

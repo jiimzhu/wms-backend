@@ -1,0 +1,302 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-11-18T12:48:56.954+08:00  INFO 1972 --- [wms-outbound-service] [           main] c.j.w.o.OutboundServiceApplication       : Starting OutboundServiceApplication v1.0.0 using Java 17.0.21 with PID 1972 (D:\wms\wms-backend\wms-outbound-service\target\wms-outbound-service-1.0.0.jar started by 华为 in D:\wms\wms-backend)
+2026-11-18T12:48:56.967+08:00 DEBUG 1972 --- [wms-outbound-service] [           main] c.j.w.o.OutboundServiceApplication       : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-11-18T12:48:56.969+08:00  INFO 1972 --- [wms-outbound-service] [           main] c.j.w.o.OutboundServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-11-18T12:48:58.153+08:00  INFO 1972 --- [wms-outbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T12:48:58.158+08:00  INFO 1972 --- [wms-outbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-18T12:48:58.183+08:00  INFO 1972 --- [wms-outbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2026-11-18T12:48:58.537+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22b00c06-f450-389c-b3fe-25b61977d6ec
+2026-11-18T12:48:58.902+08:00  WARN 1972 --- [wms-outbound-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T12:48:58.910+08:00  WARN 1972 --- [wms-outbound-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T12:48:59.464+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 18084 (http)
+2026-11-18T12:48:59.499+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T12:48:59.502+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-11-18T12:48:59.602+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T12:48:59.603+08:00  INFO 1972 --- [wms-outbound-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2533 ms
+2026-11-18T12:49:00.147+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T12:49:00.692+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fb082ff
+2026-11-18T12:49:00.699+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T12:49:01.120+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2026-11-18T12:49:01.122+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2026-11-18T12:49:01.122+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-11-18T12:49:01.160+08:00  INFO 1972 --- [wms-outbound-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3306/jim_wms_outbound (MySQL 8.0)
+2026-11-18T12:49:01.270+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.063s)
+2026-11-18T12:49:01.296+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `jim_wms_outbound`: 3
+2026-11-18T12:49:01.306+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.f.core.internal.command.DbMigrate      : Schema `jim_wms_outbound` is up to date. No migration necessary.
+2026-11-18T12:49:02.157+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'wms-inventory-service' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T12:49:02.312+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'wms-integration-service' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T12:49:02.359+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'wms-transfer-service' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T12:49:04.021+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.jim.wms.common.lock.RedisLockUtil    : Redis 锁通道就绪（127.0.0.1:6379:0），PING=PONG
+2026-11-18T12:49:04.584+08:00  INFO 1972 --- [wms-outbound-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T12:49:04.617+08:00  WARN 1972 --- [wms-outbound-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T12:49:04.651+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-18T12:49:04.742+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-18T12:49:04.750+08:00  INFO 1972 --- [wms-outbound-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T12:49:04.778+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T12:49:04.780+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T12:49:04.780+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T12:49:04.780+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T12:49:04.780+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T12:49:04.780+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-18T12:49:04.780+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T12:49:05.150+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T12:49:05.155+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 10
+2026-11-18T12:49:05.158+08:00  INFO 1972 --- [wms-outbound-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-18T12:49:05.163+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794977345162 with initial instances count: 2
+2026-11-18T12:49:05.165+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WMS-OUTBOUND-SERVICE with eureka with status UP
+2026-11-18T12:49:05.166+08:00  INFO 1972 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794977345166, current=UP, previous=STARTING]
+2026-11-18T12:49:05.169+08:00  INFO 1972 --- [wms-outbound-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-OUTBOUND-SERVICE/wms-outbound-service:18084: registering service...
+2026-11-18T12:49:05.183+08:00  INFO 1972 --- [wms-outbound-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 18084 (http) with context path ''
+2026-11-18T12:49:05.184+08:00  INFO 1972 --- [wms-outbound-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 18084
+2026-11-18T12:49:05.207+08:00  INFO 1972 --- [wms-outbound-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-OUTBOUND-SERVICE/wms-outbound-service:18084 - registration status: 204
+2026-11-18T12:49:05.251+08:00  INFO 1972 --- [wms-outbound-service] [           main] c.j.w.o.OutboundServiceApplication       : Started OutboundServiceApplication in 8.982 seconds (process running for 9.601)
+2026-11-18T12:49:35.275+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:49:35.286+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:49:35.253249500(LocalDateTime), 2026-11-18T12:49:35.253249500(LocalDateTime)
+2026-11-18T12:49:35.296+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:49:35.379+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:49:35.382+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:47:35.298745200(LocalDateTime)
+2026-11-18T12:49:35.383+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:49:39.272+08:00  INFO 1972 --- [wms-outbound-service] [io-18084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T12:49:39.273+08:00  INFO 1972 --- [wms-outbound-service] [io-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T12:49:39.276+08:00  INFO 1972 --- [wms-outbound-service] [io-18084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-18T12:49:39.312+08:00 ERROR 1972 --- [wms-outbound-service] [io-18084-exec-1] c.j.w.c.e.GlobalExceptionHandler         : 系统异常
+
+org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/octet-stream' is not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:213) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:161) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:135) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-11-18T12:50:05.305+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:50:05.307+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:50:05.305981900(LocalDateTime), 2026-11-18T12:50:05.305981900(LocalDateTime)
+2026-11-18T12:50:05.308+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:50:05.385+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:50:05.388+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:48:05.384621700(LocalDateTime)
+2026-11-18T12:50:05.390+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:50:06.318+08:00 DEBUG 1972 --- [wms-outbound-service] [io-18084-exec-3] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T12:50:06.320+08:00 DEBUG 1972 --- [wms-outbound-service] [io-18084-exec-3] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794977369142(String)
+2026-11-18T12:50:06.326+08:00 DEBUG 1972 --- [wms-outbound-service] [io-18084-exec-3] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T12:50:06.329+08:00  WARN 1972 --- [wms-outbound-service] [io-18084-exec-3] c.j.w.c.e.GlobalExceptionHandler         : 业务异常: 当前状态不允许出库确认: CONFIRMING
+2026-11-18T12:50:35.318+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:50:35.318+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:50:35.317645100(LocalDateTime), 2026-11-18T12:50:35.317645100(LocalDateTime)
+2026-11-18T12:50:35.320+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:50:35.397+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:50:35.399+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:48:35.396085600(LocalDateTime)
+2026-11-18T12:50:35.401+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:51:05.326+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:51:05.329+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:51:05.326609800(LocalDateTime), 2026-11-18T12:51:05.326609800(LocalDateTime)
+2026-11-18T12:51:05.331+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:51:05.409+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:51:05.411+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:49:05.406249400(LocalDateTime)
+2026-11-18T12:51:05.413+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:51:35.344+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:51:35.347+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:51:35.344295200(LocalDateTime), 2026-11-18T12:51:35.344295200(LocalDateTime)
+2026-11-18T12:51:35.349+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:51:35.424+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:51:35.425+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:49:35.421714(LocalDateTime)
+2026-11-18T12:51:35.429+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:52:05.363+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T12:52:05.367+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T12:52:05.363605300(LocalDateTime), 2026-11-18T12:52:05.363605300(LocalDateTime)
+2026-11-18T12:52:05.369+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T12:52:05.443+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T12:52:05.445+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T12:50:05.442233900(LocalDateTime)
+2026-11-18T12:52:05.447+08:00 DEBUG 1972 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T12:52:25.696+08:00  INFO 1972 --- [wms-outbound-service] [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8761/eureka/} exception=I/O error on PUT request for "http://127.0.0.1:8761/eureka/apps/WMS-OUTBOUND-SERVICE/wms-outbound-service:18084": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://127.0.0.1:8761/eureka/apps/WMS-OUTBOUND-SERVICE/wms-outbound-service:18084": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:351)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:184)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 19 more
+
+2026-11-18T12:52:25.698+08:00  WARN 1972 --- [wms-outbound-service] [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://127.0.0.1:8761/eureka/apps/WMS-OUTBOUND-SERVICE/wms-outbound-service:18084": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+2026-11-18T12:52:25.710+08:00  INFO 1972 --- [wms-outbound-service] [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://127.0.0.1:8761/eureka/}, exception=I/O error on PUT request for "http://127.0.0.1:8761/eureka/apps/WMS-OUTBOUND-SERVICE/wms-outbound-service:18084": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://127.0.0.1:8761/eureka/apps/WMS-OUTBOUND-SERVICE/wms-outbound-service:18084": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:351)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:184)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 20 more
+
+2026-11-18T12:52:25.711+08:00  WARN 1972 --- [wms-outbound-service] [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://127.0.0.1:8761/eureka/apps/WMS-OUTBOUND-SERVICE/wms-outbound-service:18084": Connect to http://127.0.0.1:8761 [/127.0.0.1] failed: Connection refused: getsockopt
+2026-11-18T12:52:25.711+08:00 ERROR 1972 --- [wms-outbound-service] [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-OUTBOUND-SERVICE/wms-outbound-service:18084 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar!/:2.0.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.2.jar!/:2.0.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.2.jar!/:2.0.2]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.2.jar!/:2.0.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.2.jar!/:2.0.2]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837) ~[eureka-client-2.0.2.jar!/:2.0.2]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401) ~[eureka-client-2.0.2.jar!/:2.0.2]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+

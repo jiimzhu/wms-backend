@@ -1,0 +1,1 @@
+{"code":400,"msg":"该 SKU 存在多个可拣货明细，请指定 locationCode 与 batchNo 后重试；候选: 库位=DC01-R4-03, 批次=B-R4-D1; 库位=DC01-R4-04, 批次=B-R4-D2","data":null}

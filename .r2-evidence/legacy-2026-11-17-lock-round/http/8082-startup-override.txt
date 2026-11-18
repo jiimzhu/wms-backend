@@ -1,0 +1,1 @@
+﻿--wms.lock.wait-timeout 保持 yml 默认 2000ms；仅 CLI 覆盖 spring.kafka.producer.properties.max.block.ms=50

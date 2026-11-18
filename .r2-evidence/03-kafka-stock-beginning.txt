@@ -1,0 +1,18 @@
+﻿Option --property is deprecated and will be removed in a future version. Use --formatter-property instead.
+java.exe : The consumer rebalance protocol (KIP-848) is production-ready! Set group.protocol=consumer to try it out. Se
+e https://kafka.apache.org/documentation/#consumer_rebalance_protocol
+所在位置 行:1 字符: 300
++ ... sages','30','--timeout-ms','8000'); & java -cp $cp @args 2>&1 | Tee-O ...
++                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (The consumer re...alance_protocol:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+WMS-T:SKU-T-001|{"eventId":"2122890347758620672","eventType":"INBOUND","warehouseCode":"WMS-T","locationCode":"LOC-T","skuCode":"SKU-T-001","batchNo":null,"businessNo":"TEST-BIZ-001","changeQty":10,"beforeQty":0,"afterQty":10,"eventTime":"2026-11-18T11:11:14.958813"}
+WMS-T:SKU-T-001|{"eventId":"2122890374543446016","eventType":"INBOUND","warehouseCode":"WMS-T","locationCode":"LOC-T","skuCode":"SKU-T-001","batchNo":null,"businessNo":"TEST-BIZ-002","changeQty":5,"beforeQty":10.000,"afterQty":15.000,"eventTime":"2026-11-18T11:11:21.3441716"}
+WMS-T:SKU-T-001|{"eventId":"2122891580942716928","eventType":"INBOUND","warehouseCode":"WMS-T","locationCode":"LOC-T","skuCode":"SKU-T-001","batchNo":"B20261118","businessNo":"IN1794971583777","changeQty":3,"beforeQty":0,"afterQty":3,"eventTime":"2026-11-18T11:16:08.9727718"}
+DC01:SKU-001|{"eventId":"2122897149103575040","eventType":"INBOUND","warehouseCode":"DC01","locationCode":"DC01-P-01","skuCode":"SKU-001","batchNo":"B-R2-001","businessNo":"INR2-001","changeQty":2,"beforeQty":0,"afterQty":2,"eventTime":"2026-11-18T11:38:16.5256088"}
+DC01:SKU-001|{"eventId":"2122897150294757376","eventType":"INBOUND","warehouseCode":"DC01","locationCode":"DC01-P-01","skuCode":"SKU-001","batchNo":"B-R2-001","businessNo":"INR2-002","changeQty":3,"beforeQty":2.000,"afterQty":5.000,"eventTime":"2026-11-18T11:38:16.809391"}
+2026-11-18T03:40:50.474366900Z main ERROR Error processing message, terminating consumer process: 
+org.apache.kafka.common.errors.TimeoutException
+
+Processed a total of 5 messages

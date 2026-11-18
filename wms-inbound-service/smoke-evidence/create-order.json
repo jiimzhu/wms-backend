@@ -1,0 +1,13 @@
+{
+  "inboundType": "PURCHASE",
+  "sourceSystem": "CTM",
+  "sourceNo": "SMK-IN-001",
+  "warehouseCode": "WMS-T",
+  "items": [
+    {
+      "skuCode": "SKU-T-001",
+      "batchNo": "B20261118",
+      "expectQty": "3"
+    }
+  ]
+}

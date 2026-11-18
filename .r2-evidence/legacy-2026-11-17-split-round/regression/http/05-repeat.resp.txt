@@ -1,0 +1,2 @@
+HTTP 200
+{"code":409,"msg":"单据已接收，请勿重复推送: CTM-REG-001","data":null}

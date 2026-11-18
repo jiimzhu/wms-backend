@@ -1,0 +1,13 @@
+﻿=== 裸旧单体库 jim_wms 直连串（期望无命中） ===
+(无命中)
+
+=== 各服务数据源 URL ===
+src -> url: jdbc:mysql://127.0.0.1:3306/jim_wms_admin?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+src -> url: jdbc:mysql://127.0.0.1:3306/jim_wms_inbound?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+src -> url: jdbc:mysql://127.0.0.1:3306/jim_wms_integration?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+src -> url: jdbc:mysql://127.0.0.1:3306/jim_wms_inventory?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+src -> url: jdbc:mysql://127.0.0.1:3306/jim_wms_outbound?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+src -> url: jdbc:mysql://127.0.0.1:3306/jim_wms_report?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+src -> url: jdbc:mysql://127.0.0.1:3306/jim_wms_return?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+src -> url: jdbc:mysql://127.0.0.1:3306/jim_wms_stocktake?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+src -> url: jdbc:mysql://127.0.0.1:3306/jim_wms_transfer?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false

@@ -1,0 +1,10 @@
+﻿wms-admin-service            Start-Class=com.jim.wms.admin.AdminServiceApplication
+wms-inventory-service        Start-Class=com.jim.wms.inventory.InventoryServiceApplication
+wms-inbound-service          Start-Class=com.jim.wms.inbound.InboundServiceApplication
+wms-outbound-service         Start-Class=com.jim.wms.outbound.OutboundServiceApplication
+wms-transfer-service         Start-Class=com.jim.wms.transfer.TransferServiceApplication
+wms-stocktake-service        Start-Class=com.jim.wms.stocktake.StocktakeServiceApplication
+wms-return-service           Start-Class=com.jim.wms.returns.ReturnServiceApplication
+wms-report-service           Start-Class=com.jim.wms.report.ReportServiceApplication
+wms-integration-service      Start-Class=com.jim.wms.integration.IntegrationServiceApplication
+wms-eureka-server            Start-Class=com.jim.wms.eureka.EurekaServerApplication

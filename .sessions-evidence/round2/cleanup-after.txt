@@ -1,0 +1,15 @@
+﻿t	c
+order	0
+item	0
+task	0
+outbound_outbox	0
+version	success
+1	1
+2	1
+3	1
+t	id	sku_code	location_code	batch_no	qty
+inv	10	SKU-T-001	LOC-T	B20261118	3.000
+t	id	business_no	sku_code
+invlog	80	IN1794971583777	SKU-T-001
+t	id	topic	event_key	status
+invoutbox	3	wms-stock-event	WMS-T:SKU-T-001	SENT

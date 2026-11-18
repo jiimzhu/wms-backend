@@ -1,0 +1,16 @@
+﻿+----------------------------------+----+
+| t                                | c  |
++----------------------------------+----+
+| inventory.wms_inventory          |  8 |
+| inventory.wms_inventory_log      | 13 |
+| inventory.wms_event_outbox       | 13 |
+| outbound.wms_outbound_order      |  4 |
+| outbound.wms_outbound_item       |  5 |
+| outbound.wms_outbound_stock_task |  3 |
+| outbound.wms_event_outbox        |  3 |
+| integration.wms_external_order   |  1 |
+| transfer.wms_transfer_order      |  0 |
+| inbound.wms_inbound_order        |  0 |
+| inbound.wms_inbound_item         |  0 |
+| inbound.wms_event_outbox         |  0 |
++----------------------------------+----+

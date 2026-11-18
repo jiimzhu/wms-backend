@@ -1,0 +1,10 @@
+{
+  "orderType": "REPLENISH",
+  "sourceSystem": "CTM",
+  "sourceNo": "CTM-E1",
+  "warehouseCode": "WH1",
+  "items": [
+    {"skuCode": "SKU-E", "batchNo": null, "planQty": 10, "locationCode": "LOC-9"},
+    {"skuCode": "SKU-E", "batchNo": "B2", "planQty": 5, "locationCode": "LOC-7"}
+  ]
+}

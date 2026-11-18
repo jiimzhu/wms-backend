@@ -1,0 +1,289 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-11-18T11:12:23.200+08:00  INFO 35108 --- [wms-inbound-service] [           main] c.j.w.inbound.InboundServiceApplication  : Starting InboundServiceApplication v1.0.0 using Java 17.0.21 with PID 35108 (D:\wms\wms-backend\wms-inbound-service\target\wms-inbound-service-1.0.0.jar started by 华为 in D:\wms\wms-backend)
+2026-11-18T11:12:23.214+08:00 DEBUG 35108 --- [wms-inbound-service] [           main] c.j.w.inbound.InboundServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-11-18T11:12:23.216+08:00  INFO 35108 --- [wms-inbound-service] [           main] c.j.w.inbound.InboundServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-11-18T11:12:24.396+08:00  INFO 35108 --- [wms-inbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T11:12:24.400+08:00  INFO 35108 --- [wms-inbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-18T11:12:24.425+08:00  INFO 35108 --- [wms-inbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2026-11-18T11:12:24.788+08:00  INFO 35108 --- [wms-inbound-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d02ab5a4-b723-3e34-8c64-077c72760f87
+2026-11-18T11:12:25.203+08:00  WARN 35108 --- [wms-inbound-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T11:12:25.209+08:00  WARN 35108 --- [wms-inbound-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T11:12:25.799+08:00  INFO 35108 --- [wms-inbound-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 18083 (http)
+2026-11-18T11:12:25.834+08:00  INFO 35108 --- [wms-inbound-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T11:12:25.837+08:00  INFO 35108 --- [wms-inbound-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-11-18T11:12:25.972+08:00  INFO 35108 --- [wms-inbound-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T11:12:25.975+08:00  INFO 35108 --- [wms-inbound-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2644 ms
+2026-11-18T11:12:26.591+08:00  INFO 35108 --- [wms-inbound-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T11:12:27.169+08:00  INFO 35108 --- [wms-inbound-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b2a4332
+2026-11-18T11:12:27.176+08:00  INFO 35108 --- [wms-inbound-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T11:12:27.422+08:00  INFO 35108 --- [wms-inbound-service] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2026-11-18T11:12:27.423+08:00  INFO 35108 --- [wms-inbound-service] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2026-11-18T11:12:27.424+08:00  INFO 35108 --- [wms-inbound-service] [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-11-18T11:12:27.473+08:00  INFO 35108 --- [wms-inbound-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3306/jim_wms_inbound (MySQL 8.0)
+2026-11-18T11:12:27.558+08:00  INFO 35108 --- [wms-inbound-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.048s)
+2026-11-18T11:12:27.585+08:00  INFO 35108 --- [wms-inbound-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `jim_wms_inbound`: 1
+2026-11-18T11:12:27.608+08:00  INFO 35108 --- [wms-inbound-service] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `jim_wms_inbound` to version "2 - event outbox"
+2026-11-18T11:12:27.714+08:00  INFO 35108 --- [wms-inbound-service] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema `jim_wms_inbound`, now at version v2 (execution time 00:00.073s)
+2026-11-18T11:12:30.093+08:00  INFO 35108 --- [wms-inbound-service] [           main] com.jim.wms.common.lock.RedisLockUtil    : Redis 锁通道就绪（127.0.0.1:6379:0），PING=PONG
+2026-11-18T11:12:30.815+08:00  INFO 35108 --- [wms-inbound-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T11:12:30.889+08:00  WARN 35108 --- [wms-inbound-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T11:12:30.963+08:00  INFO 35108 --- [wms-inbound-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 18083 (http) with context path ''
+2026-11-18T11:12:31.044+08:00  INFO 35108 --- [wms-inbound-service] [           main] c.j.w.inbound.InboundServiceApplication  : Started InboundServiceApplication in 8.526 seconds (process running for 9.145)
+2026-11-18T11:13:03.626+08:00  INFO 35108 --- [wms-inbound-service] [io-18083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T11:13:03.628+08:00  INFO 35108 --- [wms-inbound-service] [io-18083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T11:13:03.630+08:00  INFO 35108 --- [wms-inbound-service] [io-18083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-18T11:13:03.955+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-1] c.j.w.i.m.InboundOrderMapper.insert      : ==>  Preparing: INSERT INTO wms_inbound_order ( inbound_no, inbound_type, source_system, source_no, warehouse_code, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T11:13:03.971+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-1] c.j.w.i.m.InboundOrderMapper.insert      : ==> Parameters: IN1794971583777(String), PURCHASE(String), CTM(String), SMK-IN-001(String), WMS-T(String), CREATED(String), 2026-11-18T11:13:03.779690200(LocalDateTime), 2026-11-18T11:13:03.779690200(LocalDateTime)
+2026-11-18T11:13:03.977+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-1] c.j.w.i.m.InboundOrderMapper.insert      : <==    Updates: 1
+2026-11-18T11:13:03.984+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-1] c.j.w.i.m.InboundOrderItemMapper.insert  : ==>  Preparing: INSERT INTO wms_inbound_item ( inbound_no, sku_code, batch_no, expect_qty, received_qty, putaway_qty, qc_status ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T11:13:03.987+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-1] c.j.w.i.m.InboundOrderItemMapper.insert  : ==> Parameters: IN1794971583777(String), SKU-T-001(String), B20261118(String), 3(BigDecimal), 0(BigDecimal), 0(BigDecimal), PENDING(String)
+2026-11-18T11:13:03.990+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-1] c.j.w.i.m.InboundOrderItemMapper.insert  : <==    Updates: 1
+2026-11-18T11:13:19.857+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-3] c.j.w.i.m.InboundOrderMapper.selectList  : ==>  Preparing: SELECT id,inbound_no,inbound_type,source_system,source_no,warehouse_code,status,create_time,update_time FROM wms_inbound_order WHERE (inbound_no = ?)
+2026-11-18T11:13:19.859+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-3] c.j.w.i.m.InboundOrderMapper.selectList  : ==> Parameters: IN1794971583777(String)
+2026-11-18T11:13:19.882+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-3] c.j.w.i.m.InboundOrderMapper.selectList  : <==      Total: 1
+2026-11-18T11:13:19.886+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-3] c.j.w.i.m.I.selectList                   : ==>  Preparing: SELECT id,inbound_no,sku_code,batch_no,expect_qty,received_qty,putaway_qty,location_code,qc_status FROM wms_inbound_item WHERE (inbound_no = ? AND sku_code = ?)
+2026-11-18T11:13:19.888+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-3] c.j.w.i.m.I.selectList                   : ==> Parameters: IN1794971583777(String), SKU-T-001(String)
+2026-11-18T11:13:19.890+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-3] c.j.w.i.m.I.selectList                   : <==      Total: 1
+2026-11-18T11:13:19.894+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-3] c.j.w.i.m.I.updateById                   : ==>  Preparing: UPDATE wms_inbound_item SET inbound_no=?, sku_code=?, batch_no=?, expect_qty=?, received_qty=?, putaway_qty=?, qc_status=? WHERE id=?
+2026-11-18T11:13:19.895+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-3] c.j.w.i.m.I.updateById                   : ==> Parameters: IN1794971583777(String), SKU-T-001(String), B20261118(String), 3.000(BigDecimal), 3.000(BigDecimal), 0.000(BigDecimal), PENDING(String), 5(Long)
+2026-11-18T11:13:19.897+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-3] c.j.w.i.m.I.updateById                   : <==    Updates: 1
+2026-11-18T11:13:19.901+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-3] c.j.w.i.m.InboundOrderMapper.updateById  : ==>  Preparing: UPDATE wms_inbound_order SET inbound_no=?, inbound_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T11:13:19.904+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-3] c.j.w.i.m.InboundOrderMapper.updateById  : ==> Parameters: IN1794971583777(String), PURCHASE(String), CTM(String), SMK-IN-001(String), WMS-T(String), RECEIVED(String), 2026-11-18T11:13:04(LocalDateTime), 2026-11-18T11:13:19.898804800(LocalDateTime), 6(Long)
+2026-11-18T11:13:19.905+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-3] c.j.w.i.m.InboundOrderMapper.updateById  : <==    Updates: 1
+2026-11-18T11:13:19.985+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-5] c.j.w.i.m.I.selectList                   : ==>  Preparing: SELECT id,inbound_no,sku_code,batch_no,expect_qty,received_qty,putaway_qty,location_code,qc_status FROM wms_inbound_item WHERE (inbound_no = ? AND sku_code = ?)
+2026-11-18T11:13:19.987+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-5] c.j.w.i.m.I.selectList                   : ==> Parameters: IN1794971583777(String), SKU-T-001(String)
+2026-11-18T11:13:19.990+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-5] c.j.w.i.m.I.selectList                   : <==      Total: 1
+2026-11-18T11:13:19.991+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-5] c.j.w.i.m.I.updateById                   : ==>  Preparing: UPDATE wms_inbound_item SET inbound_no=?, sku_code=?, batch_no=?, expect_qty=?, received_qty=?, putaway_qty=?, qc_status=? WHERE id=?
+2026-11-18T11:13:19.991+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-5] c.j.w.i.m.I.updateById                   : ==> Parameters: IN1794971583777(String), SKU-T-001(String), B20261118(String), 3.000(BigDecimal), 3.000(BigDecimal), 0.000(BigDecimal), PASS(String), 5(Long)
+2026-11-18T11:13:19.993+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-5] c.j.w.i.m.I.updateById                   : <==    Updates: 1
+2026-11-18T11:14:08.744+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-7] c.j.w.i.m.InboundOrderMapper.selectList  : ==>  Preparing: SELECT id,inbound_no,inbound_type,source_system,source_no,warehouse_code,status,create_time,update_time FROM wms_inbound_order WHERE (inbound_no = ?)
+2026-11-18T11:14:08.746+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-7] c.j.w.i.m.InboundOrderMapper.selectList  : ==> Parameters: IN1794971583777(String)
+2026-11-18T11:14:08.749+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-7] c.j.w.i.m.InboundOrderMapper.selectList  : <==      Total: 1
+2026-11-18T11:14:08.750+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-7] c.j.w.i.m.I.selectList                   : ==>  Preparing: SELECT id,inbound_no,sku_code,batch_no,expect_qty,received_qty,putaway_qty,location_code,qc_status FROM wms_inbound_item WHERE (inbound_no = ? AND sku_code = ?)
+2026-11-18T11:14:08.751+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-7] c.j.w.i.m.I.selectList                   : ==> Parameters: IN1794971583777(String), SKU-T-001(String)
+2026-11-18T11:14:08.753+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-7] c.j.w.i.m.I.selectList                   : <==      Total: 1
+2026-11-18T11:14:08.786+08:00 ERROR 35108 --- [wms-inbound-service] [io-18083-exec-7] c.j.w.i.service.impl.InboundServiceImpl  : 上架加库存 Feign 调用异常, inboundNo=IN1794971583777, skuCode=SKU-T-001, requestId=IN:IN1794971583777:SKU-T-001:LOC-T:B20261118
+
+feign.RetryableException: Connection refused: getsockopt executing POST http://127.0.0.1:18082/internal/inventory/change-stock
+	at feign.FeignException.errorExecuting(FeignException.java:278) ~[feign-core-13.2.1.jar!/:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:110) ~[feign-core-13.2.1.jar!/:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70) ~[feign-core-13.2.1.jar!/:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:99) ~[feign-core-13.2.1.jar!/:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy102.changeStock(Unknown Source) ~[na:na]
+	at com.jim.wms.inbound.service.impl.InboundServiceImpl.putaway(InboundServiceImpl.java:124) ~[!/:1.0.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.6.jar!/:6.1.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.6.jar!/:6.1.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.6.jar!/:6.1.6]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.6.jar!/:6.1.6]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.6.jar!/:6.1.6]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.6.jar!/:6.1.6]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.6.jar!/:6.1.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.6.jar!/:6.1.6]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.6.jar!/:6.1.6]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.6.jar!/:6.1.6]
+	at com.jim.wms.inbound.service.impl.InboundServiceImpl$$SpringCGLIB$$0.putaway(<generated>) ~[!/:1.0.0]
+	at com.jim.wms.inbound.controller.InboundController.putaway(InboundController.java:44) ~[!/:1.0.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.6.jar!/:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar!/:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:541) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:646) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:291) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:394) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:416) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1332) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1265) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1151) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1080) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1482) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1445) ~[na:na]
+	at feign.Client$Default.convertAndSend(Client.java:224) ~[feign-core-13.2.1.jar!/:na]
+	at feign.Client$Default.execute(Client.java:106) ~[feign-core-13.2.1.jar!/:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:100) ~[feign-core-13.2.1.jar!/:na]
+	... 70 common frames omitted
+
+2026-11-18T11:14:08.800+08:00  WARN 35108 --- [wms-inbound-service] [io-18083-exec-7] c.j.w.c.e.GlobalExceptionHandler         : 业务异常: 库存服务调用失败: RetryableException: Connection refused: getsockopt executing POST http://127.0.0.1:18082/internal/inventory/change-stock
+2026-11-18T11:16:08.723+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.InboundOrderMapper.selectList  : ==>  Preparing: SELECT id,inbound_no,inbound_type,source_system,source_no,warehouse_code,status,create_time,update_time FROM wms_inbound_order WHERE (inbound_no = ?)
+2026-11-18T11:16:08.725+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.InboundOrderMapper.selectList  : ==> Parameters: IN1794971583777(String)
+2026-11-18T11:16:08.727+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.InboundOrderMapper.selectList  : <==      Total: 1
+2026-11-18T11:16:08.728+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.I.selectList                   : ==>  Preparing: SELECT id,inbound_no,sku_code,batch_no,expect_qty,received_qty,putaway_qty,location_code,qc_status FROM wms_inbound_item WHERE (inbound_no = ? AND sku_code = ?)
+2026-11-18T11:16:08.728+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.I.selectList                   : ==> Parameters: IN1794971583777(String), SKU-T-001(String)
+2026-11-18T11:16:08.730+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.I.selectList                   : <==      Total: 1
+2026-11-18T11:16:09.089+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.I.updateById                   : ==>  Preparing: UPDATE wms_inbound_item SET inbound_no=?, sku_code=?, batch_no=?, expect_qty=?, received_qty=?, putaway_qty=?, location_code=?, qc_status=? WHERE id=?
+2026-11-18T11:16:09.091+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.I.updateById                   : ==> Parameters: IN1794971583777(String), SKU-T-001(String), B20261118(String), 3.000(BigDecimal), 3.000(BigDecimal), 3.000(BigDecimal), LOC-T(String), PASS(String), 5(Long)
+2026-11-18T11:16:09.093+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.I.updateById                   : <==    Updates: 1
+2026-11-18T11:16:09.095+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.InboundOrderMapper.updateById  : ==>  Preparing: UPDATE wms_inbound_order SET inbound_no=?, inbound_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T11:16:09.095+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.InboundOrderMapper.updateById  : ==> Parameters: IN1794971583777(String), PURCHASE(String), CTM(String), SMK-IN-001(String), WMS-T(String), PUTAWAY(String), 2026-11-18T11:13:04(LocalDateTime), 2026-11-18T11:16:09.094928200(LocalDateTime), 6(Long)
+2026-11-18T11:16:09.097+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.InboundOrderMapper.updateById  : <==    Updates: 1
+2026-11-18T11:16:09.099+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.I.selectList                   : ==>  Preparing: SELECT id,inbound_no,sku_code,batch_no,expect_qty,received_qty,putaway_qty,location_code,qc_status FROM wms_inbound_item WHERE (inbound_no = ?)
+2026-11-18T11:16:09.100+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.I.selectList                   : ==> Parameters: IN1794971583777(String)
+2026-11-18T11:16:09.106+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.I.selectList                   : <==      Total: 1
+2026-11-18T11:16:09.108+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.InboundOrderMapper.updateById  : ==>  Preparing: UPDATE wms_inbound_order SET inbound_no=?, inbound_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T11:16:09.109+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.InboundOrderMapper.updateById  : ==> Parameters: IN1794971583777(String), PURCHASE(String), CTM(String), SMK-IN-001(String), WMS-T(String), FINISHED(String), 2026-11-18T11:13:04(LocalDateTime), 2026-11-18T11:16:09.094928200(LocalDateTime), 6(Long)
+2026-11-18T11:16:09.111+08:00 DEBUG 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.m.InboundOrderMapper.updateById  : <==    Updates: 1
+2026-11-18T11:16:09.119+08:00  INFO 35108 --- [wms-inbound-service] [io-18083-exec-9] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-order-status, eventKey=IN1794971583777
+2026-11-18T11:16:09.119+08:00  INFO 35108 --- [wms-inbound-service] [io-18083-exec-9] c.j.w.i.service.impl.InboundServiceImpl  : 入库单完成，inboundNo=IN1794971583777
+2026-11-18T11:16:09.801+08:00  INFO 35108 --- [wms-inbound-service] [   scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [127.0.0.1:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 5000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 1000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 3000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2026-11-18T11:16:09.865+08:00  INFO 35108 --- [wms-inbound-service] [   scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2026-11-18T11:16:09.924+08:00  INFO 35108 --- [wms-inbound-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2026-11-18T11:16:09.925+08:00  INFO 35108 --- [wms-inbound-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2026-11-18T11:16:09.925+08:00  INFO 35108 --- [wms-inbound-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794971769916
+2026-11-18T11:16:10.209+08:00  INFO 35108 --- [wms-inbound-service] [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: It0Yw3kSTE6CgjNgvc67hg
+2026-11-18T11:16:10.219+08:00  INFO 35108 --- [wms-inbound-service] [ad | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1001 with epoch 0
+2026-11-18T11:16:10.257+08:00  INFO 35108 --- [wms-inbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=1, topic=wms-order-status, eventKey=IN1794971583777
+2026-11-18T11:16:10.257+08:00  INFO 35108 --- [wms-inbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-inbound-service:18083

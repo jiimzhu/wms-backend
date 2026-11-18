@@ -1,0 +1,9 @@
+﻿wms-admin-service          name=wms-admin-service(True) port=8081(True) db=jim_wms_admin(True) zone=True
+wms-inventory-service      name=wms-inventory-service(True) port=8082(True) db=jim_wms_inventory(True) zone=True
+wms-inbound-service        name=wms-inbound-service(True) port=8083(True) db=jim_wms_inbound(True) zone=True
+wms-outbound-service       name=wms-outbound-service(True) port=8084(True) db=jim_wms_outbound(True) zone=True
+wms-transfer-service       name=wms-transfer-service(True) port=8085(True) db=jim_wms_transfer(True) zone=True
+wms-stocktake-service      name=wms-stocktake-service(True) port=8086(True) db=jim_wms_stocktake(True) zone=True
+wms-return-service         name=wms-return-service(True) port=8087(True) db=jim_wms_return(True) zone=True
+wms-report-service         name=wms-report-service(True) port=8088(True) db=jim_wms_report(True) zone=True
+wms-integration-service    name=wms-integration-service(True) port=8089(True) db=jim_wms_integration(True) zone=True

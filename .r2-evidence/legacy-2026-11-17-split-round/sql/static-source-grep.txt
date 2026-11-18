@@ -1,0 +1,9 @@
+﻿=== Check 2a: InventoryMapper refs outside inventory-service ===
+=== Check 2b: com.jim.wms.inventory package refs outside inventory-service ===
+wms-common\src\main\java\com\jim\wms\common\dto\InventoryView.java:10: * 库存台账视图，字段对齐旧实体 com.jim.wms.inventory.entity.Inventory
+=== Check 2c: wms_inventory / wms_inventory_log table names outside inventory-service ===
+=== Check 5: all @FeignClient locations ===
+wms-common\src\main\java\com\jim\wms\common\api\AdminApi.java:15: @FeignClient(name = "wms-admin-service", path = "/internal/admin")
+wms-common\src\main\java\com\jim\wms\common\api\IntegrationApi.java:13: @FeignClient(name = "wms-integration-service", path = "/internal/integration")
+wms-common\src\main\java\com\jim\wms\common\api\InventoryApi.java:19: @FeignClient(name = "wms-inventory-service", path = "/internal/inventory")
+wms-common\src\main\java\com\jim\wms\common\api\OutboundApi.java:13: @FeignClient(name = "wms-outbound-service", path = "/internal/outbound")

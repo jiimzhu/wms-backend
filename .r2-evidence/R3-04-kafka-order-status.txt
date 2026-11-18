@@ -1,0 +1,27 @@
+﻿Option --property is deprecated and will be removed in a future version. Use --formatter-property instead.
+java.exe : The consumer rebalance protocol (KIP-848) is production-ready! Set group.protocol=consumer to try it out. Se
+e https://kafka.apache.org/documentation/#consumer_rebalance_protocol
+所在位置 行:1 字符: 309
++ ... ','10000'); & java -cp $cp org.apache.kafka.tools.consumer.ConsoleCon ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (The consumer re...alance_protocol:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+OUT1794972363022|{"orderNo":"OUT1794972363022","message":"出库完成","status":"FINISHED"}
+OUT1794973273559|{"orderNo":"OUT1794973273559","message":"出库完成","status":"FINISHED"}
+OUT1794975435867|{"orderNo":"OUT1794975435867","message":"出库完成","status":"FINISHED"}
+OUT1794975828057|{"orderNo":"OUT1794975828057","message":"部分出库","status":"PICKED"}
+OUT1794976876513|{"orderNo":"OUT1794976876513","message":"出库完成","status":"FINISHED"}
+OUT1794976876513|{"orderNo":"OUT1794976876513","message":"出库完成","status":"FINISHED"}
+OUT1794977170371|{"orderNo":"OUT1794977170371","message":"出库完成","status":"FINISHED"}
+OUT1794977369142|{"orderNo":"OUT1794977369142","message":"出库完成","status":"FINISHED"}
+IN1794971583777|{"status":"FINISHED","message":"入库完成","orderNo":"IN1794971583777"}
+OUT1794974228602|{"orderNo":"OUT1794974228602","message":"出库完成","status":"FINISHED"}
+OUT1794972161208|{"orderNo":"OUT1794972161208","message":"unpicked cancel","status":"CANCELLED"}
+OUT1794975793358|{"orderNo":"OUT1794975793358","message":"CTM 取消单据: OMS-CANCEL-001","status":"CANCELLED"}
+OUT1794975969332|{"orderNo":"OUT1794975969332","message":"CTM 取消单据: null","status":"CANCELLED"}
+OUT1794977962652|{"orderNo":"OUT1794977962652","message":"出库完成","status":"FINISHED"}
+2026-11-18T05:01:28.250352500Z main ERROR Error processing message, terminating consumer process: 
+org.apache.kafka.common.errors.TimeoutException
+
+Processed a total of 14 messages

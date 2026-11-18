@@ -1,0 +1,1 @@
+﻿2026-11-17T15:13:53.135+08:00  WARN 30324 --- [wms-inventory-service] [io-18082-exec-1] com.jim.wms.common.lock.RedisLockUtil    : Redis 不可用，按 wms.lock.allow-local-fallback=true 回退进程内锁 key=wms:stock:DC01:DC01-A-01-01:SKU-LOCK-01:B-LOCK-01（仅限单机开发，生产禁用）

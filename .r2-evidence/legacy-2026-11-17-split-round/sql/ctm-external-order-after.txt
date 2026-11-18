@@ -1,0 +1,2 @@
+﻿id	source_system	external_order_no	business_type	warehouse_code	status	create_time	update_time
+1	CTM	CTM-E2E-001	REPLENISH	DC01	RECEIVED	2026-11-17 13:27:35	2026-11-17 13:27:35

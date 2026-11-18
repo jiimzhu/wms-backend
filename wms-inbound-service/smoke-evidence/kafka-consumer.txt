@@ -1,0 +1,4 @@
+﻿{"status":"FINISHED","message":"入库完成","orderNo":"IN1794971583777"}
+2026-11-18T03:16:54.554071400Z main ERROR Error processing message, terminating consumer process: 
+org.apache.kafka.common.errors.TimeoutException
+

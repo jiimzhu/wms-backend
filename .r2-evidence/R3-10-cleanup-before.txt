@@ -1,0 +1,14 @@
+﻿BEFORE CLEANUP R3 snapshot 2026-11-18T13:14:29.0070467+08:00
+inventory.wms_inventory=14
+inventory.wms_inventory_log=42
+inventory.wms_event_outbox=42
+outbound.wms_outbound_order=10
+outbound.wms_outbound_item=11
+outbound.wms_outbound_stock_task=8
+outbound.wms_event_outbox=9
+transfer.wms_transfer_order=1
+integration.wms_external_order=3
+inbound.wms_inbound_order=0
+inbound.wms_inbound_item=0
+stocktake.wms_stocktake_order=0
+return.wms_return_order=0

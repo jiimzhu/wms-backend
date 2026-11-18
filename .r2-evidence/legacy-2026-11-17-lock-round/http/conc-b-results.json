@@ -1,0 +1,187 @@
+﻿{
+    "scenario":  "CONC-B",
+    "concurrency":  20,
+    "globalElapsedMs":  2198,
+    "results":  [
+                    {
+                        "requestId":  "CONC-B-P01",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2159
+                    },
+                    {
+                        "requestId":  "CONC-B-M01",
+                        "changeQty":  -1,
+                        "businessType":  "SALE_OUT",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2173
+                    },
+                    {
+                        "requestId":  "CONC-B-P02",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2173
+                    },
+                    {
+                        "requestId":  "CONC-B-M02",
+                        "changeQty":  -1,
+                        "businessType":  "SALE_OUT",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2173
+                    },
+                    {
+                        "requestId":  "CONC-B-P03",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2172
+                    },
+                    {
+                        "requestId":  "CONC-B-M03",
+                        "changeQty":  -1,
+                        "businessType":  "SALE_OUT",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2172
+                    },
+                    {
+                        "requestId":  "CONC-B-P04",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2169
+                    },
+                    {
+                        "requestId":  "CONC-B-M04",
+                        "changeQty":  -1,
+                        "businessType":  "SALE_OUT",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2166
+                    },
+                    {
+                        "requestId":  "CONC-B-P05",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2164
+                    },
+                    {
+                        "requestId":  "CONC-B-M05",
+                        "changeQty":  -1,
+                        "businessType":  "SALE_OUT",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2163
+                    },
+                    {
+                        "requestId":  "CONC-B-P06",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2162
+                    },
+                    {
+                        "requestId":  "CONC-B-M06",
+                        "changeQty":  -1,
+                        "businessType":  "SALE_OUT",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2161
+                    },
+                    {
+                        "requestId":  "CONC-B-P07",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2161
+                    },
+                    {
+                        "requestId":  "CONC-B-M07",
+                        "changeQty":  -1,
+                        "businessType":  "SALE_OUT",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2160
+                    },
+                    {
+                        "requestId":  "CONC-B-P08",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2160
+                    },
+                    {
+                        "requestId":  "CONC-B-M08",
+                        "changeQty":  -1,
+                        "businessType":  "SALE_OUT",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2160
+                    },
+                    {
+                        "requestId":  "CONC-B-P09",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2160
+                    },
+                    {
+                        "requestId":  "CONC-B-M09",
+                        "changeQty":  -1,
+                        "businessType":  "SALE_OUT",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2160
+                    },
+                    {
+                        "requestId":  "CONC-B-P10",
+                        "changeQty":  1,
+                        "businessType":  "PURCHASE_IN",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2160
+                    },
+                    {
+                        "requestId":  "CONC-B-M10",
+                        "changeQty":  -1,
+                        "businessType":  "SALE_OUT",
+                        "httpStatus":  200,
+                        "bodyCode":  200,
+                        "bodyMsg":  "ok",
+                        "elapsedMs":  2159
+                    }
+                ]
+}

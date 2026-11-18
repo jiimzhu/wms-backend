@@ -1,0 +1,20 @@
+package com.jim.wms.inbound;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.mybatis.spring.annotation.MapperScan;
+
+
+@SpringBootApplication
+@EnableDiscoveryClient
+@EnableFeignClients(basePackages = "com.jim.wms.common.api")
+@MapperScan("com.jim.wms.inbound.mapper")
+
+public class InboundServiceApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(InboundServiceApplication.class, args);
+    }
+}

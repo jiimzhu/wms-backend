@@ -1,0 +1,96 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: wms-outbound-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jim_wms_outbound?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: root
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 0
+      connect-timeout: 2000ms
+      timeout: 3000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: 1000ms
+        shutdown-timeout: 1000ms
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    producer:
+      acks: all
+      retries: 3
+      properties:
+        max.block.ms: 1000
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connect-timeout: 3000
+            read-timeout: 10000
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  global-config:
+    banner: false
+    db-config:
+      id-type: auto
+  configuration:
+    map-underscore-to-camel-case: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+
+wms:
+  lock:
+    wait-timeout: 2000ms
+    lease-time: 30s
+    retry-interval: 50ms
+    allow-local-fallback: false
+  outbox:
+    enabled: true
+    scan-interval-ms: 1000
+    batch-size: 50
+    max-retry: 20
+    send-timeout-ms: 5000
+    backoff-ms: 5000
+    sending-lease-ms: 60000
+  outbound:
+    # 租约：最坏耗时（锁等待 2s + Feign 读超时 10s）约 12s，取 ~5 倍 = 60s
+    lease-seconds: 60
+    # 扫描间隔，必须显著小于租约
+    scan-interval-ms: 30000
+    # 插入 PENDING 时 next_retry_time = 创建时间 + 该阈值，PENDING 超时纳入扫描
+    pending-threshold-ms: 10000
+    # 单据停在 CONFIRMING 超过该值触发单据维度补扫
+    doc-reconcile-threshold-ms: 120000
+    max-retry: 5
+    lease-renew-interval-ms: 20000
+
+logging:
+  level:
+    com.jim.wms: debug

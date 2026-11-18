@@ -1,0 +1,5 @@
+﻿id	location_code	sku_code	batch_no	qty	freeze_qty
+1	DC01-A-01-01	SKU-001	B001	15.000	0.000
+2	DC01-A-01-01	SKU-001	B-E2E-01	20.000	0.000
+log_rows_before
+3

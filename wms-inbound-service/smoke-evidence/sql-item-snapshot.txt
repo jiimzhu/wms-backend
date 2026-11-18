@@ -1,0 +1,10 @@
+﻿*************************** 1. row ***************************
+           id: 5
+   inbound_no: IN1794971583777
+     sku_code: SKU-T-001
+     batch_no: B20261118
+   expect_qty: 3.000
+ received_qty: 3.000
+  putaway_qty: 3.000
+location_code: LOC-T
+    qc_status: PASS

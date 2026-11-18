@@ -1,0 +1,6 @@
+﻿outbound_no	status
+OUT1794893342705	CANCELLED
+id	status	retry_count	next_retry_time
+4	CANCELLED	1	2026-11-17 13:30:03
+out_log_b03
+0

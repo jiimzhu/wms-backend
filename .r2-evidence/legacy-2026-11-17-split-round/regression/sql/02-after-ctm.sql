@@ -1,0 +1,1 @@
+﻿SELECT outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status FROM jim_wms_outbound.wms_outbound_order WHERE outbound_no='OUT1794895803002'; SELECT source_system,external_order_no,business_type,status FROM jim_wms_integration.wms_external_order WHERE external_order_no='CTM-REG-001';

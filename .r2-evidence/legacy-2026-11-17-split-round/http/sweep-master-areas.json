@@ -1,0 +1,1 @@
+﻿{"code":200,"msg":"ok","data":[{"id":4,"warehouseCode":"DC01","areaCode":"NG","areaName":"不合格区","areaType":4},{"id":3,"warehouseCode":"DC01","areaCode":"PICK","areaName":"拣货区","areaType":3},{"id":1,"warehouseCode":"DC01","areaCode":"RCV","areaName":"收货区","areaType":1},{"id":2,"warehouseCode":"DC01","areaCode":"STO","areaName":"存储区","areaType":2}]}

@@ -1,0 +1,5 @@
+﻿id	warehouse_code	location_code	sku_code	batch_no	qty
+10	WMS-T	LOC-T	SKU-T-001	B20261118	3.000
+16	WMS-T	LOC-T2	SKU-T-002	B20261118	5.000
+log_rows
+1

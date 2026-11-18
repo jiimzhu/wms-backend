@@ -1,0 +1,19 @@
+=== cleanup AFTER snapshot 2026-11-18 12:01:34 ===
+jim_wms_stocktake.wms_stocktake_order = 0
+jim_wms_stocktake.wms_stocktake_item = 0
+jim_wms_return.wms_return_order = 0
+jim_wms_transfer.wms_transfer_order = 0
+jim_wms_inventory.wms_inventory = 1
+jim_wms_inventory.wms_inventory_log = 1
+jim_wms_inventory.wms_event_outbox = 1
+jim_wms_integration.wms_external_order = 0
+jim_wms_outbound.wms_outbound_order = 0
+jim_wms_outbound.wms_outbound_item = 0
+jim_wms_outbound.wms_outbound_stock_task = 0
+jim_wms_outbound.wms_event_outbox = 0
+jim_wms_inbound.wms_inbound_order = 0
+jim_wms_inbound.wms_inbound_item = 0
+jim_wms_inbound.wms_event_outbox = 0
+=== remaining inventory rows ===
+warehouse_code	location_code	sku_code	batch_no	qty
+WMS-T	LOC-T	SKU-T-001	B20261118	3.000

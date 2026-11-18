@@ -1,0 +1,99 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-11-18T12:57:01.378+08:00  INFO 36544 --- [wms-admin-service] [           main] c.jim.wms.admin.AdminServiceApplication  : Starting AdminServiceApplication v1.0.0 using Java 17.0.21 with PID 36544 (D:\wms\wms-backend\wms-admin-service\target\wms-admin-service-1.0.0.jar started by 华为 in D:\wms\wms-backend)
+2026-11-18T12:57:01.386+08:00 DEBUG 36544 --- [wms-admin-service] [           main] c.jim.wms.admin.AdminServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-11-18T12:57:01.389+08:00  INFO 36544 --- [wms-admin-service] [           main] c.jim.wms.admin.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-11-18T12:57:02.678+08:00  INFO 36544 --- [wms-admin-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T12:57:02.689+08:00  INFO 36544 --- [wms-admin-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-18T12:57:02.717+08:00  INFO 36544 --- [wms-admin-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2026-11-18T12:57:03.184+08:00  INFO 36544 --- [wms-admin-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d768b99c-4251-3b50-a0e6-2ac6bd26f4b1
+2026-11-18T12:57:03.507+08:00  WARN 36544 --- [wms-admin-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T12:57:03.514+08:00  WARN 36544 --- [wms-admin-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T12:57:04.071+08:00  INFO 36544 --- [wms-admin-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-11-18T12:57:04.109+08:00  INFO 36544 --- [wms-admin-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T12:57:04.111+08:00  INFO 36544 --- [wms-admin-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-11-18T12:57:04.229+08:00  INFO 36544 --- [wms-admin-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T12:57:04.234+08:00  INFO 36544 --- [wms-admin-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2731 ms
+2026-11-18T12:57:05.101+08:00  INFO 36544 --- [wms-admin-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T12:57:05.620+08:00  INFO 36544 --- [wms-admin-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@640c216b
+2026-11-18T12:57:05.629+08:00  INFO 36544 --- [wms-admin-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T12:57:05.822+08:00  INFO 36544 --- [wms-admin-service] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2026-11-18T12:57:05.826+08:00  INFO 36544 --- [wms-admin-service] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2026-11-18T12:57:05.828+08:00  INFO 36544 --- [wms-admin-service] [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-11-18T12:57:05.874+08:00  INFO 36544 --- [wms-admin-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3306/jim_wms_admin (MySQL 8.0)
+2026-11-18T12:57:05.983+08:00  INFO 36544 --- [wms-admin-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.059s)
+2026-11-18T12:57:06.013+08:00  INFO 36544 --- [wms-admin-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `jim_wms_admin`: 2
+2026-11-18T12:57:06.021+08:00  INFO 36544 --- [wms-admin-service] [           main] o.f.core.internal.command.DbMigrate      : Schema `jim_wms_admin` is up to date. No migration necessary.
+2026-11-18T12:57:09.792+08:00  INFO 36544 --- [wms-admin-service] [           main] com.jim.wms.common.lock.RedisLockUtil    : Redis 锁通道就绪（127.0.0.1:6379:0），PING=PONG
+2026-11-18T12:57:11.112+08:00  INFO 36544 --- [wms-admin-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T12:57:11.404+08:00  WARN 36544 --- [wms-admin-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T12:57:11.613+08:00  INFO 36544 --- [wms-admin-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-18T12:57:11.970+08:00  INFO 36544 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-18T12:57:11.994+08:00  INFO 36544 --- [wms-admin-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T12:57:12.094+08:00  INFO 36544 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T12:57:12.096+08:00  INFO 36544 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T12:57:12.096+08:00  INFO 36544 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T12:57:12.098+08:00  INFO 36544 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T12:57:12.099+08:00  INFO 36544 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T12:57:12.099+08:00  INFO 36544 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-18T12:57:12.100+08:00  INFO 36544 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T12:57:13.942+08:00  INFO 36544 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T12:57:13.956+08:00  INFO 36544 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 10
+2026-11-18T12:57:13.965+08:00  INFO 36544 --- [wms-admin-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-18T12:57:13.983+08:00  INFO 36544 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794977833982 with initial instances count: 0
+2026-11-18T12:57:13.990+08:00  INFO 36544 --- [wms-admin-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WMS-ADMIN-SERVICE with eureka with status UP
+2026-11-18T12:57:13.996+08:00  INFO 36544 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794977833996, current=UP, previous=STARTING]
+2026-11-18T12:57:14.004+08:00  INFO 36544 --- [wms-admin-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-ADMIN-SERVICE/wms-admin-service:8081: registering service...
+2026-11-18T12:57:14.063+08:00  INFO 36544 --- [wms-admin-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2026-11-18T12:57:14.067+08:00  INFO 36544 --- [wms-admin-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2026-11-18T12:57:14.494+08:00  INFO 36544 --- [wms-admin-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-ADMIN-SERVICE/wms-admin-service:8081 - registration status: 204
+2026-11-18T12:57:14.513+08:00  INFO 36544 --- [wms-admin-service] [           main] c.jim.wms.admin.AdminServiceApplication  : Started AdminServiceApplication in 13.775 seconds (process running for 14.392)
+2026-11-18T12:57:43.970+08:00  INFO 36544 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T12:57:43.972+08:00  INFO 36544 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T12:57:43.973+08:00  INFO 36544 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T12:57:43.973+08:00  INFO 36544 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T12:57:43.974+08:00  INFO 36544 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T12:57:43.975+08:00  INFO 36544 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-11-18T12:57:43.975+08:00  INFO 36544 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T12:57:43.997+08:00  INFO 36544 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T13:02:12.115+08:00  INFO 36544 --- [wms-admin-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T13:07:12.121+08:00  INFO 36544 --- [wms-admin-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T13:12:12.129+08:00  INFO 36544 --- [wms-admin-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T13:12:37.913+08:00  INFO 36544 --- [wms-admin-service] [nio-8081-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T13:12:37.914+08:00  INFO 36544 --- [wms-admin-service] [nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T13:12:37.915+08:00  INFO 36544 --- [wms-admin-service] [nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-18T13:12:38.084+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-4] c.j.w.a.m.WarehouseMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,warehouse_name,warehouse_type,enable,create_time,update_time FROM wms_warehouse WHERE (warehouse_code = ?)
+2026-11-18T13:12:38.099+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-4] c.j.w.a.m.WarehouseMapper.selectList     : ==> Parameters: DC01(String)
+2026-11-18T13:12:38.118+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-4] c.j.w.a.m.WarehouseMapper.selectList     : <==      Total: 1
+2026-11-18T13:12:38.148+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-5] c.j.w.a.m.W.selectList                   : ==>  Preparing: SELECT id,warehouse_code,area_code,location_code,location_type,capacity,enable FROM wms_location WHERE (location_code = ? AND warehouse_code = ?)
+2026-11-18T13:12:38.150+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-5] c.j.w.a.m.W.selectList                   : ==> Parameters: DC01-A-01-01(String), DC01(String)
+2026-11-18T13:12:38.152+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-5] c.j.w.a.m.W.selectList                   : <==      Total: 1
+2026-11-18T13:12:38.169+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-1] c.j.w.a.mapper.SkuItemMapper.selectList  : ==>  Preparing: SELECT id,sku_code,sku_name,unit,batch_manage,expire_manage,sn_manage,enable FROM wms_sku WHERE (sku_code = ?)
+2026-11-18T13:12:38.172+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-1] c.j.w.a.mapper.SkuItemMapper.selectList  : ==> Parameters: SKU-001(String)
+2026-11-18T13:12:38.173+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-1] c.j.w.a.mapper.SkuItemMapper.selectList  : <==      Total: 1
+2026-11-18T13:12:38.388+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-2] c.j.w.a.m.WarehouseMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,warehouse_name,warehouse_type,enable,create_time,update_time FROM wms_warehouse WHERE (warehouse_code = ?)
+2026-11-18T13:12:38.390+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-2] c.j.w.a.m.WarehouseMapper.selectList     : ==> Parameters: DC01(String)
+2026-11-18T13:12:38.392+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-2] c.j.w.a.m.WarehouseMapper.selectList     : <==      Total: 1
+2026-11-18T13:12:38.399+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-6] c.j.w.a.m.W.selectList                   : ==>  Preparing: SELECT id,warehouse_code,area_code,location_code,location_type,capacity,enable FROM wms_location WHERE (location_code = ? AND warehouse_code = ?)
+2026-11-18T13:12:38.400+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-6] c.j.w.a.m.W.selectList                   : ==> Parameters: DC01-A-01-01(String), DC01(String)
+2026-11-18T13:12:38.401+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-6] c.j.w.a.m.W.selectList                   : <==      Total: 1
+2026-11-18T13:12:38.410+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-7] c.j.w.a.mapper.SkuItemMapper.selectList  : ==>  Preparing: SELECT id,sku_code,sku_name,unit,batch_manage,expire_manage,sn_manage,enable FROM wms_sku WHERE (sku_code = ?)
+2026-11-18T13:12:38.411+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-7] c.j.w.a.mapper.SkuItemMapper.selectList  : ==> Parameters: SKU-001(String)
+2026-11-18T13:12:38.413+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-7] c.j.w.a.mapper.SkuItemMapper.selectList  : <==      Total: 1
+2026-11-18T13:12:44.725+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-8] c.j.w.a.m.WarehouseMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,warehouse_name,warehouse_type,enable,create_time,update_time FROM wms_warehouse WHERE (warehouse_code = ?)
+2026-11-18T13:12:44.726+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-8] c.j.w.a.m.WarehouseMapper.selectList     : ==> Parameters: DC01(String)
+2026-11-18T13:12:44.728+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-8] c.j.w.a.m.WarehouseMapper.selectList     : <==      Total: 1
+2026-11-18T13:12:44.733+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-3] c.j.w.a.m.W.selectList                   : ==>  Preparing: SELECT id,warehouse_code,area_code,location_code,location_type,capacity,enable FROM wms_location WHERE (location_code = ? AND warehouse_code = ?)
+2026-11-18T13:12:44.733+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-3] c.j.w.a.m.W.selectList                   : ==> Parameters: DC01-A-01-01(String), DC01(String)
+2026-11-18T13:12:44.735+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-3] c.j.w.a.m.W.selectList                   : <==      Total: 1
+2026-11-18T13:12:44.739+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-9] c.j.w.a.mapper.SkuItemMapper.selectList  : ==>  Preparing: SELECT id,sku_code,sku_name,unit,batch_manage,expire_manage,sn_manage,enable FROM wms_sku WHERE (sku_code = ?)
+2026-11-18T13:12:44.740+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-9] c.j.w.a.mapper.SkuItemMapper.selectList  : ==> Parameters: SKU-NOEXIST(String)
+2026-11-18T13:12:44.741+08:00 DEBUG 36544 --- [wms-admin-service] [nio-8081-exec-9] c.j.w.a.mapper.SkuItemMapper.selectList  : <==      Total: 0
+2026-11-18T13:12:44.744+08:00  WARN 36544 --- [wms-admin-service] [nio-8081-exec-9] c.j.w.c.e.GlobalExceptionHandler         : 业务异常: SKU 不存在: SKU-NOEXIST

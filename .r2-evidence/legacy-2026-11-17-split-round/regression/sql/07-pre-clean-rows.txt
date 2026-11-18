@@ -1,0 +1,17 @@
+﻿db	t	c
+jim_wms_admin	wms_warehouse	2
+jim_wms_admin	wms_area	4
+jim_wms_admin	wms_location	5
+jim_wms_admin	wms_sku	2
+jim_wms_inventory	wms_inventory	1
+jim_wms_inventory	wms_inventory_log	2
+jim_wms_inbound	wms_inbound_order	0
+jim_wms_inbound	wms_inbound_item	0
+jim_wms_outbound	wms_outbound_order	2
+jim_wms_outbound	wms_outbound_item	2
+jim_wms_outbound	wms_outbound_stock_task	2
+jim_wms_transfer	wms_transfer_order	0
+jim_wms_stocktake	wms_stocktake_order	0
+jim_wms_stocktake	wms_stocktake_item	0
+jim_wms_return	wms_return_order	0
+jim_wms_integration	wms_external_order	2

@@ -1,0 +1,6 @@
+﻿=== direct RestTemplate / HttpClient / WebClient URLs to services ===
+wms-integration-service\src\main\java\com\jim\wms\integration\client\CtmCallbackClient.java:9: import org.springframework.web.client.RestTemplate;
+wms-integration-service\src\main\java\com\jim\wms\integration\client\CtmCallbackClient.java:15: * 实现方式沿用旧单体：内部 new RestTemplate()，地址取 wms.ctm.base-url；
+wms-integration-service\src\main\java\com\jim\wms\integration\client\CtmCallbackClient.java:22: private final RestTemplate restTemplate = new RestTemplate();
+wms-integration-service\src\main\java\com\jim\wms\integration\client\CtmCallbackClient.java:36: restTemplate.postForObject(url, new HttpEntity<>(body, headers), Map.class);
+=== ERROR lines in service logs ===

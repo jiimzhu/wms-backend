@@ -1,0 +1,11 @@
+﻿db	history_rows
+jim_wms	1
+jim_wms_admin	1
+jim_wms_inbound	1
+jim_wms_integration	1
+jim_wms_inventory	1
+jim_wms_outbound	1
+jim_wms_report	1
+jim_wms_return	1
+jim_wms_stocktake	1
+jim_wms_transfer	1

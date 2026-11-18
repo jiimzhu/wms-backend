@@ -1,0 +1,10 @@
+﻿*************************** 1. row ***************************
+            id: 6
+    inbound_no: IN1794971583777
+  inbound_type: PURCHASE
+ source_system: CTM
+     source_no: SMK-IN-001
+warehouse_code: WMS-T
+        status: FINISHED
+   create_time: 2026-11-18 11:13:04
+   update_time: 2026-11-18 11:16:09

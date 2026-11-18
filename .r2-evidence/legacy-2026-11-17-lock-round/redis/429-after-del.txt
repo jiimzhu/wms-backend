@@ -1,0 +1,4 @@
+﻿DEL wms:stock:DC01:DC01-A-01-01:SKU-LOCK-01:B-LOCK-01 => 0
+EXISTS wms:stock:DC01:DC01-A-01-01:SKU-LOCK-01:B-LOCK-01 => 0
+KEYS wms:stock:* => []
+DBSIZE => 0

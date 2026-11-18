@@ -1,0 +1,8 @@
+﻿id	location_code	sku_code	batch_no	qty	freeze_qty
+3	DC01-P-01	SKU-002	B-E2E-02	10.000	0.000
+id	biz_key	business_type	business_no	change_qty	before_qty	after_qty
+5	IN:IN1794893127012:SKU-002:DC01-P-01:B-E2E-02	PURCHASE_IN	IN1794893127012	10.000	0.000	10.000
+outbound_no	status
+OUT1794893070048	CONFIRM_FAILED
+id	status	retry_count	last_error	next_retry_time
+3	FAILED	1	code=400, msg=库存不足, skuCode=SKU-002, 现有=0, 需要=10.0000	2026-11-17 13:25:47

@@ -1,0 +1,13 @@
+﻿*************************** 1. row ***************************
+         id: 1
+   event_id: dbaf7a3c-98d3-4df9-a01b-a3bd14c1f1b0
+      topic: wms-order-status
+  event_key: IN1794971583777
+    payload: {"status":"FINISHED","message":"入库完成","orderNo":"IN1794971583777"}
+     status: SENT
+retry_count: 0
+      owner: NULL
+lease_until: NULL
+create_time: 2026-11-18 11:16:09
+update_time: 2026-11-18 11:16:10
+  sent_time: 2026-11-18 11:16:10

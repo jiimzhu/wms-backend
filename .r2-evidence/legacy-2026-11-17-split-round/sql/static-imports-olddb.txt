@@ -1,0 +1,12 @@
+﻿=== import com.jim.wms.inventory outside inventory-service ===
+=== service imports of common api (Feign clients used) ===
+wms-inbound-service\src\main\java\com\jim\wms\inbound\service\impl\InboundServiceImpl.java: import com.jim.wms.common.api.InventoryApi;
+wms-integration-service\src\main\java\com\jim\wms\integration\controller\CtmReplenishController.java: import com.jim.wms.common.api.OutboundApi;
+wms-integration-service\src\main\java\com\jim\wms\integration\controller\InternalIntegrationController.java: import com.jim.wms.common.api.IntegrationApi;
+wms-outbound-service\src\main\java\com\jim\wms\outbound\service\impl\OutboundServiceImpl.java: import com.jim.wms.common.api.IntegrationApi;
+wms-outbound-service\src\main\java\com\jim\wms\outbound\service\impl\OutboundServiceImpl.java: import com.jim.wms.common.api.InventoryApi;
+wms-report-service\src\main\java\com\jim\wms\report\controller\ReportController.java: import com.jim.wms.common.api.InventoryApi;
+wms-return-service\src\main\java\com\jim\wms\returns\service\impl\ReturnServiceImpl.java: import com.jim.wms.common.api.InventoryApi;
+wms-stocktake-service\src\main\java\com\jim\wms\stocktake\service\impl\StocktakeServiceImpl.java: import com.jim.wms.common.api.InventoryApi;
+=== Check 4: old jim_wms connection string anywhere (yml/properties/sql/java) ===
+=== literal /jim_wms (not underscore db) occurrences ===

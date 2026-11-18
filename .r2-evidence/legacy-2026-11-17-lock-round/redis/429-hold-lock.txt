@@ -1,0 +1,4 @@
+﻿SET wms:stock:DC01:DC01-A-01-01:SKU-LOCK-01:B-LOCK-01 held-by-cli PX 5000 => OK
+GET wms:stock:DC01:DC01-A-01-01:SKU-LOCK-01:B-LOCK-01 => held-by-cli
+TTL wms:stock:DC01:DC01-A-01-01:SKU-LOCK-01:B-LOCK-01 => 5
+EXISTS wms:stock:DC01:DC01-A-01-01:SKU-LOCK-01:B-LOCK-01 => 1

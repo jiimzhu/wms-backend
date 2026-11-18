@@ -1,0 +1,1 @@
+﻿SELECT outbound_no,status FROM jim_wms_outbound.wms_outbound_order WHERE outbound_no='OUT1794895933020'; SELECT outbound_no,sku_code,status,retry_count,next_retry_time,last_error FROM jim_wms_outbound.wms_outbound_stock_task WHERE outbound_no='OUT1794895933020'; SELECT COUNT(*) AS sku002_log_rows FROM jim_wms_inventory.wms_inventory_log WHERE sku_code='SKU-002';

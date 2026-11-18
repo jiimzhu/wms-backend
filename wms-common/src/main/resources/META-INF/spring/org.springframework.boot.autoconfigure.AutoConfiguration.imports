@@ -1,0 +1,2 @@
+com.jim.wms.common.config.CommonAutoConfiguration
+com.jim.wms.common.outbox.OutboxAutoConfiguration

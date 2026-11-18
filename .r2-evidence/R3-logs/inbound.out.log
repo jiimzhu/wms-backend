@@ -1,0 +1,61 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-11-18T12:57:06.736+08:00  INFO 26288 --- [wms-inbound-service] [           main] c.j.w.inbound.InboundServiceApplication  : Starting InboundServiceApplication v1.0.0 using Java 17.0.21 with PID 26288 (D:\wms\wms-backend\wms-inbound-service\target\wms-inbound-service-1.0.0.jar started by 华为 in D:\wms\wms-backend)
+2026-11-18T12:57:06.758+08:00 DEBUG 26288 --- [wms-inbound-service] [           main] c.j.w.inbound.InboundServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-11-18T12:57:06.761+08:00  INFO 26288 --- [wms-inbound-service] [           main] c.j.w.inbound.InboundServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-11-18T12:57:10.134+08:00  INFO 26288 --- [wms-inbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T12:57:10.143+08:00  INFO 26288 --- [wms-inbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-18T12:57:10.247+08:00  INFO 26288 --- [wms-inbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 0 Redis repository interfaces.
+2026-11-18T12:57:11.627+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c6b39a12-60d4-3590-9a0d-ab8f0cb43840
+2026-11-18T12:57:12.484+08:00  WARN 26288 --- [wms-inbound-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T12:57:12.492+08:00  WARN 26288 --- [wms-inbound-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T12:57:13.982+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2026-11-18T12:57:14.065+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T12:57:14.079+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-11-18T12:57:14.345+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T12:57:14.350+08:00  INFO 26288 --- [wms-inbound-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7349 ms
+2026-11-18T12:57:15.855+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T12:57:16.653+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45dde6ac
+2026-11-18T12:57:16.668+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T12:57:17.441+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2026-11-18T12:57:17.445+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2026-11-18T12:57:17.446+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-11-18T12:57:17.504+08:00  INFO 26288 --- [wms-inbound-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3306/jim_wms_inbound (MySQL 8.0)
+2026-11-18T12:57:17.651+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.073s)
+2026-11-18T12:57:17.710+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `jim_wms_inbound`: 2
+2026-11-18T12:57:17.719+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.f.core.internal.command.DbMigrate      : Schema `jim_wms_inbound` is up to date. No migration necessary.
+2026-11-18T12:57:20.421+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'wms-inventory-service' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T12:57:25.052+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.jim.wms.common.lock.RedisLockUtil    : Redis 锁通道就绪（127.0.0.1:6379:0），PING=PONG
+2026-11-18T12:57:27.233+08:00  INFO 26288 --- [wms-inbound-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T12:57:27.349+08:00  WARN 26288 --- [wms-inbound-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T12:57:27.503+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-18T12:57:27.942+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-18T12:57:27.989+08:00  INFO 26288 --- [wms-inbound-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T12:57:28.171+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T12:57:28.315+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T12:57:28.315+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T12:57:28.316+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T12:57:28.317+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T12:57:28.320+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-18T12:57:28.323+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T12:57:30.265+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T12:57:30.298+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 10
+2026-11-18T12:57:30.310+08:00  INFO 26288 --- [wms-inbound-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-18T12:57:30.327+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794977850325 with initial instances count: 2
+2026-11-18T12:57:30.336+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WMS-INBOUND-SERVICE with eureka with status UP
+2026-11-18T12:57:30.342+08:00  INFO 26288 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794977850342, current=UP, previous=STARTING]
+2026-11-18T12:57:30.380+08:00  INFO 26288 --- [wms-inbound-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path ''
+2026-11-18T12:57:30.383+08:00  INFO 26288 --- [wms-inbound-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2026-11-18T12:57:30.409+08:00  INFO 26288 --- [wms-inbound-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-INBOUND-SERVICE/wms-inbound-service:8083: registering service...
+2026-11-18T12:57:30.686+08:00  INFO 26288 --- [wms-inbound-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-INBOUND-SERVICE/wms-inbound-service:8083 - registration status: 204
+2026-11-18T12:57:31.780+08:00  INFO 26288 --- [wms-inbound-service] [           main] c.j.w.inbound.InboundServiceApplication  : Started InboundServiceApplication in 26.229 seconds (process running for 27.475)
+2026-11-18T13:02:28.337+08:00  INFO 26288 --- [wms-inbound-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T13:07:28.343+08:00  INFO 26288 --- [wms-inbound-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T13:12:28.361+08:00  INFO 26288 --- [wms-inbound-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

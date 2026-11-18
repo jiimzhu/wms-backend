@@ -1,0 +1,9 @@
+{
+  "orderType": "SALE_OUT",
+  "sourceSystem": "OMS",
+  "sourceNo": "OMS-B-001",
+  "warehouseCode": "WMS-T",
+  "items": [
+    {"skuCode": "SKU-T-001", "locationCode": "LOC-T", "batchNo": "B20261118", "planQty": 1}
+  ]
+}

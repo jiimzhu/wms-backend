@@ -1,0 +1,66 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-11-18T13:26:54.019+08:00  INFO 18480 --- [wms-admin-service] [           main] c.jim.wms.admin.AdminServiceApplication  : Starting AdminServiceApplication v1.0.0 using Java 17.0.21 with PID 18480 (D:\wms\wms-backend\wms-admin-service\target\wms-admin-service-1.0.0.jar started by 华为 in D:\wms\wms-backend)
+2026-11-18T13:26:54.030+08:00 DEBUG 18480 --- [wms-admin-service] [           main] c.jim.wms.admin.AdminServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-11-18T13:26:54.031+08:00  INFO 18480 --- [wms-admin-service] [           main] c.jim.wms.admin.AdminServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-11-18T13:26:55.253+08:00  INFO 18480 --- [wms-admin-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T13:26:55.265+08:00  INFO 18480 --- [wms-admin-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-18T13:26:55.292+08:00  INFO 18480 --- [wms-admin-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2026-11-18T13:26:55.598+08:00  INFO 18480 --- [wms-admin-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d768b99c-4251-3b50-a0e6-2ac6bd26f4b1
+2026-11-18T13:26:55.850+08:00  WARN 18480 --- [wms-admin-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T13:26:55.854+08:00  WARN 18480 --- [wms-admin-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T13:26:56.359+08:00  INFO 18480 --- [wms-admin-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-11-18T13:26:56.387+08:00  INFO 18480 --- [wms-admin-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T13:26:56.389+08:00  INFO 18480 --- [wms-admin-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-11-18T13:26:56.501+08:00  INFO 18480 --- [wms-admin-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T13:26:56.505+08:00  INFO 18480 --- [wms-admin-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2368 ms
+2026-11-18T13:26:57.148+08:00  INFO 18480 --- [wms-admin-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T13:26:57.609+08:00  INFO 18480 --- [wms-admin-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c5406b
+2026-11-18T13:26:57.623+08:00  INFO 18480 --- [wms-admin-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T13:26:57.803+08:00  INFO 18480 --- [wms-admin-service] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2026-11-18T13:26:57.806+08:00  INFO 18480 --- [wms-admin-service] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2026-11-18T13:26:57.806+08:00  INFO 18480 --- [wms-admin-service] [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-11-18T13:26:57.850+08:00  INFO 18480 --- [wms-admin-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3306/jim_wms_admin (MySQL 8.0)
+2026-11-18T13:26:57.994+08:00  INFO 18480 --- [wms-admin-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.068s)
+2026-11-18T13:26:58.023+08:00  INFO 18480 --- [wms-admin-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `jim_wms_admin`: 2
+2026-11-18T13:26:58.032+08:00  INFO 18480 --- [wms-admin-service] [           main] o.f.core.internal.command.DbMigrate      : Schema `jim_wms_admin` is up to date. No migration necessary.
+2026-11-18T13:27:00.471+08:00  INFO 18480 --- [wms-admin-service] [           main] com.jim.wms.common.lock.RedisLockUtil    : Redis 锁通道就绪（127.0.0.1:6379:0），PING=PONG
+2026-11-18T13:27:01.071+08:00  INFO 18480 --- [wms-admin-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T13:27:01.162+08:00  WARN 18480 --- [wms-admin-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T13:27:01.304+08:00  INFO 18480 --- [wms-admin-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-18T13:27:01.496+08:00  INFO 18480 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-18T13:27:01.512+08:00  INFO 18480 --- [wms-admin-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T13:27:01.567+08:00  INFO 18480 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T13:27:01.568+08:00  INFO 18480 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T13:27:01.570+08:00  INFO 18480 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T13:27:01.571+08:00  INFO 18480 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T13:27:01.571+08:00  INFO 18480 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T13:27:01.572+08:00  INFO 18480 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-18T13:27:01.572+08:00  INFO 18480 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T13:27:02.496+08:00  INFO 18480 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T13:27:02.502+08:00  INFO 18480 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 10
+2026-11-18T13:27:02.509+08:00  INFO 18480 --- [wms-admin-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-18T13:27:02.518+08:00  INFO 18480 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794979622517 with initial instances count: 0
+2026-11-18T13:27:02.524+08:00  INFO 18480 --- [wms-admin-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WMS-ADMIN-SERVICE with eureka with status UP
+2026-11-18T13:27:02.526+08:00  INFO 18480 --- [wms-admin-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794979622525, current=UP, previous=STARTING]
+2026-11-18T13:27:02.530+08:00  INFO 18480 --- [wms-admin-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-ADMIN-SERVICE/wms-admin-service:8081: registering service...
+2026-11-18T13:27:02.556+08:00  INFO 18480 --- [wms-admin-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2026-11-18T13:27:02.558+08:00  INFO 18480 --- [wms-admin-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2026-11-18T13:27:02.706+08:00  INFO 18480 --- [wms-admin-service] [           main] c.jim.wms.admin.AdminServiceApplication  : Started AdminServiceApplication in 9.323 seconds (process running for 9.92)
+2026-11-18T13:27:02.815+08:00  INFO 18480 --- [wms-admin-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-ADMIN-SERVICE/wms-admin-service:8081 - registration status: 204
+2026-11-18T13:27:32.516+08:00  INFO 18480 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T13:27:32.518+08:00  INFO 18480 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T13:27:32.520+08:00  INFO 18480 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T13:27:32.520+08:00  INFO 18480 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T13:27:32.520+08:00  INFO 18480 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T13:27:32.521+08:00  INFO 18480 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-11-18T13:27:32.521+08:00  INFO 18480 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T13:27:32.543+08:00  INFO 18480 --- [wms-admin-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T13:32:01.577+08:00  INFO 18480 --- [wms-admin-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

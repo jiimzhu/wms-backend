@@ -1,0 +1,4 @@
+﻿id	warehouse_code	location_code	sku_code	batch_no	qty	freeze_qty	stock_status	version
+1	DC01	DC01-A-01-01	SKU-001	B001	15.000	0.000	1	1
+log_rows_before
+2

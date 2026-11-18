@@ -1,0 +1,12 @@
+﻿DELETE FROM jim_wms_outbound.wms_outbound_item;
+DELETE FROM jim_wms_outbound.wms_outbound_stock_task;
+DELETE FROM jim_wms_outbound.wms_outbound_order;
+DELETE FROM jim_wms_inventory.wms_inventory_log;
+DELETE FROM jim_wms_inventory.wms_inventory;
+DELETE FROM jim_wms_inbound.wms_inbound_item;
+DELETE FROM jim_wms_inbound.wms_inbound_order;
+DELETE FROM jim_wms_integration.wms_external_order;
+DELETE FROM jim_wms_transfer.wms_transfer_order;
+DELETE FROM jim_wms_stocktake.wms_stocktake_item;
+DELETE FROM jim_wms_stocktake.wms_stocktake_order;
+DELETE FROM jim_wms_return.wms_return_order;

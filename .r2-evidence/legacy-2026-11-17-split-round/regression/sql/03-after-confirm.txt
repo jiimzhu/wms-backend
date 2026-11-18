@@ -1,0 +1,9 @@
+﻿tbl	warehouse_code	location_code	sku_code	batch_no	qty	freeze_qty
+inventory	DC01	DC01-A-01-01	SKU-001	B-REG-01	7.000	0.000
+tbl	id	sku_code	business_type	business_no	change_qty	before_qty	after_qty	biz_key
+log	7	SKU-001	PURCHASE_IN	REG-RESTOCK-001	10.000	0.000	10.000	REG-RESTOCK-001
+log	8	SKU-001	TRANSFER_OUT	OUT1794895803002	-3.000	10.000	7.000	OUT:OUT1794895803002:SKU-001:DC01-A-01-01:B-REG-01
+tbl	outbound_no	order_type	status
+order	OUT1794895803002	TRANSFER_OUT	FINISHED
+tbl	outbound_no	sku_code	status	change_qty	retry_count	next_retry_time	last_error_is_null	last_error
+task	OUT1794895803002	SKU-001	SUCCESS	-3.0000	0	NULL	1	NULL

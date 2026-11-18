@@ -1,0 +1,4 @@
+﻿outbound_no	order_type	source_system	source_no	warehouse_code	target_warehouse_code	status
+OUT1794895803002	TRANSFER_OUT	CTM	CTM-REG-001	DC01	DC02	CREATED
+source_system	external_order_no	business_type	status
+CTM	CTM-REG-001	TRANSFER	RECEIVED

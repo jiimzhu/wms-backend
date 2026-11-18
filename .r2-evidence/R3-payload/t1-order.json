@@ -1,0 +1,1 @@
+{"items":[{"planQty":2,"batchNo":"B-R3-A1","skuCode":"SKU-001","locationCode":"DC01-A-01-01"},{"planQty":2,"batchNo":"B-R3-A2","skuCode":"SKU-001","locationCode":"DC01-A-01-02"}],"orderType":"REPLENISH","sourceSystem":"CTM","sourceNo":"CTM-R3-T1","warehouseCode":"DC01"}

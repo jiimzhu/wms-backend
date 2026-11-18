@@ -1,0 +1,18 @@
+﻿AFTER CLEANUP R3 snapshot 2026-11-18T13:15:45.5285345+08:00
+inventory.wms_inventory=1
+inventory.wms_inventory_log=1
+inventory.wms_event_outbox=1
+outbound.wms_outbound_order=0
+outbound.wms_outbound_item=0
+outbound.wms_outbound_stock_task=0
+outbound.wms_event_outbox=0
+transfer.wms_transfer_order=0
+integration.wms_external_order=0
+inbound.wms_inbound_order=0
+inbound.wms_inbound_item=0
+stocktake.wms_stocktake_order=0
+return.wms_return_order=0
+--- seed verify ---
+seed_inventory=WMS-T/LOC-T/SKU-T-001/B20261118/3.000
+seed_log_id=80
+seed_outbox_id=3

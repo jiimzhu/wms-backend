@@ -1,0 +1,1 @@
+{"code":200,"msg":"ok","data":{"warehouseCode":"DC01","locationCode":"DC01-A-01-01","skuCode":"SKU-LOCK-01","batchNo":"B-LOCK-01","expireDate":null,"snCode":null,"qty":22.000,"freezeQty":0.000,"stockStatus":1}}

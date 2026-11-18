@@ -1,0 +1,16 @@
+=== cleanup BEFORE snapshot 2026-11-18 12:01:06 ===
+jim_wms_stocktake.wms_stocktake_order = 0
+jim_wms_stocktake.wms_stocktake_item = 0
+jim_wms_return.wms_return_order = 0
+jim_wms_transfer.wms_transfer_order = 0
+jim_wms_inventory.wms_inventory = 4
+jim_wms_inventory.wms_inventory_log = 45
+jim_wms_inventory.wms_event_outbox = 45
+jim_wms_integration.wms_external_order = 0
+jim_wms_outbound.wms_outbound_order = 3
+jim_wms_outbound.wms_outbound_item = 3
+jim_wms_outbound.wms_outbound_stock_task = 3
+jim_wms_outbound.wms_event_outbox = 2
+jim_wms_inbound.wms_inbound_order = 0
+jim_wms_inbound.wms_inbound_item = 0
+jim_wms_inbound.wms_event_outbox = 0

@@ -1,0 +1,378 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-11-18T13:26:58.958+08:00  INFO 3784 --- [wms-inventory-service] [           main] c.j.w.i.InventoryServiceApplication      : Starting InventoryServiceApplication v1.0.0 using Java 17.0.21 with PID 3784 (D:\wms\wms-backend\wms-inventory-service\target\wms-inventory-service-1.0.0.jar started by 华为 in D:\wms\wms-backend)
+2026-11-18T13:26:58.969+08:00 DEBUG 3784 --- [wms-inventory-service] [           main] c.j.w.i.InventoryServiceApplication      : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-11-18T13:26:58.971+08:00  INFO 3784 --- [wms-inventory-service] [           main] c.j.w.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-11-18T13:27:00.737+08:00  INFO 3784 --- [wms-inventory-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T13:27:00.749+08:00  INFO 3784 --- [wms-inventory-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-18T13:27:00.784+08:00  INFO 3784 --- [wms-inventory-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2026-11-18T13:27:01.331+08:00  INFO 3784 --- [wms-inventory-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3129620e-1297-378e-b954-3f2f20b84675
+2026-11-18T13:27:01.855+08:00  WARN 3784 --- [wms-inventory-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T13:27:01.861+08:00  WARN 3784 --- [wms-inventory-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T13:27:02.524+08:00  INFO 3784 --- [wms-inventory-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-11-18T13:27:02.562+08:00  INFO 3784 --- [wms-inventory-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T13:27:02.565+08:00  INFO 3784 --- [wms-inventory-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-11-18T13:27:02.702+08:00  INFO 3784 --- [wms-inventory-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T13:27:02.706+08:00  INFO 3784 --- [wms-inventory-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3548 ms
+2026-11-18T13:27:03.330+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T13:27:03.874+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@489f62a3
+2026-11-18T13:27:03.890+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T13:27:04.098+08:00  INFO 3784 --- [wms-inventory-service] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2026-11-18T13:27:04.100+08:00  INFO 3784 --- [wms-inventory-service] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2026-11-18T13:27:04.100+08:00  INFO 3784 --- [wms-inventory-service] [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-11-18T13:27:04.136+08:00  INFO 3784 --- [wms-inventory-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3306/jim_wms_inventory (MySQL 8.0)
+2026-11-18T13:27:04.230+08:00  INFO 3784 --- [wms-inventory-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.046s)
+2026-11-18T13:27:04.260+08:00  INFO 3784 --- [wms-inventory-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `jim_wms_inventory`: 2
+2026-11-18T13:27:04.265+08:00  INFO 3784 --- [wms-inventory-service] [           main] o.f.core.internal.command.DbMigrate      : Schema `jim_wms_inventory` is up to date. No migration necessary.
+2026-11-18T13:27:06.208+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.jim.wms.common.lock.RedisLockUtil    : Redis 锁通道就绪（127.0.0.1:6379:0），PING=PONG
+2026-11-18T13:27:08.781+08:00  INFO 3784 --- [wms-inventory-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T13:27:08.932+08:00  WARN 3784 --- [wms-inventory-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T13:27:09.079+08:00  INFO 3784 --- [wms-inventory-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-18T13:27:09.296+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-18T13:27:09.309+08:00  INFO 3784 --- [wms-inventory-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T13:27:09.373+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T13:27:09.375+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T13:27:09.377+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T13:27:09.377+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T13:27:09.377+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T13:27:09.379+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-18T13:27:09.379+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T13:27:10.053+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T13:27:10.059+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 10
+2026-11-18T13:27:10.065+08:00  INFO 3784 --- [wms-inventory-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-18T13:27:10.074+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794979630072 with initial instances count: 0
+2026-11-18T13:27:10.079+08:00  INFO 3784 --- [wms-inventory-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WMS-INVENTORY-SERVICE with eureka with status UP
+2026-11-18T13:27:10.081+08:00  INFO 3784 --- [wms-inventory-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794979630081, current=UP, previous=STARTING]
+2026-11-18T13:27:10.084+08:00  INFO 3784 --- [wms-inventory-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-INVENTORY-SERVICE/wms-inventory-service:8082: registering service...
+2026-11-18T13:27:10.116+08:00  INFO 3784 --- [wms-inventory-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-11-18T13:27:10.119+08:00  INFO 3784 --- [wms-inventory-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-11-18T13:27:10.159+08:00  INFO 3784 --- [wms-inventory-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-INVENTORY-SERVICE/wms-inventory-service:8082 - registration status: 204
+2026-11-18T13:27:10.274+08:00  INFO 3784 --- [wms-inventory-service] [           main] c.j.w.i.InventoryServiceApplication      : Started InventoryServiceApplication in 12.393 seconds (process running for 13.325)
+2026-11-18T13:27:40.068+08:00  INFO 3784 --- [wms-inventory-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T13:27:40.076+08:00  INFO 3784 --- [wms-inventory-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T13:27:40.077+08:00  INFO 3784 --- [wms-inventory-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T13:27:40.078+08:00  INFO 3784 --- [wms-inventory-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T13:27:40.078+08:00  INFO 3784 --- [wms-inventory-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T13:27:40.078+08:00  INFO 3784 --- [wms-inventory-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-11-18T13:27:40.078+08:00  INFO 3784 --- [wms-inventory-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T13:27:40.093+08:00  INFO 3784 --- [wms-inventory-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T13:28:36.753+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T13:28:36.756+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T13:28:36.759+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-18T13:28:36.888+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-2] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-R4-01:SKU-R4-001:NO_BATCH token=wms-inventory-service:8082:43:8a4f10de-a20f-4406-92e0-e8c08130d46a
+2026-11-18T13:28:37.002+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-2] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:28:37.017+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-2] c.j.w.i.m.I.selectCount                  : ==> Parameters: R4-D1-REQ-1(String)
+2026-11-18T13:28:37.030+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-2] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:28:37.041+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-2] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no IS NULL) for update
+2026-11-18T13:28:37.042+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-2] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-001(String)
+2026-11-18T13:28:37.044+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-2] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 0
+2026-11-18T13:28:37.050+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-2] c.j.w.i.mapper.InventoryMapper.insert    : ==>  Preparing: INSERT INTO wms_inventory ( warehouse_code, location_code, sku_code, qty, freeze_qty, stock_status, version, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:28:37.052+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-2] c.j.w.i.mapper.InventoryMapper.insert    : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-001(String), 1(BigDecimal), 0(BigDecimal), 1(Integer), 0(Integer), 2026-11-18T13:28:37.045467400(LocalDateTime), 2026-11-18T13:28:37.045467400(LocalDateTime)
+2026-11-18T13:28:37.055+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-2] c.j.w.i.mapper.InventoryMapper.insert    : <==    Updates: 1
+2026-11-18T13:28:37.060+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-2] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, business_type, business_no, change_qty, before_qty, after_qty, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:28:37.061+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-2] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-001(String), PURCHASE_IN(String), R4-D1-BIZ-1(String), 1(BigDecimal), 0(BigDecimal), 1(BigDecimal), R4-D1-REQ-1(String), 2026-11-18T13:28:37.058504300(LocalDateTime)
+2026-11-18T13:28:37.065+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-2] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:28:37.158+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-2] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-R4-001
+2026-11-18T13:28:37.231+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-2] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-R4-01:SKU-R4-001:NO_BATCH token=wms-inventory-service:8082:43:8a4f10de-a20f-4406-92e0-e8c08130d46a
+2026-11-18T13:28:37.356+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-3] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-R4-01:SKU-R4-001:NO_BATCH token=wms-inventory-service:8082:44:56162736-9361-46fd-a088-8fcd5fd395be
+2026-11-18T13:28:37.360+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:28:37.361+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.I.selectCount                  : ==> Parameters: R4-D1-REQ-2(String)
+2026-11-18T13:28:37.363+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:28:37.366+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no IS NULL) for update
+2026-11-18T13:28:37.369+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-001(String)
+2026-11-18T13:28:37.379+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 1
+2026-11-18T13:28:37.391+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.updateById     : ==>  Preparing: UPDATE wms_inventory SET warehouse_code=?, location_code=?, sku_code=?, qty=?, freeze_qty=?, stock_status=?, version=?, create_time=?, update_time=? WHERE id=? AND version=?
+2026-11-18T13:28:37.394+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.updateById     : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-001(String), 2.000(BigDecimal), 0.000(BigDecimal), 1(Integer), 1(Integer), 2026-11-18T13:28:37(LocalDateTime), 2026-11-18T13:28:37.382034600(LocalDateTime), 30(Long), 0(Integer)
+2026-11-18T13:28:37.398+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.updateById     : <==    Updates: 1
+2026-11-18T13:28:37.400+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, business_type, business_no, change_qty, before_qty, after_qty, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:28:37.401+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-001(String), PURCHASE_IN(String), R4-D1-BIZ-2(String), 1(BigDecimal), 1.000(BigDecimal), 2.000(BigDecimal), R4-D1-REQ-2(String), 2026-11-18T13:28:37.399383800(LocalDateTime)
+2026-11-18T13:28:37.403+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:28:37.406+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-3] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-R4-001
+2026-11-18T13:28:37.408+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-3] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-R4-01:SKU-R4-001:NO_BATCH token=wms-inventory-service:8082:44:56162736-9361-46fd-a088-8fcd5fd395be
+2026-11-18T13:28:37.493+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-5] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-R4-01:SKU-R4-001:NO_BATCH token=wms-inventory-service:8082:46:577a769e-ff36-4dac-bc82-c675d260d191
+2026-11-18T13:28:37.496+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:28:37.499+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.I.selectCount                  : ==> Parameters: R4-D1-REQ-3(String)
+2026-11-18T13:28:37.500+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:28:37.502+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no IS NULL) for update
+2026-11-18T13:28:37.503+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-001(String)
+2026-11-18T13:28:37.505+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 1
+2026-11-18T13:28:37.506+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryMapper.updateById     : ==>  Preparing: UPDATE wms_inventory SET warehouse_code=?, location_code=?, sku_code=?, qty=?, freeze_qty=?, stock_status=?, version=?, create_time=?, update_time=? WHERE id=? AND version=?
+2026-11-18T13:28:37.507+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryMapper.updateById     : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-001(String), 3.000(BigDecimal), 0.000(BigDecimal), 1(Integer), 2(Integer), 2026-11-18T13:28:37(LocalDateTime), 2026-11-18T13:28:37.505777100(LocalDateTime), 30(Long), 1(Integer)
+2026-11-18T13:28:37.509+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryMapper.updateById     : <==    Updates: 1
+2026-11-18T13:28:37.514+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, business_type, business_no, change_qty, before_qty, after_qty, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:28:37.516+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-001(String), PURCHASE_IN(String), R4-D1-BIZ-3(String), 1(BigDecimal), 2.000(BigDecimal), 3.000(BigDecimal), R4-D1-REQ-3(String), 2026-11-18T13:28:37.512830200(LocalDateTime)
+2026-11-18T13:28:37.518+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:28:37.520+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-5] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-R4-001
+2026-11-18T13:28:37.521+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-5] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-R4-01:SKU-R4-001:NO_BATCH token=wms-inventory-service:8082:46:577a769e-ff36-4dac-bc82-c675d260d191
+2026-11-18T13:28:37.542+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [127.0.0.1:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 5000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 1000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 3000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2026-11-18T13:28:37.590+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2026-11-18T13:28:37.640+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2026-11-18T13:28:37.641+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2026-11-18T13:28:37.641+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794979717639
+2026-11-18T13:28:37.947+08:00  INFO 3784 --- [wms-inventory-service] [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: It0Yw3kSTE6CgjNgvc67hg
+2026-11-18T13:28:37.950+08:00  INFO 3784 --- [wms-inventory-service] [ad | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1015 with epoch 0
+2026-11-18T13:28:37.995+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=98, topic=wms-stock-event, eventKey=DC01:SKU-R4-001
+2026-11-18T13:28:38.015+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=99, topic=wms-stock-event, eventKey=DC01:SKU-R4-001
+2026-11-18T13:28:38.016+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 2 条，owner=wms-inventory-service:8082
+2026-11-18T13:28:39.040+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=100, topic=wms-stock-event, eventKey=DC01:SKU-R4-001
+2026-11-18T13:28:39.041+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-inventory-service:8082
+2026-11-18T13:28:41.783+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-8] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-R4-01:SKU-R4-001:NO_BATCH token=wms-inventory-service:8082:49:4ba32ef7-b88d-4212-9c4e-52949669ee9d
+2026-11-18T13:28:41.785+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-8] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:28:41.785+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-8] c.j.w.i.m.I.selectCount                  : ==> Parameters: R4-D1-REQ-1(String)
+2026-11-18T13:28:41.786+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-8] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:28:41.787+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-8] c.j.w.i.s.impl.InventoryServiceImpl      : 库存变动命中幂等，直接返回当前库存，requestId=R4-D1-REQ-1, warehouseCode=DC01, locationCode=DC01-R4-01, skuCode=SKU-R4-001, batchNo=null
+2026-11-18T13:28:41.788+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-8] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no IS NULL) for update
+2026-11-18T13:28:41.788+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-8] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-001(String)
+2026-11-18T13:28:41.789+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-8] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 1
+2026-11-18T13:28:41.790+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-8] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-R4-01:SKU-R4-001:NO_BATCH token=wms-inventory-service:8082:49:4ba32ef7-b88d-4212-9c4e-52949669ee9d
+2026-11-18T13:28:57.107+08:00  INFO 3784 --- [wms-inventory-service] [io-8082-exec-10] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-R4-01:SKU-R4-002:B-R4-B1 token=wms-inventory-service:8082:51:d817f25e-de47-4614-8cab-5cd0d258983d
+2026-11-18T13:28:57.110+08:00 DEBUG 3784 --- [wms-inventory-service] [io-8082-exec-10] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:28:57.111+08:00 DEBUG 3784 --- [wms-inventory-service] [io-8082-exec-10] c.j.w.i.m.I.selectCount                  : ==> Parameters: R4-D1-REQ-4(String)
+2026-11-18T13:28:57.112+08:00 DEBUG 3784 --- [wms-inventory-service] [io-8082-exec-10] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:28:57.115+08:00 DEBUG 3784 --- [wms-inventory-service] [io-8082-exec-10] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no = ?) for update
+2026-11-18T13:28:57.115+08:00 DEBUG 3784 --- [wms-inventory-service] [io-8082-exec-10] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-002(String), B-R4-B1(String)
+2026-11-18T13:28:57.117+08:00 DEBUG 3784 --- [wms-inventory-service] [io-8082-exec-10] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 0
+2026-11-18T13:28:57.118+08:00 DEBUG 3784 --- [wms-inventory-service] [io-8082-exec-10] c.j.w.i.mapper.InventoryMapper.insert    : ==>  Preparing: INSERT INTO wms_inventory ( warehouse_code, location_code, sku_code, batch_no, qty, freeze_qty, stock_status, version, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:28:57.118+08:00 DEBUG 3784 --- [wms-inventory-service] [io-8082-exec-10] c.j.w.i.mapper.InventoryMapper.insert    : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-002(String), B-R4-B1(String), 1(BigDecimal), 0(BigDecimal), 1(Integer), 0(Integer), 2026-11-18T13:28:57.117923800(LocalDateTime), 2026-11-18T13:28:57.117923800(LocalDateTime)
+2026-11-18T13:28:57.121+08:00 DEBUG 3784 --- [wms-inventory-service] [io-8082-exec-10] c.j.w.i.mapper.InventoryMapper.insert    : <==    Updates: 1
+2026-11-18T13:28:57.121+08:00 DEBUG 3784 --- [wms-inventory-service] [io-8082-exec-10] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, batch_no, business_type, business_no, change_qty, before_qty, after_qty, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:28:57.122+08:00 DEBUG 3784 --- [wms-inventory-service] [io-8082-exec-10] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-002(String), B-R4-B1(String), PURCHASE_IN(String), R4-D1-BIZ-4(String), 1(BigDecimal), 0(BigDecimal), 1(BigDecimal), R4-D1-REQ-4(String), 2026-11-18T13:28:57.121938700(LocalDateTime)
+2026-11-18T13:28:57.124+08:00 DEBUG 3784 --- [wms-inventory-service] [io-8082-exec-10] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:28:57.127+08:00  INFO 3784 --- [wms-inventory-service] [io-8082-exec-10] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-R4-002
+2026-11-18T13:28:57.129+08:00  INFO 3784 --- [wms-inventory-service] [io-8082-exec-10] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-R4-01:SKU-R4-002:B-R4-B1 token=wms-inventory-service:8082:51:d817f25e-de47-4614-8cab-5cd0d258983d
+2026-11-18T13:28:57.193+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-1] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-R4-01:SKU-R4-002:B-R4-B2 token=wms-inventory-service:8082:42:42ca36e7-c4a3-458d-b341-03aebfaed219
+2026-11-18T13:28:57.194+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:28:57.195+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.I.selectCount                  : ==> Parameters: R4-D1-REQ-5(String)
+2026-11-18T13:28:57.199+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:28:57.201+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no = ?) for update
+2026-11-18T13:28:57.203+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-002(String), B-R4-B2(String)
+2026-11-18T13:28:57.207+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 0
+2026-11-18T13:28:57.209+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.mapper.InventoryMapper.insert    : ==>  Preparing: INSERT INTO wms_inventory ( warehouse_code, location_code, sku_code, batch_no, qty, freeze_qty, stock_status, version, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:28:57.211+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.mapper.InventoryMapper.insert    : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-002(String), B-R4-B2(String), 1(BigDecimal), 0(BigDecimal), 1(Integer), 0(Integer), 2026-11-18T13:28:57.208536300(LocalDateTime), 2026-11-18T13:28:57.208536300(LocalDateTime)
+2026-11-18T13:28:57.213+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=101, topic=wms-stock-event, eventKey=DC01:SKU-R4-002
+2026-11-18T13:28:57.213+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-inventory-service:8082
+2026-11-18T13:28:57.214+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.mapper.InventoryMapper.insert    : <==    Updates: 1
+2026-11-18T13:28:57.215+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, batch_no, business_type, business_no, change_qty, before_qty, after_qty, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:28:57.215+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-002(String), B-R4-B2(String), PURCHASE_IN(String), R4-D1-BIZ-5(String), 1(BigDecimal), 0(BigDecimal), 1(BigDecimal), R4-D1-REQ-5(String), 2026-11-18T13:28:57.215574800(LocalDateTime)
+2026-11-18T13:28:57.217+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:28:57.218+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-1] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-R4-002
+2026-11-18T13:28:57.219+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-1] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-R4-01:SKU-R4-002:B-R4-B2 token=wms-inventory-service:8082:42:42ca36e7-c4a3-458d-b341-03aebfaed219
+2026-11-18T13:28:58.238+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=102, topic=wms-stock-event, eventKey=DC01:SKU-R4-002
+2026-11-18T13:28:58.238+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-inventory-service:8082
+2026-11-18T13:29:35.623+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-3] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-R4-01:SKU-R4-001:NO_BATCH token=wms-inventory-service:8082:44:231014f2-9a09-4dc9-adaf-bda10f745414
+2026-11-18T13:29:35.625+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:29:35.627+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.I.selectCount                  : ==> Parameters: OUT:OUT1794979768183:SKU-R4-001:DC01-R4-01:NOBATCH(String)
+2026-11-18T13:29:35.630+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:29:35.633+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no IS NULL) for update
+2026-11-18T13:29:35.635+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-001(String)
+2026-11-18T13:29:35.638+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 1
+2026-11-18T13:29:35.639+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.updateById     : ==>  Preparing: UPDATE wms_inventory SET warehouse_code=?, location_code=?, sku_code=?, qty=?, freeze_qty=?, stock_status=?, version=?, create_time=?, update_time=? WHERE id=? AND version=?
+2026-11-18T13:29:35.642+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.updateById     : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-001(String), 2.0000(BigDecimal), 0.000(BigDecimal), 1(Integer), 3(Integer), 2026-11-18T13:28:37(LocalDateTime), 2026-11-18T13:29:35.639141400(LocalDateTime), 30(Long), 2(Integer)
+2026-11-18T13:29:35.646+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.updateById     : <==    Updates: 1
+2026-11-18T13:29:35.648+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, business_type, business_no, change_qty, before_qty, after_qty, remark, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:29:35.651+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-R4-01(String), SKU-R4-001(String), SALE_OUT(String), OUT1794979768183(String), -1.0000(BigDecimal), 3.000(BigDecimal), 2.0000(BigDecimal), 出库确认(String), OUT:OUT1794979768183:SKU-R4-001:DC01-R4-01:NOBATCH(String), 2026-11-18T13:29:35.646649100(LocalDateTime)
+2026-11-18T13:29:35.653+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:29:35.654+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-3] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-R4-001
+2026-11-18T13:29:35.657+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-3] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-R4-01:SKU-R4-001:NO_BATCH token=wms-inventory-service:8082:44:231014f2-9a09-4dc9-adaf-bda10f745414
+2026-11-18T13:29:36.706+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=103, topic=wms-stock-event, eventKey=DC01:SKU-R4-001
+2026-11-18T13:29:36.706+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-inventory-service:8082
+2026-11-18T13:29:59.068+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-4] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-R4-02:SKU-R4-003:B-R4-C1 token=wms-inventory-service:8082:45:55732699-e46c-4dae-bfe9-427f35aa4c31
+2026-11-18T13:29:59.069+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-4] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:29:59.069+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-4] c.j.w.i.m.I.selectCount                  : ==> Parameters: R4-D2-SEED-REQ1(String)
+2026-11-18T13:29:59.070+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-4] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:29:59.072+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-4] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no = ?) for update
+2026-11-18T13:29:59.072+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-4] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-R4-02(String), SKU-R4-003(String), B-R4-C1(String)
+2026-11-18T13:29:59.074+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-4] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 0
+2026-11-18T13:29:59.076+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-4] c.j.w.i.mapper.InventoryMapper.insert    : ==>  Preparing: INSERT INTO wms_inventory ( warehouse_code, location_code, sku_code, batch_no, qty, freeze_qty, stock_status, version, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:29:59.076+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-4] c.j.w.i.mapper.InventoryMapper.insert    : ==> Parameters: DC01(String), DC01-R4-02(String), SKU-R4-003(String), B-R4-C1(String), 2(BigDecimal), 0(BigDecimal), 1(Integer), 0(Integer), 2026-11-18T13:29:59.074905500(LocalDateTime), 2026-11-18T13:29:59.074905500(LocalDateTime)
+2026-11-18T13:29:59.078+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-4] c.j.w.i.mapper.InventoryMapper.insert    : <==    Updates: 1
+2026-11-18T13:29:59.079+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-4] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, batch_no, business_type, business_no, change_qty, before_qty, after_qty, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:29:59.081+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-4] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-R4-02(String), SKU-R4-003(String), B-R4-C1(String), PURCHASE_IN(String), R4-D2-SEED1(String), 2(BigDecimal), 0(BigDecimal), 2(BigDecimal), R4-D2-SEED-REQ1(String), 2026-11-18T13:29:59.079420(LocalDateTime)
+2026-11-18T13:29:59.083+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-4] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:29:59.085+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-4] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-R4-003
+2026-11-18T13:29:59.087+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-4] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-R4-02:SKU-R4-003:B-R4-C1 token=wms-inventory-service:8082:45:55732699-e46c-4dae-bfe9-427f35aa4c31
+2026-11-18T13:29:59.160+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-6] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-R4-03:SKU-R4-004:B-R4-D1 token=wms-inventory-service:8082:47:f70d4e78-0fc9-4c55-8de0-9a026a9ff5e7
+2026-11-18T13:29:59.163+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-6] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:29:59.164+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-6] c.j.w.i.m.I.selectCount                  : ==> Parameters: R4-D2-SEED-REQ2(String)
+2026-11-18T13:29:59.165+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-6] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:29:59.167+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-6] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no = ?) for update
+2026-11-18T13:29:59.168+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-6] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-R4-03(String), SKU-R4-004(String), B-R4-D1(String)
+2026-11-18T13:29:59.169+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-6] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 0
+2026-11-18T13:29:59.169+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-6] c.j.w.i.mapper.InventoryMapper.insert    : ==>  Preparing: INSERT INTO wms_inventory ( warehouse_code, location_code, sku_code, batch_no, qty, freeze_qty, stock_status, version, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:29:59.170+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-6] c.j.w.i.mapper.InventoryMapper.insert    : ==> Parameters: DC01(String), DC01-R4-03(String), SKU-R4-004(String), B-R4-D1(String), 2(BigDecimal), 0(BigDecimal), 1(Integer), 0(Integer), 2026-11-18T13:29:59.169589400(LocalDateTime), 2026-11-18T13:29:59.169589400(LocalDateTime)
+2026-11-18T13:29:59.170+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-6] c.j.w.i.mapper.InventoryMapper.insert    : <==    Updates: 1
+2026-11-18T13:29:59.172+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-6] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, batch_no, business_type, business_no, change_qty, before_qty, after_qty, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:29:59.173+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-6] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-R4-03(String), SKU-R4-004(String), B-R4-D1(String), PURCHASE_IN(String), R4-D2-SEED2(String), 2(BigDecimal), 0(BigDecimal), 2(BigDecimal), R4-D2-SEED-REQ2(String), 2026-11-18T13:29:59.172093600(LocalDateTime)
+2026-11-18T13:29:59.174+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-6] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:29:59.175+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-6] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-R4-004
+2026-11-18T13:29:59.177+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-6] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-R4-03:SKU-R4-004:B-R4-D1 token=wms-inventory-service:8082:47:f70d4e78-0fc9-4c55-8de0-9a026a9ff5e7
+2026-11-18T13:29:59.256+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-7] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-R4-04:SKU-R4-004:B-R4-D2 token=wms-inventory-service:8082:48:a800aa3d-68f2-4801-bbb8-b685b1f70e2a
+2026-11-18T13:29:59.257+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-7] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:29:59.259+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-7] c.j.w.i.m.I.selectCount                  : ==> Parameters: R4-D2-SEED-REQ3(String)
+2026-11-18T13:29:59.260+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-7] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:29:59.262+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-7] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no = ?) for update
+2026-11-18T13:29:59.262+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-7] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-R4-04(String), SKU-R4-004(String), B-R4-D2(String)
+2026-11-18T13:29:59.263+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-7] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 0
+2026-11-18T13:29:59.264+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-7] c.j.w.i.mapper.InventoryMapper.insert    : ==>  Preparing: INSERT INTO wms_inventory ( warehouse_code, location_code, sku_code, batch_no, qty, freeze_qty, stock_status, version, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:29:59.264+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-7] c.j.w.i.mapper.InventoryMapper.insert    : ==> Parameters: DC01(String), DC01-R4-04(String), SKU-R4-004(String), B-R4-D2(String), 2(BigDecimal), 0(BigDecimal), 1(Integer), 0(Integer), 2026-11-18T13:29:59.264017500(LocalDateTime), 2026-11-18T13:29:59.264017500(LocalDateTime)
+2026-11-18T13:29:59.265+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-7] c.j.w.i.mapper.InventoryMapper.insert    : <==    Updates: 1
+2026-11-18T13:29:59.266+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-7] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, batch_no, business_type, business_no, change_qty, before_qty, after_qty, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:29:59.268+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-7] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-R4-04(String), SKU-R4-004(String), B-R4-D2(String), PURCHASE_IN(String), R4-D2-SEED3(String), 2(BigDecimal), 0(BigDecimal), 2(BigDecimal), R4-D2-SEED-REQ3(String), 2026-11-18T13:29:59.266544200(LocalDateTime)
+2026-11-18T13:29:59.271+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-7] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:29:59.272+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-7] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-R4-004
+2026-11-18T13:29:59.275+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-7] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-R4-04:SKU-R4-004:B-R4-D2 token=wms-inventory-service:8082:48:a800aa3d-68f2-4801-bbb8-b685b1f70e2a
+2026-11-18T13:30:00.031+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=104, topic=wms-stock-event, eventKey=DC01:SKU-R4-003
+2026-11-18T13:30:00.048+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=105, topic=wms-stock-event, eventKey=DC01:SKU-R4-004
+2026-11-18T13:30:00.063+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=106, topic=wms-stock-event, eventKey=DC01:SKU-R4-004
+2026-11-18T13:30:00.063+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 3 条，owner=wms-inventory-service:8082
+2026-11-18T13:30:18.532+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-9] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND sku_code = ?)
+2026-11-18T13:30:18.534+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-9] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), SKU-R4-003(String)
+2026-11-18T13:30:18.535+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-9] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 1
+2026-11-18T13:31:03.012+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-1] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-R4-02:SKU-R4-003:B-R4-C1 token=wms-inventory-service:8082:42:a0efb3ca-5b33-49e0-a5e1-5ea9a4f2fa35
+2026-11-18T13:31:03.013+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:31:03.014+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.I.selectCount                  : ==> Parameters: OUT:OUT1794979805101:SKU-R4-003:DC01-R4-02:B-R4-C1(String)
+2026-11-18T13:31:03.015+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:31:03.016+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no = ?) for update
+2026-11-18T13:31:03.016+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-R4-02(String), SKU-R4-003(String), B-R4-C1(String)
+2026-11-18T13:31:03.018+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 1
+2026-11-18T13:31:03.018+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryMapper.updateById     : ==>  Preparing: UPDATE wms_inventory SET warehouse_code=?, location_code=?, sku_code=?, batch_no=?, qty=?, freeze_qty=?, stock_status=?, version=?, create_time=?, update_time=? WHERE id=? AND version=?
+2026-11-18T13:31:03.020+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryMapper.updateById     : ==> Parameters: DC01(String), DC01-R4-02(String), SKU-R4-003(String), B-R4-C1(String), 1.0000(BigDecimal), 0.000(BigDecimal), 1(Integer), 1(Integer), 2026-11-18T13:29:59(LocalDateTime), 2026-11-18T13:31:03.018952200(LocalDateTime), 33(Long), 0(Integer)
+2026-11-18T13:31:03.022+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryMapper.updateById     : <==    Updates: 1
+2026-11-18T13:31:03.022+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, batch_no, business_type, business_no, change_qty, before_qty, after_qty, remark, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:31:03.023+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-R4-02(String), SKU-R4-003(String), B-R4-C1(String), SALE_OUT(String), OUT1794979805101(String), -1.0000(BigDecimal), 2.000(BigDecimal), 1.0000(BigDecimal), 出库确认(String), OUT:OUT1794979805101:SKU-R4-003:DC01-R4-02:B-R4-C1(String), 2026-11-18T13:31:03.022381400(LocalDateTime)
+2026-11-18T13:31:03.024+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-1] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:31:03.025+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-1] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-R4-003
+2026-11-18T13:31:03.027+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-1] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-R4-02:SKU-R4-003:B-R4-C1 token=wms-inventory-service:8082:42:a0efb3ca-5b33-49e0-a5e1-5ea9a4f2fa35
+2026-11-18T13:31:03.956+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=107, topic=wms-stock-event, eventKey=DC01:SKU-R4-003
+2026-11-18T13:31:03.957+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-inventory-service:8082
+2026-11-18T13:32:09.385+08:00  INFO 3784 --- [wms-inventory-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T13:32:40.397+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-3] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-R4-05:SKU-R4-005:B-R4-E1 token=wms-inventory-service:8082:44:3ae47931-da26-48c8-8885-f300a018a2aa
+2026-11-18T13:32:40.399+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:32:40.399+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.I.selectCount                  : ==> Parameters: R4-D3-SEED-REQ(String)
+2026-11-18T13:32:40.400+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:32:40.402+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no = ?) for update
+2026-11-18T13:32:40.402+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-R4-05(String), SKU-R4-005(String), B-R4-E1(String)
+2026-11-18T13:32:40.402+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 0
+2026-11-18T13:32:40.403+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.mapper.InventoryMapper.insert    : ==>  Preparing: INSERT INTO wms_inventory ( warehouse_code, location_code, sku_code, batch_no, qty, freeze_qty, stock_status, version, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:32:40.403+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.mapper.InventoryMapper.insert    : ==> Parameters: DC01(String), DC01-R4-05(String), SKU-R4-005(String), B-R4-E1(String), 5(BigDecimal), 0(BigDecimal), 1(Integer), 0(Integer), 2026-11-18T13:32:40.403612900(LocalDateTime), 2026-11-18T13:32:40.403612900(LocalDateTime)
+2026-11-18T13:32:40.404+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.mapper.InventoryMapper.insert    : <==    Updates: 1
+2026-11-18T13:32:40.406+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, batch_no, business_type, business_no, change_qty, before_qty, after_qty, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:32:40.406+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-R4-05(String), SKU-R4-005(String), B-R4-E1(String), PURCHASE_IN(String), R4-D3-SEED(String), 5(BigDecimal), 0(BigDecimal), 5(BigDecimal), R4-D3-SEED-REQ(String), 2026-11-18T13:32:40.404635800(LocalDateTime)
+2026-11-18T13:32:40.406+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-3] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:32:40.407+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-3] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-R4-005
+2026-11-18T13:32:40.411+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-3] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-R4-05:SKU-R4-005:B-R4-E1 token=wms-inventory-service:8082:44:3ae47931-da26-48c8-8885-f300a018a2aa
+2026-11-18T13:32:41.225+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=108, topic=wms-stock-event, eventKey=DC01:SKU-R4-005
+2026-11-18T13:32:41.228+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-inventory-service:8082
+2026-11-18T13:33:08.772+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-5] com.jim.wms.common.lock.RedisLockUtil    : Redis 加锁成功 key=wms:stock:DC01:DC01-R4-05:SKU-R4-005:B-R4-E1 token=wms-inventory-service:8082:46:5be847e7-4258-43a0-b3d0-2f6dddfd0808
+2026-11-18T13:33:08.773+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.I.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_inventory_log WHERE (biz_key = ?)
+2026-11-18T13:33:08.773+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.I.selectCount                  : ==> Parameters: OUT:OUT1794979981259:SKU-R4-005:DC01-R4-05:B-R4-E1(String)
+2026-11-18T13:33:08.774+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.I.selectCount                  : <==      Total: 1
+2026-11-18T13:33:08.775+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryMapper.selectList     : ==>  Preparing: SELECT id,warehouse_code,location_code,sku_code,batch_no,expire_date,sn_code,qty,freeze_qty,stock_status,version,create_time,update_time FROM wms_inventory WHERE (warehouse_code = ? AND location_code = ? AND sku_code = ? AND batch_no = ?) for update
+2026-11-18T13:33:08.776+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryMapper.selectList     : ==> Parameters: DC01(String), DC01-R4-05(String), SKU-R4-005(String), B-R4-E1(String)
+2026-11-18T13:33:08.778+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryMapper.selectList     : <==      Total: 1
+2026-11-18T13:33:08.779+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryMapper.updateById     : ==>  Preparing: UPDATE wms_inventory SET warehouse_code=?, location_code=?, sku_code=?, batch_no=?, qty=?, freeze_qty=?, stock_status=?, version=?, create_time=?, update_time=? WHERE id=? AND version=?
+2026-11-18T13:33:08.780+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryMapper.updateById     : ==> Parameters: DC01(String), DC01-R4-05(String), SKU-R4-005(String), B-R4-E1(String), 3.0000(BigDecimal), 0.000(BigDecimal), 1(Integer), 1(Integer), 2026-11-18T13:32:40(LocalDateTime), 2026-11-18T13:33:08.778468800(LocalDateTime), 36(Long), 0(Integer)
+2026-11-18T13:33:08.782+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryMapper.updateById     : <==    Updates: 1
+2026-11-18T13:33:08.783+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryLogMapper.insert      : ==>  Preparing: INSERT INTO wms_inventory_log ( warehouse_code, location_code, sku_code, batch_no, business_type, business_no, change_qty, before_qty, after_qty, remark, biz_key, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T13:33:08.783+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryLogMapper.insert      : ==> Parameters: DC01(String), DC01-R4-05(String), SKU-R4-005(String), B-R4-E1(String), SALE_OUT(String), OUT1794979981259(String), -2.0000(BigDecimal), 5.000(BigDecimal), 3.0000(BigDecimal), 出库确认(String), OUT:OUT1794979981259:SKU-R4-005:DC01-R4-05:B-R4-E1(String), 2026-11-18T13:33:08.782567400(LocalDateTime)
+2026-11-18T13:33:08.784+08:00 DEBUG 3784 --- [wms-inventory-service] [nio-8082-exec-5] c.j.w.i.m.InventoryLogMapper.insert      : <==    Updates: 1
+2026-11-18T13:33:08.784+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-5] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-stock-event, eventKey=DC01:SKU-R4-005
+2026-11-18T13:33:08.786+08:00  INFO 3784 --- [wms-inventory-service] [nio-8082-exec-5] com.jim.wms.common.lock.RedisLockUtil    : Redis 释放锁成功 key=wms:stock:DC01:DC01-R4-05:SKU-R4-005:B-R4-E1 token=wms-inventory-service:8082:46:5be847e7-4258-43a0-b3d0-2f6dddfd0808
+2026-11-18T13:33:09.630+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=109, topic=wms-stock-event, eventKey=DC01:SKU-R4-005
+2026-11-18T13:33:09.633+08:00  INFO 3784 --- [wms-inventory-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-inventory-service:8082

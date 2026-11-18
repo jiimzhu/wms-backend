@@ -1,0 +1,6 @@
+﻿outbound_no	status	last_error	update_time
+OUT1794977170371	CONFIRM_FAILED	NULL	2026-11-18 12:47:10
+id	status	request_id	retry_count	owner	lease_until	last_error	next_retry_time
+25	FAILED	OUT:OUT1794977170371:SKU-T-001:LOC-T:B20261118	1	NULL	NULL	Feign 调用异常: RetryableException: Connection refused: getsockopt executing POST http://wms-inventory-service/internal/inventory/change-stock	2026-11-18 12:48:10
+log_rows
+0

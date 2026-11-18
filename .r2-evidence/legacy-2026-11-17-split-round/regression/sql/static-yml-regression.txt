@@ -1,0 +1,40 @@
+﻿--- src
+  name: wms-admin-service driver-class-name: com.mysql.cj.jdbc.Driver username: root
+  port: 8081 port: 6379
+  defaultZone: http://127.0.0.1:8761/eureka/
+--- src
+  name: wms-eureka-server hostname: localhost
+  port: 8761
+  defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+--- src
+  name: wms-inbound-service driver-class-name: com.mysql.cj.jdbc.Driver username: root
+  port: 8083 port: 6379
+  defaultZone: http://127.0.0.1:8761/eureka/
+--- src
+  name: wms-integration-service driver-class-name: com.mysql.cj.jdbc.Driver username: root
+  port: 8089 port: 6379
+  defaultZone: http://127.0.0.1:8761/eureka/
+--- src
+  name: wms-inventory-service driver-class-name: com.mysql.cj.jdbc.Driver username: root
+  port: 8082 port: 6379
+  defaultZone: http://127.0.0.1:8761/eureka/
+--- src
+  name: wms-outbound-service driver-class-name: com.mysql.cj.jdbc.Driver username: root
+  port: 8084 port: 6379
+  defaultZone: http://127.0.0.1:8761/eureka/
+--- src
+  name: wms-report-service driver-class-name: com.mysql.cj.jdbc.Driver username: root
+  port: 8088 port: 6379
+  defaultZone: http://127.0.0.1:8761/eureka/
+--- src
+  name: wms-return-service driver-class-name: com.mysql.cj.jdbc.Driver username: root
+  port: 8087 port: 6379
+  defaultZone: http://127.0.0.1:8761/eureka/
+--- src
+  name: wms-stocktake-service driver-class-name: com.mysql.cj.jdbc.Driver username: root
+  port: 8086 port: 6379
+  defaultZone: http://127.0.0.1:8761/eureka/
+--- src
+  name: wms-transfer-service driver-class-name: com.mysql.cj.jdbc.Driver username: root
+  port: 8085 port: 6379
+  defaultZone: http://127.0.0.1:8761/eureka/
